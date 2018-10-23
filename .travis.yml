@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.6"
+
+addons:
+  apt:
+    packages:
+      - pandoc
+install:
+  - pip install Sphinx
+  - pip install nbsphinx
+  - pip install ipykernel
+script:
+  - python -m sphinx . build/ -b html
