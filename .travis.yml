@@ -8,7 +8,7 @@ addons:
       - pandoc
 install:
   - pip install Sphinx
-  - pip install sphinxnb
+  - pip install nbsphinx
   - pip install ipykernel
 script:
   - python -m sphinx . build/ -b html
