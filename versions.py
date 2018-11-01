@@ -1,14 +1,38 @@
 #!/usr/bin/env python3
 
-import numpy as np
-import pandas as pd
-import matplotlib as mpl
-import sklearn
-import scipy
+try:
+    import numpy as np
+except ModuleNotFoundError:
+    np = None
+    
+try:
+    import pandas as pd
+except ModuleNotFoundError:
+    pd = None
+    
+try:
+    import matplotlib as mpl
+except ModuleNotFoundError:
+    mpl = None
+    
+try:
+    import sklearn
+except ModuleNotFoundError:
+    sklearn = None
+
+try:
+    import scipy
+except ModuleNotFoundError:
+    scipy = None
+
 import sys
 
 def helper(name, imp):
-    print("%s version: %s from file %s" % (name, imp.__version__, imp.__file__))
+    if imp:
+        print("%s version: %s from file %s" % (name, imp.__version__, imp.__file__))
+    else:
+        print("%s not installed" % name)
+        
 
 print("Python version:", sys.version.split('\n')[0])
 helper("numpy", np)
