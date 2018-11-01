@@ -12,3 +12,21 @@ install:
   - pip install ipykernel
 script:
   - python -m sphinx . build/ -b html
+  - touch build/.nojekyll # this file tells gh-pages that there is no need to build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  local-dir: build
+  target-branch: gh-pages 
+  on:
+    branch: master
+
+notifications:
+  email:
+    recipients:
+      - jarkko.toivonen@cs.helsinki.fi
+    on_success: always
+    on_failure: always
