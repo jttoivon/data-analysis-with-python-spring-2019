@@ -16,6 +16,7 @@ Welcome to Data analysis with Python's documentation!
    bayes
    clustering
    pca
+   testing
 
 Indices and tables
 ==================
