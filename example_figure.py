@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
 
 #import seaborn as sns; sns.set()
 
@@ -20,5 +21,9 @@ ax[1].set_ylabel("y")
 fig.suptitle("Polynomials")
 fig.set_tight_layout(True)
 plt.subplots_adjust(top=0.95)
-plt.show()
+if len(sys.argv) == 1:
+    plt.show()
+else:
+    filename = sys.argv[1]
+    plt.savefig(filename)
 #plt.savefig("example_figure.png")

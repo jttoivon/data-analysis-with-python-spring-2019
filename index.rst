@@ -12,12 +12,15 @@ Welcome to Data analysis with Python's documentation!
 
    instructions
    basics
+   numpy
+   matplotlib
+   image_processing
    linear_regression
    bayes
    clustering
    pca
-   testing
-
+   poista
+   
 Indices and tables
 ==================
 
