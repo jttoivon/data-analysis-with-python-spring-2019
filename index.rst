@@ -15,11 +15,16 @@ Welcome to Data analysis with Python's documentation!
    numpy
    matplotlib
    image_processing
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Machine learning:
+
    linear_regression
    bayes
    clustering
    pca
-   poista
+
    
 Indices and tables
 ==================
