@@ -15,7 +15,8 @@ Welcome to Data analysis with Python's documentation!
    numpy
    matplotlib
    image_processing
-
+   pandas
+   
 .. toctree::
    :maxdepth: 2
    :caption: Machine learning:
