@@ -77,11 +77,11 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
 #html_theme = 'classic'
-#import sphinx_rtd_theme
-#html_theme = 'sphinx_rtd_theme'
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+import sphinx_rtd_theme
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -163,3 +163,28 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
+
+
+# This is processed by Jinja2 and inserted before each notebook
+nbsphinx_prolog = r"""
+{% set docname = env.doc2path(env.docname, base='source') %}
+{% set docname2 = env.doc2path(env.docname, base='') %}
+
+.. only:: html
+
+    .. role:: raw-html(raw)
+        :format: html
+
+    .. nbinfo::
+
+        This page was generated from `{{ docname2 }}`__.
+        :raw-html:`<br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/{{ docname2 }}'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a>`
+        :raw-html:`<br/>`
+
+    __ https://github.com/jttoivon/x/blob/master/{{ docname2 }}
+
+"""
+
+#        :raw-html:`<br/><a href="https://mybinder.org/v2/gh/geo-python/{{ env.config.release }}/master?urlpath=lab/tree/{{ docname }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a>`
+#        :raw-html:`<a href="https://mybinder.org/v2/gh/geo-python/notebooks/master?urlpath=lab/tree/{{ docname2 }}"><img alt="Binder badge" src="https://img.shields.io/badge/launch-student%20binder-red.svg" style="vertical-align:text-bottom"></a>`
+#        :raw-html:`<a href="https://notebooks.csc.fi/#/blueprint/d71cd2d26d924f48820dc22b67a87d8e"><img alt="CSC badge" src="https://img.shields.io/badge/launch-CSC%20notebook-blue.svg" style="vertical-align:text-bottom"></a>`
