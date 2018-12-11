@@ -26,7 +26,7 @@ NAV_COMMENT = "<!--NAVIGATION-->\n"
 
 COLAB_LINK = """
 
-<a href="https://colab.research.google.com/github/jttoivon/x/blob/master/notebooks/{notebook_filename}"><img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a>
+<a href="https://colab.research.google.com/github/jttoivon/x/blob/master/{notebook_filename}"><img align="left" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a>
 """
 
 def iter_notebooks():
