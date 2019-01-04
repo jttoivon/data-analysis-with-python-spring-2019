@@ -12,6 +12,7 @@ Welcome to Data analysis with Python's documentation!
 
    instructions
    basics
+   basics2
    numpy
    matplotlib
    image_processing
