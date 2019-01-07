@@ -11,7 +11,17 @@ Welcome to Data analysis with Python's documentation!
    :caption: Contents:
 
    instructions
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Week 1:
+
    basics
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Week 2:
+
    basics2
    numpy
    matplotlib
