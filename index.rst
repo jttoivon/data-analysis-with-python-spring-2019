@@ -24,6 +24,12 @@ Welcome to Data analysis with Python's documentation!
 
    basics2
    numpy
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Week 3:
+
+   numpy2	     
    matplotlib
    image_processing
    pandas
