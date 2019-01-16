@@ -32,7 +32,13 @@ Welcome to Data analysis with Python's documentation!
    numpy2	     
    matplotlib
    image_processing
-   pandas
+   pandas1
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Week 4:
+
+   pandas2
    
 .. toctree::
    :maxdepth: 2
