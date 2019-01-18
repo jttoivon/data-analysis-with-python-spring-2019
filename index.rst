@@ -42,9 +42,15 @@ Welcome to Data analysis with Python's documentation!
    
 .. toctree::
    :maxdepth: 2
-   :caption: Machine learning:
+   :caption: Week 5:
 
+   pandas3
    linear_regression
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Week6:
+
    bayes
    clustering
    pca
