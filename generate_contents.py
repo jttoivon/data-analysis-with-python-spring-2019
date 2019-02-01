@@ -28,6 +28,7 @@ def print_contents(nb):
 
 
 if __name__ == '__main__':
-    print_contents(sys.argv[1])
+    for f in sys.argv[1:]:
+        print_contents(f)
     #print('\n', 70 * '#', '\n')
     #print_contents('http://nbviewer.jupyter.org/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/')
