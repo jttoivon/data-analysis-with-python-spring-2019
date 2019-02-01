@@ -25,6 +25,11 @@ try:
 except ModuleNotFoundError:
     scipy = None
 
+try:
+    import seaborn
+except ModuleNotFoundError:
+    seaborn = None
+
 import sys
 
 def helper(name, imp):
@@ -40,4 +45,5 @@ helper("pandas", pd)
 helper("matplotlib", mpl)
 helper("scikit-learn", sklearn)
 helper("scipy", scipy)
+helper("seaborn", seaborn)
 
