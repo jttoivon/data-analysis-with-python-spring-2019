@@ -8,7 +8,7 @@ addons:
       - pandoc
 install:
   - pip install Sphinx
-  - pip install nbsphinx
+  - pip install nbsphinx==0.4.2
   - pip install ipykernel
   - pip install sphinx_rtd_theme
 script:
