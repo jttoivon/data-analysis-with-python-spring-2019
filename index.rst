@@ -56,7 +56,7 @@ themes discussed in the exercises. The final grade will be based
 on the project work, its peer review, and the exam.
 
 Note that this course requires a lot of work! Depending on your background
-it can take something between 5 to 18 hours per week.
+it can take something between 5 to 20 hours per week.
 In addition to reading the course material, you sometimes may need to consult
 the online documentation of Python or its various libraries.
 
