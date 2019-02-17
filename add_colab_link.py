@@ -3,6 +3,7 @@
 import os
 import itertools
 import sys
+import re
 
 from ipykernel import kernelspec as ks
 import nbformat
@@ -47,6 +48,26 @@ def iter_navbars():
             
         yield os.path.join(NOTEBOOK_DIR, nb), navbar
 
+def get_notebook_exercises(nb):
+    result = []
+    for cell in nb.cells:
+        if cell.source.startswith('<div class="alert alert-info">') and cell.cell_type != "code":
+#            line = cell.source.splitlines()[0]
+            line = cell.source
+#            exercise_name = re.search(r">(.*)<", line).group(1)
+            exercise_name = re.search(r"^#### (.*)$", line, re.MULTILINE).group(1)
+            result.append(exercise_name)
+    return result
+
+def to_nbsphinx(s):
+    """Use the sphinx naming style for anchors of headings"""
+    s = s.replace(" ", "-").lower()
+    return "".join(filter(lambda c : c not in "()", s))
+
+def to_github(s):
+    """Use the github naming style for anchors of headings"""
+    s = s.replace(" ", "-")
+    return s
 
 def write_navbars():
     for nb_name, navbar in iter_navbars():
@@ -54,12 +75,16 @@ def write_navbars():
         nb_file = os.path.basename(nb_name)
         is_comment = lambda cell: cell.source.startswith(NAV_COMMENT)
 
+        exercises = get_notebook_exercises(nb)
+        exercise_links = [ "[%s](#%s)" % (e, to_github(e)) for e in exercises ]
+        print(exercise_links)
+        header = "%s\n %s\n" % (navbar, " | ".join(exercise_links))
         if is_comment(nb.cells[0]):
             print("- amending navbar for {0}".format(nb_file))
-            nb.cells[0].source = navbar
+            nb.cells[0].source = header
         else:
             print("- inserting navbar for {0}".format(nb_file))
-            nb.cells.insert(0, new_markdown_cell(source=navbar))
+            nb.cells.insert(0, new_markdown_cell(source=header))
 
         if is_comment(nb.cells[-1]):
             nb.cells[-1].source = navbar
