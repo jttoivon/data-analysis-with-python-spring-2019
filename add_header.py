@@ -51,11 +51,12 @@ def iter_navbars():
 def get_notebook_exercises(nb):
     result = []
     for cell in nb.cells:
-        if cell.source.startswith('<div class="alert alert-info">') and cell.cell_type != "code":
+#        if cell.source.startswith('<div class="alert alert-info">') and cell.cell_type != "code":
+        if cell.source.startswith('#### <div class="alert alert-info">') and cell.cell_type != "code":
 #            line = cell.source.splitlines()[0]
             line = cell.source
-#            exercise_name = re.search(r">(.*)<", line).group(1)
-            exercise_name = re.search(r"^#### (.*)$", line, re.MULTILINE).group(1)
+            exercise_name = re.search(r">(.*)<", line).group(1)
+#            exercise_name = re.search(r"^#### (.*)$", line, re.MULTILINE).group(1)
             result.append(exercise_name)
     return result
 
@@ -67,6 +68,7 @@ def to_nbsphinx(s):
 def to_github(s):
     """Use the github naming style for anchors of headings"""
     s = s.replace(" ", "-")
+    s = re.sub(r"\)$", "&#41;", s)   # In notebook the link cannot end in closing parenthesis
     return s
 
 def write_navbars():
@@ -76,9 +78,30 @@ def write_navbars():
         is_comment = lambda cell: cell.source.startswith(NAV_COMMENT)
 
         exercises = get_notebook_exercises(nb)
-        exercise_links = [ "[%s](#%s)" % (e, to_github(e)) for e in exercises ]
+        exercise_links = [ "[%s](<#%s>)" % (e, to_github(e)) for e in exercises ]
+        longest_field = max(len(e) for e in exercise_links)
         print(exercise_links)
-        header = "%s\n %s\n" % (navbar, " | ".join(exercise_links))
+        print("%i exercises" % len(exercises))
+        columns = 3  
+        table = []
+        empty=" " * (longest_field + 2)
+        dash="-" * (longest_field + 2)
+        table.append("|%s\n" % (("%s|" % empty)*columns))
+        table.append("|%s\n" % (("%s|" % dash)*columns))
+        for i, e in enumerate(exercise_links):
+            if i % columns == 0:
+                table.append("|")
+            table.append(" %s |" % e.center(longest_field))
+            if i % columns == (columns-1):
+                table.append("\n")
+        remainder = len(exercises) % columns
+        if remainder > 0:
+            table.append("%s\n" % (("%s|" % empty)* (columns - remainder)))
+                
+        table = "".join(table)
+        print(table)
+#        header = "%s\n%s\n" % (navbar, " | ".join(exercise_links))
+        header = "%s\n%s\n" % (navbar, table)
         if is_comment(nb.cells[0]):
             print("- amending navbar for {0}".format(nb_file))
             nb.cells[0].source = header
