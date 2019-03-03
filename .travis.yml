@@ -1,3 +1,4 @@
+dist: xenial
 language: python
 python:
   - "3.6"
@@ -5,9 +6,9 @@ python:
 addons:
   apt:
     packages:
-#      - pandoc
+      - pandoc
 install:
-  - pip install pandoc==2.2.3
+#  - pip install pandoc==2.2.3
   - pip install Sphinx
   - pip install nbsphinx==0.4.2
   - pip install ipykernel
