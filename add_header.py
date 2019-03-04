@@ -78,30 +78,35 @@ def write_navbars():
         is_comment = lambda cell: cell.source.startswith(NAV_COMMENT)
 
         exercises = get_notebook_exercises(nb)
-        exercise_links = [ "[%s](<#%s>)" % (e, to_github(e)) for e in exercises ]
-        longest_field = max(len(e) for e in exercise_links)
-        print(exercise_links)
-        print("%i exercises" % len(exercises))
-        columns = 3  
-        table = []
-        empty=" " * (longest_field + 2)
-        dash="-" * (longest_field + 2)
-        table.append("|%s\n" % (("%s|" % empty)*columns))
-        table.append("|%s\n" % (("%s|" % dash)*columns))
-        for i, e in enumerate(exercise_links):
-            if i % columns == 0:
-                table.append("|")
-            table.append(" %s |" % e.center(longest_field))
-            if i % columns == (columns-1):
-                table.append("\n")
-        remainder = len(exercises) % columns
-        if remainder > 0:
-            table.append("%s\n" % (("%s|" % empty)* (columns - remainder)))
-                
-        table = "".join(table)
-        print(table)
-#        header = "%s\n%s\n" % (navbar, " | ".join(exercise_links))
-        header = "%s\n%s\n" % (navbar, table)
+        n = len(exercises)
+        if n > 0:
+            exercise_links = [ "[%s](<#%s>)" % (e, to_github(e)) for e in exercises ]
+            longest_field = max(len(e) for e in exercise_links)
+            print(exercise_links)
+            print("%i exercises" % n)
+            columns = 3
+            if n < columns:
+                columns = n
+            table = []
+            empty=" " * (longest_field + 2)
+            dash="-" * (longest_field + 2)
+            table.append("|%s\n" % (("%s|" % empty)*columns))
+            table.append("|%s\n" % (("%s|" % dash)*columns))
+            for i, e in enumerate(exercise_links):
+                if i % columns == 0:
+                    table.append("|")
+                table.append(" %s |" % e.center(longest_field))
+                if i % columns == (columns-1):
+                    table.append("\n")
+            remainder = n % columns
+            if remainder > 0:
+                table.append("%s\n" % (("%s|" % empty)* (columns - remainder)))
+
+            table = "".join(table)
+            print(table)
+            header = "%s\n%s\n" % (navbar, table)
+        else:
+            header = "%s\n" % (navbar)   # no exercises
         if is_comment(nb.cells[0]):
             print("- amending navbar for {0}".format(nb_file))
             nb.cells[0].source = header
