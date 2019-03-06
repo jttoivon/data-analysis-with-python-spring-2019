@@ -1,4 +1,4 @@
-# Data analysis with Python - Beta
+# Data analysis with Python - Spring 2019
 
 ## Authors
 

@@ -3,10 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Data analysis with Python - Beta!
-============================================
-
-Note! This course instance is only for approved beta testers.
+Welcome to Data analysis with Python - Spring 2019
+==================================================
 
 In this course an overview is given of different phases
 of the data analysis pipeline using Python and its data analysis
@@ -66,37 +64,39 @@ Schedule
 Every week there are 15 - 20 programming exercises that you must
 solve and then submit to the TMC system for checking.
 In order to continue with next week's exercises you
-need to get 80% of the points from exercises of the previous week.
+need to get at least 80% of the points from exercises of the previous week.
 Note that from some exercises it is possible to get more that one point.
 
 
-+------+----------------+----------------------+
-| Week | Deadline       | Theme                |
-+======+================+======================+
-| 1    | 1.1.2019 23.59 | Basics of Python I   |
-+------+----------------+----------------------+
-| 2    | 1.1.2019 23.59 | Basics of Python II, |
-|      |                | NumPy I              |
-+------+----------------+----------------------+
-| 3    | 1.1.2019 23.59 | NumPy II,            |
-|      |                | Visualization,       |
-|      |                | Image processing,    |
-|      |                | Data Analysis        |
-|      |                | with Pandas I        |
-+------+----------------+----------------------+
-| 4    | 1.1.2019 23.59 | Data Analysis        |
-|      |                | with Pandas II       |
-+------+----------------+----------------------+
-| 5    | 1.1.2019 23.59 | Data Analysis        |
-|      |                | with Pandas III,     |
-|      |                | Machine learning I   |
-+------+----------------+----------------------+
-| 6    | 1.1.2019 23.59 | Machine learning II, |
-|      |                | Project              |
-+------+----------------+----------------------+
-| 7    | 1.1.2019 23.59 | Project continues    |
-+------+----------------+----------------------+
-
++------+-----------------+----------------------+
+| Week | Deadline        | Theme                |
++======+=================+======================+
+| 1    | 18.3.2019 23.59 | Basics of Python I   |
++------+-----------------+----------------------+
+| 2    | 25.3.2019 23.59 | Basics of Python II, |
+|      |                 | NumPy I              |
++------+-----------------+----------------------+
+| 3    | 1.4.2019 23.59  | NumPy II,            |
+|      |                 | Visualization,       |
+|      |                 | Image processing,    |
+|      |                 | Data Analysis        |
+|      |                 | with Pandas I        |
++------+-----------------+----------------------+
+| 4    | 8.4.2019 23.59  | Data Analysis        |
+|      |                 | with Pandas II       |
++------+-----------------+----------------------+
+| 5    | 15.4.2019 23.59 | Data Analysis        |
+|      |                 | with Pandas III,     |
+|      |                 | Machine learning I   |
++------+-----------------+----------------------+
+| 6    | 22.4.2019 23.59 | Machine learning II, |
+|      |                 | Project              |
++------+-----------------+----------------------+
+| 7    | x.x.2019 23.59  | Project continues    |
++------+-----------------+----------------------+
+| 8    |                 | Peer review          |
+|      |                 | Exam                 |
++------+-----------------+----------------------+
 
 Software libraries used
 -----------------------

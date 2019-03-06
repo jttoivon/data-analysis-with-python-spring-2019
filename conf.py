@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Data analysis with Python'
+project = 'Data analysis with Python - Spring 2019'
 copyright = '2018-2019, Jarkko Toivonen'
 author = 'Jarkko Toivonen'
 
