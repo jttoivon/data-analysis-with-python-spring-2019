@@ -12,11 +12,16 @@ ecosystem. What is typically done in data analysis? We assume that data is alrea
 available, so we only need to download it. After downloading the
 data it needs to be cleaned to enable further analysis. In the
 cleaning phase the data is converted to some uniform and consistent
-format. After which the data can be
+format. After which the data can, for instance, be
+
 * combined or divided into smaller chunks
+
 * grouped or sorted,
+  
 * condensed into small number of summary statistics
+  
 * numerical or string operations can be performed on the data
+  
 The point is to manipulate the data into a form that enables discovery
 of relationships and regularities among the elements of data.
 Visualization of data often helps to get a better understanding of the data.
@@ -40,7 +45,7 @@ of this course.
 The course lasts for seven weeks and gives 5 credit units.
 It is recommended that you do this course in the end of bachelor
 degree or in the beginning of masters degree; preferably
-before the course "Introduction to Data Analysis".
+before the course "Introduction to Data Science".
 
 Passing the course
 ------------------
@@ -65,8 +70,12 @@ Every week there are 15 - 20 programming exercises that you must
 solve and then submit to the TMC system for checking.
 In order to continue with next week's exercises you
 need to get at least 80% of the points from exercises of the previous week.
-Note that from some exercises it is possible to get more that one point.
+Note that from some exercises it is possible to get more than one point.
+The deadlines, shown below, are hard and no exceptions will be made,
+so finish and submit your solutions early.
 
+Teaching workshop (pajaopetus) will be held weekly in Exactum building
+in Kumpula in room B221 on Thurdays 10.00 - 12.00 (14.3. - 5.5.).
 
 +------+-----------------+----------------------+
 | Week | Deadline        | Theme                |
@@ -92,7 +101,7 @@ Note that from some exercises it is possible to get more that one point.
 | 6    | 22.4.2019 23.59 | Machine learning II, |
 |      |                 | Project              |
 +------+-----------------+----------------------+
-| 7    | x.x.2019 23.59  | Project continues    |
+| 7    | 29.4.2019 23.59 | Project continues    |
 +------+-----------------+----------------------+
 | 8    |                 | Peer review          |
 |      |                 | Exam                 |

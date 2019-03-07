@@ -180,10 +180,10 @@ nbsphinx_prolog = r"""
     .. nbinfo::
 
         This page was generated from `{{ docname2 }}`__.
-        :raw-html:`<br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/{{ docname2 }}'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a>`
+        :raw-html:`<br/><a href='https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/{{ docname2 }}'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a>`
         :raw-html:`<br/>`
 
-    __ https://github.com/jttoivon/x/blob/master/{{ docname2 }}
+    __ https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/{{ docname2 }}
 
 """
 
