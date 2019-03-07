@@ -44,7 +44,7 @@
     "\n",
     "    * With Linux and MacOS:\n",
     "        `source /miniconda/install/location/bin/activate`\n",
-    "* Download the [requirements.txt](https://raw.githubusercontent.com/jttoivon/x/master/requirements.txt) file\n",
+    "* Download the [requirements.txt](https://raw.githubusercontent.com/jttoivon/data-analysis-with-python-spring-2019/master/requirements.txt) file\n",
     "* Install the required packages with\n",
     "\n",
     "         `conda install --yes --file requirements.txt`\n",
@@ -59,7 +59,7 @@
    "source": [
     "## 2 Log in to the course\n",
     "\n",
-    "* Go to the [exercise page](https://tmc.mooc.fi/org/hy/courses/414) of the course\n",
+    "* Go to the [exercise page](https://tmc.mooc.fi/org/hy/courses/438) of the course\n",
     "* If you don't already have an account on this server, press the signup button\n",
     "* Use your student number as the organizational id\n",
     "* Choose organization Helsingin yliopisto\n",
