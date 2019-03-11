@@ -107,6 +107,21 @@ in Kumpula in room B221 on Thurdays 10.00 - 12.00 (14.3. - 5.5.).
 |      |                 | Exam                 |
 +------+-----------------+----------------------+
 
+Discussion forum
+----------------
+
+A Telegram chat room for the course has been opened. We recommend that you use
+the channel either through a web browser or the Telegram desktop application.
+
+You can reach the channel through this link:
+`https://t.me/dap19s <https://t.me/dap19s>`__.
+The browser version can be reached here `Telegram <https://web.telegram.org>`__.
+
+The discussion channel is based on peer support. The teachers of the course
+are participating the discussion on voluntary basis if time permits.
+
+
+
 Software libraries used
 -----------------------
 
