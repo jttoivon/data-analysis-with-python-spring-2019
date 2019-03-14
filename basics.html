@@ -881,7 +881,7 @@ Note that in Python the operator <code class="docutils literal notranslate"><spa
 </div>
 <div class="section" id="Statements">
 <h3>Statements<a class="headerlink" href="#Statements" title="Permalink to this headline">¶</a></h3>
-<p>Statements are command that have some effect. For example, a function call (that is not part of another expression) is a statement. Also, the variable assignment is a statement:</p>
+<p>Statements are commands that have some effect. For example, a function call (that is not part of another expression) is a statement. Also, the variable assignment is a statement:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
@@ -1761,8 +1761,9 @@ Note that using a range consumes less memory than the corresponding list. This i
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-9-(merge)">Exercise 9 (merge)</a></div>
-<p>Suppose we have two lists <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code> that contain integers which are sorted in ascending order. Create a function <code class="docutils literal notranslate"><span class="pre">merge</span></code> that gets these lists as parameters and returns a new sorted list <code class="docutils literal notranslate"><span class="pre">L</span></code> that has all the elements of <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code>. So, <code class="docutils literal notranslate"><span class="pre">len(L)</span></code> should equal to <code class="docutils literal notranslate"><span class="pre">len(L1)+len(L2)</span></code>. Do this using the fact that both lists are already sorted. You can’t to use the <code class="docutils literal notranslate"><span class="pre">sorted</span></code> function or the <code class="docutils literal notranslate"><span class="pre">sort</span></code> method in implementing the <code class="docutils literal notranslate"><span class="pre">merge</span></code> method. You can however use these functions
-in the main function for creating inputs to the <code class="docutils literal notranslate"><span class="pre">merge</span></code> function. Test with a couple of examples in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function that your solution works correctly.</p>
+<p>Suppose we have two lists <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code> that contain integers which are sorted in ascending order. Create a function <code class="docutils literal notranslate"><span class="pre">merge</span></code> that gets these lists as parameters and returns a new sorted list <code class="docutils literal notranslate"><span class="pre">L</span></code> that has all the elements of <code class="docutils literal notranslate"><span class="pre">L1</span></code> and <code class="docutils literal notranslate"><span class="pre">L2</span></code>. So, <code class="docutils literal notranslate"><span class="pre">len(L)</span></code> should equal to <code class="docutils literal notranslate"><span class="pre">len(L1)+len(L2)</span></code>. Do this using the fact that both lists are already sorted. You can’t use the <code class="docutils literal notranslate"><span class="pre">sorted</span></code> function or the <code class="docutils literal notranslate"><span class="pre">sort</span></code> method in implementing the <code class="docutils literal notranslate"><span class="pre">merge</span></code> method. You can however use these functions in
+the main function for creating inputs to the <code class="docutils literal notranslate"><span class="pre">merge</span></code> function. Test with a couple of examples in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function that your solution works correctly.</p>
+<p>Note: In Python argument lists are passed by reference to the function, they are not copied! Make sure you don’t modify the original lists of the caller.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-10-(detect-ranges)">Exercise 10 (detect ranges)</a></div>
 <p>Create a function named <code class="docutils literal notranslate"><span class="pre">detect_ranges</span></code> that gets a list of integers as a parameter. The function should then sort this list, and transform the list into another list where pairs are used for all the detected intervals. So <code class="docutils literal notranslate"><span class="pre">3,4,5,6</span></code> is replaced by the pair <code class="docutils literal notranslate"><span class="pre">(3,7)</span></code>. Numbers that are not part of any interval result just single numbers. The resulting list consists of these numbers and pairs, separated by commas. An example of how this function works:</p>
@@ -2363,7 +2364,7 @@ Note above that one can only iterate through the generator once.</div>
 <hr/></div>
 <div class="section" id="Processing-sequences">
 <h3>Processing sequences<a class="headerlink" href="#Processing-sequences" title="Permalink to this headline">¶</a></h3>
-<p>In this section we will go through some useful tools, that are maybe familiar to you from some function programming language like <em>lisp</em> or <em>haskell</em>. These functions rely on functions being first-class objects in Python, that is, you can</p>
+<p>In this section we will go through some useful tools, that are maybe familiar to you from some functional programming language like <em>lisp</em> or <em>haskell</em>. These functions rely on functions being first-class objects in Python, that is, you can</p>
 <ul class="simple">
 <li>pass a function as a parameter to another function</li>
 <li>return a function as a return value from some function</li>
@@ -2467,7 +2468,7 @@ the function. Let’s replace the above <code class="docutils literal notranslat
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-16-(transform)">Exercise 16 (transform)</a></div>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">transform</span></code> that gets two strings as parameters and returns a list of integers. The function should split the strings into words, and convert these words to integer. This should give two lists of integers. Then the function should return a list whose elements are multiplication of two integers in the respective positions in the lists. For example <code class="docutils literal notranslate"><span class="pre">transform("1</span> <span class="pre">5</span> <span class="pre">3",</span> <span class="pre">"2</span> <span class="pre">6</span> <span class="pre">-1")</span></code> should return the list of integers <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">30,</span> <span class="pre">-3]</span></code>.</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">transform</span></code> that gets two strings as parameters and returns a list of integers. The function should split the strings into words, and convert these words to integers. This should give two lists of integers. Then the function should return a list whose elements are multiplication of two integers in the respective positions in the lists. For example <code class="docutils literal notranslate"><span class="pre">transform("1</span> <span class="pre">5</span> <span class="pre">3",</span> <span class="pre">"2</span> <span class="pre">6</span> <span class="pre">-1")</span></code> should return the list of integers <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">30,</span> <span class="pre">-3]</span></code>.</p>
 <p>You <strong>have</strong> to use <code class="docutils literal notranslate"><span class="pre">split</span></code>, <code class="docutils literal notranslate"><span class="pre">map</span></code>, and <code class="docutils literal notranslate"><span class="pre">zip</span></code> functions/methods. You may assume that the two input strings are in correct format.</p>
 <hr/></div>
 <div class="section" id="Filter-function">
@@ -2721,6 +2722,7 @@ If you want to build a string out of smaller strings, then first put the small s
 </pre></div>
 </div>
 </div>
+<p>If no parameters are given to the <code class="docutils literal notranslate"><span class="pre">split</span></code> method, then it splits at any sequence of white space.</p>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-18-(acronyms)">Exercise 18 (acronyms)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">acronyms</span></code> which takes a string as a parameter and returns a list of acronyms. A word is an acronym if it has length at least two, and all its characters are in uppercase. Before acronym detection, delete punctuation with the <code class="docutils literal notranslate"><span class="pre">strip</span></code> method.</p>
@@ -2766,7 +2768,7 @@ If you want to build a string out of smaller strings, then first put the small s
 <p>When we try to import a module <code class="docutils literal notranslate"><span class="pre">mod</span></code> with the import statement, the lookup proceeds in the following order:</p>
 <ul class="simple">
 <li>Check if it is a builtin module</li>
-<li>Check if the file <code class="docutils literal notranslate"><span class="pre">mod.py</span></code> is found in any of the directories in the list <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>. The first item in this list is the current directory</li>
+<li>Check if the file <code class="docutils literal notranslate"><span class="pre">mod.py</span></code> is found in any of the folders in the list <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>. The first item in this list is the current folder</li>
 </ul>
 <p>When Python is started, the <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> list is initialised with the contents of the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> environment variable</p>
 </div>
@@ -2808,7 +2810,7 @@ package <code class="docutils literal notranslate"><span class="pre">numpy.linal
 </div>
 <div class="section" id="Correspondence-between-folder-and-module-hierarchies">
 <h3>Correspondence between folder and module hierarchies<a class="headerlink" href="#Correspondence-between-folder-and-module-hierarchies" title="Permalink to this headline">¶</a></h3>
-<p>The packages are represented by folders in the filesystem. The folder should contain a file named <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> that makes up the package body. This handles the initialisation of the package. The directory may contain also further directories (subpackages) or Python files (normal modules).</p>
+<p>The packages are represented by folders in the filesystem. The folder should contain a file named <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> that makes up the package body. This handles the initialisation of the package. The folder may contain also further folders (subpackages) or Python files (normal modules).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">/</span>
     <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
     <span class="n">b</span><span class="o">.</span><span class="n">py</span>
