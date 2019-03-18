@@ -556,10 +556,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[6.93382338e-310, 6.93382338e-310, 0.00000000e+000,
+<span></span>array([[6.91560266e-310, 6.91560266e-310, 0.00000000e+000,
         0.00000000e+000],
-       [0.00000000e+000, 0.00000000e+000, 8.70018274e-313,
-        1.63041663e-322]])
+       [0.00000000e+000, 0.00000000e+000, 0.00000000e+000,
+        0.00000000e+000]])
 </pre></div>
 </div>
 </div>
@@ -643,9 +643,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[0.0087339 , 0.38776757, 0.42069173, 0.53054569],
-       [0.46567413, 0.18054526, 0.01220454, 0.7219326 ],
-       [0.05975253, 0.31453448, 0.52013382, 0.65436666]])
+<span></span>array([[0.27486835, 0.4966075 , 0.49947752, 0.92855812],
+       [0.67767549, 0.43807155, 0.23995212, 0.41548612],
+       [0.2021666 , 0.85345126, 0.33312485, 0.19502828]])
 </pre></div>
 </div>
 </div>
@@ -663,9 +663,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0.00237675, -0.41151022, -0.1585742 ,  0.90818123],
-       [ 0.11057494, -1.47121371,  0.35522898,  0.36073357],
-       [-0.58505958,  0.34007411,  0.30911066, -1.47528791]])
+<span></span>array([[-1.47153242,  0.51388138,  0.42129844, -0.13959174],
+       [ 0.37727114,  1.37413503, -0.19257035, -0.58588784],
+       [-0.7633735 , -1.85488724, -1.43317165,  1.76592472]])
 </pre></div>
 </div>
 </div>
@@ -683,9 +683,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 8, -2, -1,  9],
-       [ 4,  8,  1, -2],
-       [ 8,  0,  7,  5]])
+<span></span>array([[ 1,  7, -1,  6],
+       [ 5,  3,  8,  0],
+       [-2,  5,  6,  6]])
 </pre></div>
 </div>
 </div>
@@ -1648,7 +1648,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.68 µs ± 15.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+4.88 µs ± 4.59 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1665,7 +1665,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-97.2 µs ± 259 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+100 µs ± 147 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
@@ -1866,7 +1866,14 @@ operands could not be broadcast together with shapes (3,) (2,)
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-16-(multiplication-table-revisited)">Exercise 16 (multiplication table revisited)</a></div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">multiplication_table</span></code> that gets a positive integer <code class="docutils literal notranslate"><span class="pre">n</span></code> as parameter. The function should return an array with shape (n,n). The element at index <code class="docutils literal notranslate"><span class="pre">(i,j)</span></code> should be <code class="docutils literal notranslate"><span class="pre">i*j</span></code>. Don’t use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops! In your solution, rely on broadcasting, the <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> function, reshaping and vectorized operators. Example of usage: `<code class="docutils literal notranslate"><span class="pre">print(multiplication_table(4))</span> <span class="pre">[[0</span> <span class="pre">0</span> <span class="pre">0</span> <span class="pre">0]</span>  <span class="pre">[0</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3]</span>  <span class="pre">[0</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">6]</span>  <span class="pre">[0</span> <span class="pre">3</span> <span class="pre">6</span> <span class="pre">9]]</span></code></p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">multiplication_table</span></code> that gets a positive integer <code class="docutils literal notranslate"><span class="pre">n</span></code> as parameter. The function should return an array with shape (n,n). The element at index <code class="docutils literal notranslate"><span class="pre">(i,j)</span></code> should be <code class="docutils literal notranslate"><span class="pre">i*j</span></code>. Don’t use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops! In your solution, rely on broadcasting, the <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> function, reshaping and vectorized operators. Example of usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">multiplication_table</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="p">[[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">0</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">6</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">0</span> <span class="mi">3</span> <span class="mi">6</span> <span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+</div>
 <hr/></div>
 <div class="section" id="Summary-(week-2)">
 <h2>Summary (week 2)<a class="headerlink" href="#Summary-(week-2)" title="Permalink to this headline">¶</a></h2>
