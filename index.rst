@@ -149,6 +149,7 @@ Software libraries used
 
    instructions
    tools
+   faq
    
 .. toctree::
    :maxdepth: 2
