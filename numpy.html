@@ -557,10 +557,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[6.90119304e-310, 1.83109424e-316, 0.00000000e+000,
+<span></span>array([[6.90059230e-310, 6.90059230e-310, 0.00000000e+000,
         0.00000000e+000],
-       [0.00000000e+000, 0.00000000e+000, 3.16202013e-322,
-        3.16202013e-322]])
+       [0.00000000e+000, 0.00000000e+000, 8.70018274e-313,
+        2.42092166e-322]])
 </pre></div>
 </div>
 </div>
@@ -644,9 +644,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[0.42926039, 0.03956103, 0.37560919, 0.04525064],
-       [0.83274027, 0.83238727, 0.09787226, 0.05515016],
-       [0.54700234, 0.55117985, 0.23972035, 0.09300403]])
+<span></span>array([[0.67212562, 0.24882359, 0.61402898, 0.82661073],
+       [0.30805061, 0.0606119 , 0.15757539, 0.30869228],
+       [0.02043311, 0.77497382, 0.20061591, 0.39838765]])
 </pre></div>
 </div>
 </div>
@@ -664,9 +664,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 1.30058919,  1.11603933,  0.82355665,  0.59822151],
-       [-0.2921418 , -0.68111609, -1.2847335 ,  2.74079917],
-       [ 0.05848795,  1.33307479, -0.89592928, -0.77290292]])
+<span></span>array([[-0.01915817, -0.22185414,  0.18835738,  0.12685265],
+       [-1.87507493, -0.11731383, -0.96526345,  1.12195734],
+       [ 1.4230119 , -1.78045801,  0.16323065, -0.39125192]])
 </pre></div>
 </div>
 </div>
@@ -684,9 +684,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[0, 0, 6, 4],
-       [8, 1, 5, 2],
-       [2, 9, 5, 1]])
+<span></span>array([[ 1,  9, -1,  9],
+       [ 0,  3, -1,  7],
+       [ 6,  0,  1,  3]])
 </pre></div>
 </div>
 </div>
@@ -1367,7 +1367,25 @@ part 3:
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></div>
-<p>Create function <code class="docutils literal notranslate"><span class="pre">get_row_vectors</span></code> that returns a list of rows from the input array of shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, but this time the rows must have shape <code class="docutils literal notranslate"><span class="pre">(1,n)</span></code>. Similarly, create function <code class="docutils literal notranslate"><span class="pre">get_columns_vectors</span></code> that returns the column of the input matrix having shape <code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>.</p>
+<p>Create function <code class="docutils literal notranslate"><span class="pre">get_row_vectors</span></code> that returns a list of rows from the input array of shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, but this time the rows must have shape <code class="docutils literal notranslate"><span class="pre">(1,n)</span></code>. Similarly, create function <code class="docutils literal notranslate"><span class="pre">get_columns_vectors</span></code> that returns a list of columns (each having shape <code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>) of the input matrix .</p>
+<p>Example: for a 2x3 input matrix</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">3</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span> <span class="mi">7</span> <span class="mi">9</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>the result should be</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Row</span> <span class="n">vectors</span><span class="p">:</span>
+<span class="p">[</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]),</span> <span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])]</span>
+<span class="n">Column</span> <span class="n">vectors</span><span class="p">:</span>
+<span class="p">[</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">3</span><span class="p">]]),</span>
+ <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">7</span><span class="p">]]),</span>
+ <span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">9</span><span class="p">]])]</span>
+</pre></div>
+</div>
+<p>The above output is basically just the returned lists printed with <code class="docutils literal notranslate"><span class="pre">print</span></code>. Only some whitespace is adjusted to make it look nicer. Output is not tested.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-13-(diamond)">Exercise 13 (diamond)</a></div>
 <p>Create a function <code class="docutils literal notranslate"><span class="pre">diamond</span></code> that returns a two dimensional integer array where the <code class="docutils literal notranslate"><span class="pre">1</span></code>s form a diamond shape. Rest of the numbers are <code class="docutils literal notranslate"><span class="pre">0</span></code>. The function should get a parameter that tells the length of a side of the diamond. Do this using the <code class="docutils literal notranslate"><span class="pre">eye</span></code> and <code class="docutils literal notranslate"><span class="pre">concatenate</span></code> functions of NumPy and array slicing.</p>
@@ -1649,7 +1667,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.71 µs ± 40.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+4.63 µs ± 24 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1666,7 +1684,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-101 µs ± 592 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+102 µs ± 376 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
