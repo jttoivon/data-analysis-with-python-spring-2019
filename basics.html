@@ -875,7 +875,18 @@ water concatenated with melon produces watermelon
 <div class="section" id="Expressions">
 <h3>Expressions<a class="headerlink" href="#Expressions" title="Permalink to this headline">¶</a></h3>
 <p>An <em>expression</em> is a piece of Python code that results in a value. It consists of values combined together with <em>operators</em>. Values can be literals, such as <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">1.2</span></code>, <code class="docutils literal notranslate"><span class="pre">"text"</span></code>, or variables. Operators include arithmetics operators, comparison operators, function call, indexing, attribute references, among others. Below there are a few examples of expressions:</p>
-<p><code class="docutils literal notranslate"><span class="pre">1+2</span> <span class="pre">7/(2+0.1)</span> <span class="pre">a</span> <span class="pre">cos(0)</span> <span class="pre">mylist[1]</span> <span class="pre">c</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">c</span> <span class="pre">!=1</span> <span class="pre">(1,2,3)</span> <span class="pre">a&lt;5</span> <span class="pre">obj.attr</span> <span class="pre">(-1)**2</span> <span class="pre">==</span> <span class="pre">1</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span>
+<span class="mi">7</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">a</span>
+<span class="n">cos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mylist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">!=</span><span class="mi">1</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">&lt;</span><span class="mi">5</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">attr</span>
+<span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
 <div class="admonition warning">
 Note that in Python the operator <code class="docutils literal notranslate"><span class="pre">//</span></code> performs integer division and operator <code class="docutils literal notranslate"><span class="pre">/</span></code> performs float division. The <code class="docutils literal notranslate"><span class="pre">**</span></code> operator denotes exponentiation. These operators might therefore behave differently than in many other common languages.</div>
 <p>As another example the following expression computes the kinetic energy of a non-rotating object: <code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">*</span> <span class="pre">mass</span> <span class="pre">*</span> <span class="pre">velocity**2</span></code></p>
