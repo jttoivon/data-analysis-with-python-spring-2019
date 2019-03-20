@@ -557,10 +557,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[6.92432114e-310, 6.92432114e-310, 0.00000000e+000,
+<span></span>array([[6.93806664e-310, 1.91000403e-316, 0.00000000e+000,
         0.00000000e+000],
        [0.00000000e+000, 0.00000000e+000, 0.00000000e+000,
-        2.42092166e-322]])
+        3.21142670e-322]])
 </pre></div>
 </div>
 </div>
@@ -625,11 +625,11 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 </div>
-<p>With <code class="docutils literal notranslate"><span class="pre">linspace</span></code> one does not have compute the length of the step, but instead one specifies the wanted number of elements. By default, the endpoint is included in the result, unlike with <code class="docutils literal notranslate"><span class="pre">arange</span></code>.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">linspace</span></code> one does not have to compute the length of the step, but instead one specifies the wanted number of elements. By default, the endpoint is included in the result, unlike with <code class="docutils literal notranslate"><span class="pre">arange</span></code>.</p>
 <div class="section" id="Arrays-with-random-elements">
 <h3>Arrays with random elements<a class="headerlink" href="#Arrays-with-random-elements" title="Permalink to this headline">¶</a></h3>
 <p>To test our programs we might use real data as input. However, real data is not always available, and it may take time to gather. We could instead generate random numbers to use as substitute. They can be generated really easily with NumPy, and can be sampled from several different distributions, of which we mention below only a few. Random data can simulate real data better than, for example, ranges or constant arrays. Sometimes we also need random numbers in our programs to choose a subset of
-real data (sampling). NumPy can easily produces arrays of wanted shape filled with random numbers. Below are few examples.</p>
+real data (sampling). NumPy can easily produce arrays of wanted shape filled with random numbers. Below are few examples.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -644,9 +644,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[0.87916117, 0.29579214, 0.01938226, 0.84382004],
-       [0.26702325, 0.83638365, 0.74130768, 0.42476467],
-       [0.74048437, 0.08511463, 0.14142743, 0.92419348]])
+<span></span>array([[0.5112369 , 0.54097345, 0.1437927 , 0.54225083],
+       [0.49379259, 0.54246036, 0.00157108, 0.54136172],
+       [0.73323946, 0.74106891, 0.56297945, 0.51488003]])
 </pre></div>
 </div>
 </div>
@@ -664,9 +664,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 1.59493957, -2.00097474, -1.7238226 ,  1.26239881],
-       [ 0.54175331,  1.02927898, -1.0251165 , -0.84678948],
-       [-0.40925481,  0.27993595,  1.44147691, -0.37721338]])
+<span></span>array([[ 0.65868714, -2.67805559, -0.48492188, -0.62592646],
+       [ 1.32277519, -0.91796871, -0.22295975, -0.52799871],
+       [ 0.43539717,  0.3062818 , -0.599967  ,  0.01155596]])
 </pre></div>
 </div>
 </div>
@@ -684,9 +684,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0, -1,  1,  6],
-       [-2, -1,  7,  5],
-       [ 0,  5, -1, -2]])
+<span></span>array([[ 7,  0,  1,  8],
+       [-1,  3, -1, -1],
+       [ 7,  0,  9,  1]])
 </pre></div>
 </div>
 </div>
@@ -712,8 +712,8 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
  -0.18158257  1.41020463 -0.37447169  0.27519832]
 </pre></div></div>
 </div>
-<p>If you run the above cell multiple times, it will always give the same number, unlike the earlier examples. Try rerunning them now!</p>
-<p>The call to <code class="docutils literal notranslate"><span class="pre">np.random.seed</span></code> initializes the <em>global</em> random number generator. The calls <code class="docutils literal notranslate"><span class="pre">np.random.random</span></code>, <code class="docutils literal notranslate"><span class="pre">np.random.normal</span></code>, etc all use this global random number generator. It is however possible to generate new random number generators, and use those to sample random numbers from a distribution. Example on usage:</p>
+<p>If you run the above cell multiple times, it will always give the same numbers, unlike the earlier examples. Try rerunning them now!</p>
+<p>The call to <code class="docutils literal notranslate"><span class="pre">np.random.seed</span></code> initializes the <em>global</em> random number generator. The calls <code class="docutils literal notranslate"><span class="pre">np.random.random</span></code>, <code class="docutils literal notranslate"><span class="pre">np.random.normal</span></code>, etc all use this global random number generator. It is however possible to create new random number generators, and use those to sample random numbers from a distribution. Example on usage:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
@@ -1651,7 +1651,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </tr>
 </tbody>
 </table>
-<p>Let’s measure how much slower Python’s <code class="docutils literal notranslate"><span class="pre">sum</span></code> function is compared to NumPy’s equivalent when aggrating over an array:</p>
+<p>Let’s measure how much slower Python’s <code class="docutils literal notranslate"><span class="pre">sum</span></code> function is compared to NumPy’s equivalent when aggregating over an array:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
@@ -1667,7 +1667,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.93 µs ± 41.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+4.63 µs ± 20.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1684,7 +1684,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-103 µs ± 289 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+102 µs ± 264 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
