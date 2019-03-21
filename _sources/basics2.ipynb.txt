@@ -774,7 +774,12 @@
     "Each field is separated by some amount of whitespace (tab or space in this case).\n",
     "The text file is formatted to make it print nicely, but that makes it harder to process by a computer. Note that some color names can also contain a space character.\n",
     " \n",
-    "Write function `red_green_blue` that reads the file `rgb.txt` from the folder `src`. Clean-up the file so that in the output there are four fields separated by a single tab character (`\\t`). Remove the irrelevant first line of the file. The function should return a list of strings.\n",
+    "Write function `red_green_blue` that reads the file `rgb.txt` from the folder `src`.  Remove the irrelevant first line of the file. The function should return a list of strings. Clean-up the file so that the strings in the returned list have four fields separated by a single tab character (`\\t`). Use regular expressions to do this.\n",
+    "\n",
+    "The first string in the returned list should be:\n",
+    "```\n",
+    "'255\\t250\\t250\\tsnow'\n",
+    "```\n",
     "\n",
     "<hr/>"
    ]
