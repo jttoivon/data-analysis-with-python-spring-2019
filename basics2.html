@@ -825,8 +825,10 @@ process by a computer. Note that some color names can also contain a space chara
 </div>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-5-(summary)">Exercise 5 (summary)</a></div>
+<p>This exercise can give two points at maximum!</p>
 <p>Part 1.</p>
-<p>Create a function called <code class="docutils literal notranslate"><span class="pre">summary</span></code> that gets a filename as a parameter. The input file should contain a floating point number on each line of the file. Make your function read these numbers and then return a triple containing the sum, average, and standard deviation of these numbers for the file. As a remainder, the formula for corrected sample standard deviation is <span class="math notranslate nohighlight">\(\sqrt{\frac{\sum_{i=1}^n (x_i - \overline x)^2}{n-1}}\)</span>, where <span class="math notranslate nohighlight">\(\overline x\)</span> is the average.</p>
+<p>Create a function called <code class="docutils literal notranslate"><span class="pre">summary</span></code> that gets a filename as a parameter. The input file should contain a floating point number on each line of the file. Make your function read these numbers and then return a triple containing the sum, average, and standard deviation of these numbers for the file. As a reminder, the formula for corrected sample standard deviation is <span class="math notranslate nohighlight">\(\sqrt{\frac{\sum_{i=1}^n (x_i - \overline x)^2}{n-1}}\)</span>, where <span class="math notranslate nohighlight">\(\overline x\)</span> is the average. Use the <code class="docutils literal notranslate"><span class="pre">math.sqrt</span></code>
+function from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module in your solution.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">main</span></code> function should call the function summary for each filename in the list <code class="docutils literal notranslate"><span class="pre">sys.argv[1:]</span></code> of command line parameters.</p>
 <p>Example of usage from the command line: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src/summary.py</span> <span class="pre">src/example.txt</span> <span class="pre">src/example2.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">summary.py</span> <span class="pre">example.txt</span> <span class="pre">example2.txt</span></code> if you are in the folder src.</p>
 <p>The output should look like this:</p>
@@ -837,7 +839,7 @@ process by a computer. Note that some color names can also contain a space chara
 <p>Part 2.</p>
 <p>If some line doesn’t represent a number, you can just ignore that line. You can achieve this with the <em>try-except</em> block. An example of recovering from an exceptional situation:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>                 <span class="c1"># The float constructor raises ValueError exception if conversion is no possible</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>           <span class="c1"># The float constructor raises ValueError exception if conversion is no possible</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
     <span class="c1"># Statements in here are executed when the above conversion fails</span>
 </pre></div>
@@ -845,6 +847,7 @@ process by a computer. Note that some color names can also contain a space chara
 <p>We will cover more about exceptions later in the course.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-6-(file-count)">Exercise 6 (file count)</a></div>
+<p>This exercise can give two points at maximum!</p>
 <p>Part 1.</p>
 <p>Create a function <code class="docutils literal notranslate"><span class="pre">file_count</span></code> that gets a filename as parameter and returns a triple of numbers. The function should read the file, count the number of lines, words, and characters in the file, and return a triple with these count in this order. You get division into words by splitting at whitespace. Yyou don’t have to remove punctuation.</p>
 <p>Part 2.</p>
@@ -857,6 +860,7 @@ process by a computer. Note that some color names can also contain a space chara
 <p>The fields are separated by tabs (<code class="docutils literal notranslate"><span class="pre">\t</span></code>). The fields are in order: linecount, wordcount, charactercount, filename.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-7-(file-extensions)">Exercise 7 (file extensions)</a></div>
+<p>This exercise can give two points at maximum!</p>
 <p>Part 1.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">file_extensions</span></code> that gets as a parameter a filename. It should read through the lines from this file. Each line contains a filename. Find the extension for each filename. The function should return a pair, where the first element is a list containing all filenames with no extension (no period (<code class="docutils literal notranslate"><span class="pre">.</span></code>) appears in the filename). The second element of the pair is a dictionary with extensions as keys and corresponding values are lists with filenames having that extension.</p>
 <p>Sounds a bit complicated, but hopefully the next example will clarify this. If the file contains the following lines</p>
