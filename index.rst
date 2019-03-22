@@ -69,8 +69,12 @@ Schedule
 Every week there are 15 - 20 programming exercises that you must
 solve and then submit to the TMC system for checking.
 In order to continue with next week's exercises you
-need to get at least 80% of the points from exercises of the previous week.
+need to get at least 80% of the **points** from exercises of the previous week.
 Note that from some exercises it is possible to get more than one point.
+These exercises are divided into *parts*, where the parts are shown
+as Part 1, Part 2, etc. Each part gives one point.
+It is possible to submit, and get points for,
+an exercise you have completed at least partly.
 The deadlines, shown below, are hard and no exceptions will be made,
 so finish and submit your solutions early.
 
