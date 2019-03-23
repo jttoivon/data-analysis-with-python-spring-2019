@@ -557,10 +557,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[6.92526934e-310, 6.92526934e-310, 0.00000000e+000,
-        0.00000000e+000],
-       [0.00000000e+000, 0.00000000e+000, 6.92526934e-310,
-        1.81634737e-316]])
+<span></span>array([[6.90804106e-310, 1.69919057e-316, 1.01855798e-312,
+        9.54898106e-313],
+       [1.08221785e-312, 1.03977794e-312, 1.23075756e-312,
+        1.08221785e-312]])
 </pre></div>
 </div>
 </div>
@@ -644,9 +644,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[0.72174379, 0.52285431, 0.02639346, 0.80669253],
-       [0.45511273, 0.44307987, 0.07093593, 0.48303987],
-       [0.11648759, 0.9261395 , 0.94877297, 0.54377216]])
+<span></span>array([[0.39640047, 0.8088453 , 0.60576689, 0.27300496],
+       [0.82616564, 0.01159355, 0.77251318, 0.7160389 ],
+       [0.96730709, 0.61773231, 0.213893  , 0.15634672]])
 </pre></div>
 </div>
 </div>
@@ -664,9 +664,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 1.49348677, -0.5964177 , -0.5431547 ,  1.19853982],
-       [ 1.99250495, -0.42991635, -0.78863313, -0.29705683],
-       [-1.23324261,  1.36614807,  0.54487053,  1.69202797]])
+<span></span>array([[-0.32839662,  0.09486434,  1.0956301 ,  1.49958663],
+       [-0.71729633,  0.90111434, -0.86958674, -0.22350721],
+       [-0.55973065,  0.08975013, -0.56281795, -1.41707344]])
 </pre></div>
 </div>
 </div>
@@ -684,9 +684,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0,  8,  3,  8],
-       [-1,  3, -2, -2],
-       [ 5,  9,  5,  8]])
+<span></span>array([[ 3, -2,  4,  2],
+       [ 9,  9,  4,  4],
+       [-2,  4,  9,  9]])
 </pre></div>
 </div>
 </div>
@@ -1367,7 +1367,7 @@ part 3:
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></div>
-<p>Create function <code class="docutils literal notranslate"><span class="pre">get_row_vectors</span></code> that returns a list of rows from the input array of shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, but this time the rows must have shape <code class="docutils literal notranslate"><span class="pre">(1,n)</span></code>. Similarly, create function <code class="docutils literal notranslate"><span class="pre">get_columns_vectors</span></code> that returns a list of columns (each having shape <code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>) of the input matrix .</p>
+<p>Create function <code class="docutils literal notranslate"><span class="pre">get_row_vectors</span></code> that returns a list of rows from the input array of shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, but this time the rows must have shape <code class="docutils literal notranslate"><span class="pre">(1,m)</span></code>. Similarly, create function <code class="docutils literal notranslate"><span class="pre">get_columns_vectors</span></code> that returns a list of columns (each having shape <code class="docutils literal notranslate"><span class="pre">(n,1)</span></code>) of the input matrix .</p>
 <p>Example: for a 2x3 input matrix</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">3</span><span class="p">]</span>
  <span class="p">[</span><span class="mi">3</span> <span class="mi">7</span> <span class="mi">9</span><span class="p">]]</span>
@@ -1667,7 +1667,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.74 µs ± 30.2 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+4.75 µs ± 21.2 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1684,7 +1684,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-101 µs ± 97.3 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+102 µs ± 583 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
