@@ -70,7 +70,32 @@ Now it should work also on Windows.
 Tests complain about missing attribute assert_called, assert_called_once, ...
 -----------------------------------------------------------------------------
 
-These require at least Python version 3.6. Check your installation.
+These require at least Python version 3.6. Check your installation. See the next question.
+
+ModuleNotFoundError: No module named 'somelibrary'
+--------------------------------------------------
+
+The libraries needed in the course (numpy, pandas, matplotlib, scikit-learn, scipy, seaborn, and statsmodels)
+are contained in the Anaconda distribution. Either you haven't installed Anaconda or
+it hasn't been activated.
+
+On Windows you it may help, if you use 'Anaconda prompt' from the Windows menu.
+
+On Linux/macOS:
+
+You can check whether Anaconda is active with the command ``which python3``.
+If the python3 binary is under anaconda3 folder, then Anaconda is active.
+If you are sure you have already installed Anaconda, then
+you can activate it with
+
+* ``conda activate``, or
+
+* ``~/acaconda3/bin/conda activate`` (or where ever Anaconda is installed)
+
+* On older Anaconda distributions use: ``source ~/anaconda3/bin/activate``
+
+Then try again ``which python3``.
+
 
 I cannot understand the error message from a failed test case
 -------------------------------------------------------------
