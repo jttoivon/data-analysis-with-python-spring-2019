@@ -50,6 +50,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-version-of-python-should-i-use-what-is-the-name-of-the-executable">What version of Python should I use? What is the name of the executable?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-load-a-file-that-resides-in-the-src-folder">How to load a file that resides in the src folder?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests-complain-about-missing-attribute-assert-called-assert-called-once">Tests complain about missing attribute assert_called, assert_called_once, …</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modulenotfounderror-no-module-named-somelibrary">ModuleNotFoundError: No module named ‘somelibrary’</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#i-cannot-understand-the-error-message-from-a-failed-test-case">I cannot understand the error message from a failed test case</a></li>
 </ul>
 </li>
@@ -189,7 +190,25 @@ Now it should work also on Windows.</p>
 </div>
 <div class="section" id="tests-complain-about-missing-attribute-assert-called-assert-called-once">
 <h2>Tests complain about missing attribute assert_called, assert_called_once, …<a class="headerlink" href="#tests-complain-about-missing-attribute-assert-called-assert-called-once" title="Permalink to this headline">¶</a></h2>
-<p>These require at least Python version 3.6. Check your installation.</p>
+<p>These require at least Python version 3.6. Check your installation. See the next question.</p>
+</div>
+<div class="section" id="modulenotfounderror-no-module-named-somelibrary">
+<h2>ModuleNotFoundError: No module named ‘somelibrary’<a class="headerlink" href="#modulenotfounderror-no-module-named-somelibrary" title="Permalink to this headline">¶</a></h2>
+<p>The libraries needed in the course (numpy, pandas, matplotlib, scikit-learn, scipy, seaborn, and statsmodels)
+are contained in the Anaconda distribution. Either you haven’t installed Anaconda or
+it hasn’t been activated.</p>
+<p>On Windows you it may help, if you use ‘Anaconda prompt’ from the Windows menu.</p>
+<p>On Linux/macOS:</p>
+<p>You can check whether Anaconda is active with the command <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python3</span></code>.
+If the python3 binary is under anaconda3 folder, then Anaconda is active.
+If you are sure you have already installed Anaconda, then
+you can activate it with</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code>, or</li>
+<li><code class="docutils literal notranslate"><span class="pre">~/acaconda3/bin/conda</span> <span class="pre">activate</span></code> (or where ever Anaconda is installed)</li>
+<li>On older Anaconda distributions use: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/anaconda3/bin/activate</span></code></li>
+</ul>
+<p>Then try again <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python3</span></code>.</p>
 </div>
 <div class="section" id="i-cannot-understand-the-error-message-from-a-failed-test-case">
 <h2>I cannot understand the error message from a failed test case<a class="headerlink" href="#i-cannot-understand-the-error-message-from-a-failed-test-case" title="Permalink to this headline">¶</a></h2>

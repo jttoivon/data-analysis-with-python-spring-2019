@@ -75,6 +75,7 @@ These exercises are divided into *parts*, where the parts are shown
 as Part 1, Part 2, etc. Each part gives one point.
 It is possible to submit, and get points for,
 an exercise you have completed at least partly.
+You can check your points from the `TMC server <https://tmc.mooc.fi/org/hy/courses/438>`__.
 The deadlines, shown below, are hard and no exceptions will be made,
 so finish and submit your solutions early.
 
