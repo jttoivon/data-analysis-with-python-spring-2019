@@ -160,7 +160,9 @@ If it crashes, then <code class="docutils literal notranslate"><span class="pre"
 <p>If the program does not crash, you are using Windows, and you
 have installed Anaconda, then possibly TMC cannot find Anaconda installation.
 Make sure you use TMC version at least 0.9.2. You can check the
-version of TMC with <code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">--version</span></code>.</p>
+version of TMC with <code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">--version</span></code>. If it still does not work, then try to
+activate Anaconda. To achieve this check the question:
+ModuleNotFoundError: No module named ‘somelibrary’</p>
 </div>
 <div class="section" id="what-version-of-python-should-i-use-what-is-the-name-of-the-executable">
 <h2>What version of Python should I use? What is the name of the executable?<a class="headerlink" href="#what-version-of-python-should-i-use-what-is-the-name-of-the-executable" title="Permalink to this headline">¶</a></h2>
@@ -197,7 +199,13 @@ Now it should work also on Windows.</p>
 <p>The libraries needed in the course (numpy, pandas, matplotlib, scikit-learn, scipy, seaborn, and statsmodels)
 are contained in the Anaconda distribution. Either you haven’t installed Anaconda or
 it hasn’t been activated.</p>
-<p>On Windows you it may help, if you use ‘Anaconda prompt’ from the Windows menu.</p>
+<p>On Windows you it may help, if you use ‘Anaconda prompt’ from the Windows menu.
+That should activate Anaconda automatically.</p>
+<p>If you don’t want to use ‘Anaconda prompt’, then in command prompt
+try <code class="docutils literal notranslate"><span class="pre">where</span> <span class="pre">python</span></code> to see if it finds Python under
+Anaconda’s folder. If not, try to activate Anaconda with
+<code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;username&gt;\AppData\Local\Continuum\Anaconda3\Scripts\activate</span></code>
+Or something similar, depending where you installed it.</p>
 <p>On Linux/macOS:</p>
 <p>You can check whether Anaconda is active with the command <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python3</span></code>.
 If the python3 binary is under anaconda3 folder, then Anaconda is active.
