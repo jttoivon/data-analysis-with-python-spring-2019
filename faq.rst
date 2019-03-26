@@ -34,7 +34,9 @@ If it crashes, then ``tmc`` will most likely give the above message.
 If the program does not crash, you are using Windows, and you
 have installed Anaconda, then possibly TMC cannot find Anaconda installation.
 Make sure you use TMC version at least 0.9.2. You can check the
-version of TMC with ``tmc --version``.
+version of TMC with ``tmc --version``. If it still does not work, then try to
+activate Anaconda. To achieve this check the question:
+ModuleNotFoundError: No module named ‘somelibrary’
 
 What version of Python should I use? What is the name of the executable?
 ------------------------------------------------------------------------
@@ -80,6 +82,13 @@ are contained in the Anaconda distribution. Either you haven't installed Anacond
 it hasn't been activated.
 
 On Windows you it may help, if you use 'Anaconda prompt' from the Windows menu.
+That should activate Anaconda automatically.
+
+If you don't want to use 'Anaconda prompt', then in command prompt
+try ``where python`` to see if it finds Python under
+Anaconda's folder. If not, try to activate Anaconda with
+``C:\Users\<username>\AppData\Local\Continuum\Anaconda3\Scripts\activate``
+Or something similar, depending where you installed it.
 
 On Linux/macOS:
 
