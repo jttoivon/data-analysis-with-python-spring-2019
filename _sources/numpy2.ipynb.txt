@@ -26,7 +26,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -519,9 +519,21 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 5,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[5 0]\n",
+      " [3 3]\n",
+      " [7 9]]\n",
+      "[[3 5 2 4]\n",
+      " [7 6 8 8]]\n"
+     ]
+    }
+   ],
    "source": [
     "np.random.seed(0)\n",
     "a=np.random.randint(0,10, (3,2))\n",
@@ -532,9 +544,31 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1,
    "metadata": {},
    "outputs": [],
+   "source": [
+    "def info(name, a):\n",
+    "    print(\"%s has dim %i, shape %s, size %i, and dtype %s:\" % (name, a.ndim, a.shape, a.size, a.dtype))\n",
+    "    print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "c has dim 2, shape (3, 4), size 12, and dtype int64:\n",
+      "[[ 15  25  10  20]\n",
+      " [ 30  33  30  36]\n",
+      " [ 84  89  86 100]]\n"
+     ]
+    }
+   ],
    "source": [
     "c=np.matmul(a,b)\n",
     "info(\"c\", c)"
@@ -644,6 +678,27 @@
     "Part 2. What are the correlations between all the variables. Write a function `correlations` that returns an array of shape (4,4) containing the correlations. Use the function `np.corrcoef`. Which pair of variables is the most highly correlated?\n",
     "\n",
     "Note the input formats of both functions `pearsonr` and `corrcoef`.\n",
+    "\n",
+    "**Note.** There is a problem with the definition of load function in that it tries to load the data from the internet if it isn't in the cache. This may cause failure when submitting, since the internet connection from the test server to the internet is restricted. To fix this, first store the data in the `src` folder. Then you can load the data in your program with the following modified version of the `load` function.\n",
+    "\n",
+    "```python\n",
+    "def get_path(filename):\n",
+    "    import sys\n",
+    "    import os\n",
+    "    return os.path.join(os.path.dirname(sys.argv[0]), \"..\", \"src\", filename)\n",
+    "\n",
+    "def load():\n",
+    "    import pandas as pd\n",
+    "    return pd.read_csv(get_path(\"iris.csv\")).drop('species', axis=1).values\n",
+    "```\n",
+    "\n",
+    "To store the data on disk give the following line in IPython shell or in Jupyter:\n",
+    "\n",
+    "```python\n",
+    "import seaborn as sns; sns.load_dataset(\"iris\").to_csv(\"iris.csv\", index=False)\n",
+    "```\n",
+    "\n",
+    "And make sure the created file `iris.csv` is located in the `src` folder.\n",
     "\n",
     "<hr/>"
    ]

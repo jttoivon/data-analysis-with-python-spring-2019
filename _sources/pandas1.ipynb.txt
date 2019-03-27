@@ -390,7 +390,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 13 (read series)</div>\n",
     "\n",
-    "Write function `read_series` that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. The index and values are strings (in this case `dtype` is `object`). An empty line signals the end of Series. Malformed input should cause an exception. An input line is malformed\n",
+    "Write function `read_series` that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. The index and values are strings (in this case `dtype` is `object`). An empty line signals the end of Series. Malformed input should cause an exception. An input line is malformed, if it is non-empty and, when split at whitespace, does not result in two parts.\n",
     "\n",
     "Test your function from the `main` function."
    ]

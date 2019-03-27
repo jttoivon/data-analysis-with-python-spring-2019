@@ -1154,7 +1154,7 @@ Jones
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-13-(read-series)">Exercise 13 (read series)</a></div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">read_series</span></code> that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. The index and values are strings (in this case <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is <code class="docutils literal notranslate"><span class="pre">object</span></code>). An empty line signals the end of Series. Malformed input should cause an exception. An input line is malformed</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">read_series</span></code> that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. The index and values are strings (in this case <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is <code class="docutils literal notranslate"><span class="pre">object</span></code>). An empty line signals the end of Series. Malformed input should cause an exception. An input line is malformed, if it is non-empty and, when split at whitespace, does not result in two parts.</p>
 <p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-14-(operations-on-series)">Exercise 14 (operations on series)</a></div>
