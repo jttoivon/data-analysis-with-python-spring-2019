@@ -201,20 +201,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['Doing', 'going', 'staying', 'sleeping']"
-      ]
-     },
-     "execution_count": 1,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "import re\n",
     "s = \"Doing things, going home, staying awake, sleeping later\"\n",
@@ -233,20 +222,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['23', '-24', '-1']"
-      ]
-     },
-     "execution_count": 2,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "re.findall(r'[+-]?\\d+', \"23 + -24 = -1\")"
    ]
@@ -264,20 +242,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['I’m not in a hurry, then I should stay. On the other hand, if I leave']"
-      ]
-     },
-     "execution_count": 3,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "s = (\"If I’m not in a hurry, then I should stay. \" +\n",
     "    \"On the other hand, if I leave, then I can sleep.\")\n",
@@ -532,20 +499,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "b'\\xc3\\xa4'"
-      ]
-     },
-     "execution_count": 4,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "\"ä\".encode(\"utf-8\")"
    ]
@@ -559,20 +515,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "[195, 164]"
-      ]
-     },
-     "execution_count": 5,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "list(\"ä\".encode(\"utf-8\"))              # Show as a list of integers"
    ]
@@ -601,21 +546,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Line 0: {\n",
-      "Line 1:  \"cells\": [\n",
-      "Line 2:   {\n",
-      "Line 3:    \"cell_type\": \"markdown\",\n",
-      "Line 4:    \"metadata\": {},\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "f = open(\"basics.ipynb\", \"r\") # Let's open this notebook file, \n",
     "                              # which is essentially a text file.\n",
@@ -636,21 +569,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Line 0: {\n",
-      "Line 1:  \"cells\": [\n",
-      "Line 2:   {\n",
-      "Line 3:    \"cell_type\": \"markdown\",\n",
-      "Line 4:    \"metadata\": {},\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "with open(\"basics.ipynb\", \"r\") as f:          # the file will be automatically closed,\n",
     "                                              # when the with block exits\n",
@@ -668,17 +589,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The longest line in this file has length 1046\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "max_len = 0\n",
     "with open(\"basics.ipynb\", \"r\") as f:\n",
@@ -705,17 +618,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "Got a negative integer.\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "import sys\n",
     "import random\n",
@@ -1140,18 +1045,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Executing B.f\n",
-      "Executing C.g\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "class B(object):\n",
     "    def f(self):\n",
@@ -1402,17 +1298,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Index does not exist\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "L=[1,2,3]\n",
     "try:\n",
@@ -1423,19 +1311,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Give a number (non-number quits): 2\n",
-      "Give a number (non-number quits): a\n",
-      "Average is 2.0\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "def compute_average(L):\n",
     "    n=len(L)\n",
@@ -1506,18 +1384,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Give a number: 2\n",
-      "You didn’t enter a number\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "import sys\n",
     "s=input(\"Give a number: \")\n",
@@ -1591,23 +1460,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Monday\n",
-      "Tuesday\n",
-      "Wednesday\n",
-      "Thursday\n",
-      "Friday\n",
-      "Saturday\n",
-      "Sunday\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "class WeekdayIterator(object):\n",
     "    \"\"\"Iterator over the weekdays.\"\"\"\n",
@@ -1638,20 +1493,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "efg is a sequence\n",
-      "[1, 2, 3] is a sequence\n",
-      "(4, 5) is a sequence\n",
-      "<__main__.WeekdayIterator object at 0x7f141414d630> is not a sequence\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "from collections import abc  # Get the abstract base classes\n",
     "containers = [\"efg\", [1,2,3], (4,5), WeekdayIterator()]\n",
@@ -1671,20 +1515,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "True"
-      ]
-     },
-     "execution_count": 16,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
+   "outputs": [],
    "source": [
     "isinstance(WeekdayIterator(), abc.Iterable)"
    ]
@@ -1698,21 +1531,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 30,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Index 0, day 26, month 2\n",
-      "Index 1, day 27, month 2\n",
-      "Index 2, day 28, month 2\n",
-      "Index 3, day 1, month 3\n",
-      "Index 4, day 2, month 3\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "def mydate(day=1, month=1):   # Generates dates starting from the given date\n",
     "    lengths=(31,28,31,30,31,30,31,31,30,31,30,31)   # How many days in a month\n",

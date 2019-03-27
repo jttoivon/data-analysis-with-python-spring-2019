@@ -749,7 +749,7 @@ Line 4:    "metadata": {},
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The longest line in this file has length 1046
+The longest line in this file has length 836
 </pre></div></div>
 </div>
 </div>
@@ -1135,9 +1135,23 @@ Index does not exist
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Give a number (non-number quits): 2
-Give a number (non-number quits): a
-Average is 2.0
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-12-62abfbaab021&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg">         </span>x<span class="ansi-blue-fg">=</span>float<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number (non-number quits): "</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span>         mylist<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">except</span> ValueError<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
+<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
+<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
+
+<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div></div>
 </div>
 <div class="section" id="Exception-hierarchy">
@@ -1174,8 +1188,23 @@ Average is 2.0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Give a number: 2
-You didn’t enter a number
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-13-5823ed9136ad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> sys
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>s<span class="ansi-blue-fg">=</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number: "</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> s<span class="ansi-blue-fg">=</span>s<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-red-fg"># strip the \n character from the end</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     x<span class="ansi-blue-fg">=</span>int<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
+<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
+<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
+
+<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div></div>
 </div>
 <p>In the previous example, if the user doesn’t enter a string that represents an integer, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised by the <code class="docutils literal notranslate"><span class="pre">int</span></code> function. Instead of catching the <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>, we catch the root of the exception hierarchy, namely <code class="docutils literal notranslate"><span class="pre">Exception</span></code>. This results in catching all possible exceptions. But this will cause one typing error in the program to go undetected. Change the exception specification from <code class="docutils literal notranslate"><span class="pre">Exception</span></code> to <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> to see what this error is.</p>
@@ -1195,7 +1224,7 @@ of functions aren’t specified to be of any certain type.</p>
 <p>In simple terms, a container is <em>iterable</em>, if we can go through all its elements using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. All the sequences are iterable, but there are other iterable objects as well. We can even create iterable types ourselves. In our class there needs to be a special method <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> that returns an <em>iterator</em> for the container. An iterator is an object that has method <code class="docutils literal notranslate"><span class="pre">__next__</span></code>, which returns the next element from the container. Let’s have a look at a simple example where the container
 and its iterator is the same class.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1236,7 +1265,7 @@ Sunday
 </div>
 <p>We can now check whether the WeekdayIterator is a Sequence type:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1258,7 +1287,7 @@ Sunday
 efg is a sequence
 [1, 2, 3] is a sequence
 (4, 5) is a sequence
-&lt;__main__.WeekdayIterator object at 0x7f141414d630&gt; is not a sequence
+&lt;__main__.WeekdayIterator object at 0x7f37b0125cc0&gt; is not a sequence
 </pre></div></div>
 </div>
 <p>Weekday is not a sequence because, for instance, you cannot index it with the brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, but it is an iterable:</p>
@@ -1282,7 +1311,7 @@ efg is a sequence
 </div>
 <p>So it is possible to create iterators ourselves, but the syntax was quite complicated. There is an easier option using <em>generators</em>. A generator is a function that contains a <code class="docutils literal notranslate"><span class="pre">yield</span></code> statement. Note the difference between generators and generator expressions we saw in the first week. Both however produce iterables. Here’s an example of a generator:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>

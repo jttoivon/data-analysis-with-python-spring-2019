@@ -26,7 +26,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -39,7 +39,7 @@
    "source": [
     "## Comparisons and masking\n",
     "\n",
-    "Just like NumPy allows element-wise arithmetic operations between arrays, for example addition of two arrays, it is possible to compare two arrays element-wise. For example"
+    "Just like NumPy allows element-wise arithmetic operations between arrays, for example addition of two arrays, it is also possible to compare two arrays element-wise. For example"
    ]
   },
   {
@@ -445,7 +445,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "a=np.array([2,1,4,3,5])\n",
+    "a=np.array([23,12,47,35,59])\n",
     "print(\"Array a:\", a)\n",
     "idx = np.argsort(a)\n",
     "print(\"Indices:\", idx)"
@@ -519,21 +519,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "[[5 0]\n",
-      " [3 3]\n",
-      " [7 9]]\n",
-      "[[3 5 2 4]\n",
-      " [7 6 8 8]]\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "np.random.seed(0)\n",
     "a=np.random.randint(0,10, (3,2))\n",
@@ -544,7 +532,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -555,20 +543,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "c has dim 2, shape (3, 4), size 12, and dtype int64:\n",
-      "[[ 15  25  10  20]\n",
-      " [ 30  33  30  36]\n",
-      " [ 84  89  86 100]]\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "c=np.matmul(a,b)\n",
     "info(\"c\", c)"
