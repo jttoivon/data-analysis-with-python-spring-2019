@@ -473,7 +473,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 3 (most frequent first)</div>\n",
     "\n",
-    "Write function `most_frequent_first` that gets a two dimensional array and an index `c` of a column as parameters. The function should then return the array whose rows are sorted so that those rows with the most frequent element in column `c` come first, then come the rows with the second most frequent element in column `c`, and so on.\n",
+    "Write function `most_frequent_first` that gets a two dimensional array and an index `c` of a column as parameters. The function should then return the array whose rows are sorted based on column `c`, in the following way. Rows are ordered so that those rows with the most frequent element in column `c` come first, then come the rows with the second most frequent element in column `c`, and so on. Therefore, the values outside column `c` don't affect the ordering in any way.\n",
     "\n",
     "Example of usage:\n",
     "```\n",
@@ -501,7 +501,7 @@
     " [5 0 3 3 7 9 3 5 2 4]]\n",
     "```\n",
     "\n",
-    "If we look at the last column, we see that the number 1 appears three times, then both numbers 2 and 0 appear twice, and lastly numbers 3, 9, and 4 appear only once. Note that, for example, among those rows that contain in column `c` a number that appear twice the order can be arbitrary.\n",
+    "If we look at the last column, we see that the number 1 appears three times, then both numbers 2 and 0 appear twice, and lastly numbers 3, 9, and 4 appear only once. Note that, for example, among those rows that contain in column `c` a number that appear twice in column `c` the order can be arbitrary.\n",
     "\n",
     "Hint: the function `np.unique` may be useful.\n",
     "\n",
@@ -775,7 +775,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.7.1"
   }
  },
  "nbformat": 4,

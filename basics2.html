@@ -752,7 +752,7 @@ Line 4:    "metadata": {},
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The longest line in this file has length 836
+The longest line in this file has length 1046
 </pre></div></div>
 </div>
 </div>
@@ -970,7 +970,7 @@ type of the object</p>
 <p>So, it may look like we access an attribute of a class <code class="docutils literal notranslate"><span class="pre">C</span></code>, when in reality we are accessing the attribute of its base class <code class="docutils literal notranslate"><span class="pre">B</span></code>. In this case we say that the class <code class="docutils literal notranslate"><span class="pre">C</span></code> <em>inherits</em> the attribute from its base class <code class="docutils literal notranslate"><span class="pre">B</span></code>. If we have attributes with the same name in both the class and its base class, the attribute of the base class is hidden. We say that the class <code class="docutils literal notranslate"><span class="pre">C</span></code> overrides the attribute of the base class <code class="docutils literal notranslate"><span class="pre">B</span></code>. Terminology: <code class="docutils literal notranslate"><span class="pre">B</span></code> is a base class and <code class="docutils literal notranslate"><span class="pre">C</span></code> is a derived class.</p>
 <p>Example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1101,7 +1101,7 @@ division (//) | ———————–</p></td>
 </div>
 <p>Usually, just the try and except parts are needed.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1122,7 +1122,7 @@ Index does not exist
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1154,23 +1154,9 @@ Index does not exist
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-62abfbaab021&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg">         </span>x<span class="ansi-blue-fg">=</span>float<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number (non-number quits): "</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>         mylist<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">except</span> ValueError<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Give a number (non-number quits): 3
+Give a number (non-number quits): x
+Average is 3.0
 </pre></div></div>
 </div>
 <div class="section" id="Exception-hierarchy">
@@ -1186,8 +1172,8 @@ Index does not exist
 <div class="section" id="Too-general-exception-specifications">
 <h3>Too general exception specifications<a class="headerlink" href="#Too-general-exception-specifications" title="Permalink to this headline">¶</a></h3>
 <p>The exception hierarchy allows to catch multiple similar exceptions by catching their common base class. This feature has to be used carefully. Over-general exception specification, like <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">Exception:</span></code>, can hide the real reason for an error. Example of this:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1201,30 +1187,6 @@ Index does not exist
     <span class="nb">print</span><span class="p">(</span><span class="s2">"You didn’t enter a number"</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-13-5823ed9136ad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> sys
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>s<span class="ansi-blue-fg">=</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number: "</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> s<span class="ansi-blue-fg">=</span>s<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-red-fg"># strip the \n character from the end</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     x<span class="ansi-blue-fg">=</span>int<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div></div>
 </div>
 <p>In the previous example, if the user doesn’t enter a string that represents an integer, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised by the <code class="docutils literal notranslate"><span class="pre">int</span></code> function. Instead of catching the <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>, we catch the root of the exception hierarchy, namely <code class="docutils literal notranslate"><span class="pre">Exception</span></code>. This results in catching all possible exceptions. But this will cause one typing error in the program to go undetected. Change the exception specification from <code class="docutils literal notranslate"><span class="pre">Exception</span></code> to <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> to see what this error is.</p>
 </div>
@@ -1244,8 +1206,8 @@ of functions aren’t specified to be of any certain type.</p>
 <h2>Sequences, iterables, generators: revisited<a class="headerlink" href="#Sequences,-iterables,-generators:-revisited" title="Permalink to this headline">¶</a></h2>
 <p>In simple terms, a container is <em>iterable</em>, if we can go through all its elements using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. All the sequences are iterable, but there are other iterable objects as well. We can even create iterable types ourselves. In our class there needs to be a special method <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> that returns an <em>iterator</em> for the container. An iterator is an object that has method <code class="docutils literal notranslate"><span class="pre">__next__</span></code>, which returns the next element from the container. Let’s have a look at a simple example where the container
 and its iterator is the same class.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1270,23 +1232,9 @@ and its iterator is the same class.</p>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-Sunday
-</pre></div></div>
-</div>
 <p>We can now check whether the WeekdayIterator is a Sequence type:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1300,20 +1248,9 @@ Sunday
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-efg is a sequence
-[1, 2, 3] is a sequence
-(4, 5) is a sequence
-&lt;__main__.WeekdayIterator object at 0x7fbe344f6ba8&gt; is not a sequence
-</pre></div></div>
-</div>
 <p>Weekday is not a sequence because, for instance, you cannot index it with the brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, but it is an iterable:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1321,18 +1258,9 @@ efg is a sequence
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
-</pre></div>
-</div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>True
-</pre></div>
-</div>
-</div>
 <p>So it is possible to create iterators ourselves, but the syntax was quite complicated. There is an easier option using <em>generators</em>. A generator is a function that contains a <code class="docutils literal notranslate"><span class="pre">yield</span></code> statement. Note the difference between generators and generator expressions we saw in the first week. Both however produce iterables. Here’s an example of a generator:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1350,18 +1278,6 @@ efg is a sequence
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Index </span><span class="si">%i</span><span class="s2">, day </span><span class="si">%i</span><span class="s2">, month </span><span class="si">%i</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Index 0, day 26, month 2
-Index 1, day 27, month 2
-Index 2, day 28, month 2
-Index 3, day 1, month 3
-Index 4, day 2, month 3
-</pre></div></div>
 </div>
 <p>Note that it would not be possible to write the above iterable using a generator expression, and it would have been very clumsy to explicitly write it as an iterator like we did the <code class="docutils literal notranslate"><span class="pre">WeekdayIterator</span></code>. The below figure shows the relationships between different iterables we have seen:</p>
 <p><img alt="iterables.svg" src="_images/iterables.svg"/></p>

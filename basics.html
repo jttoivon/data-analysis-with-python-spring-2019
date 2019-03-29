@@ -497,20 +497,8 @@ Hello, John! How are you?
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-4-20f40ce1a4fd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>name<span class="ansi-blue-fg">=</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give me your name: "</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Hello,"</span><span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Give me your name: Jarkko
+Hello, Jarkko
 </pre></div></div>
 </div>
 </div>
@@ -1070,23 +1058,8 @@ textmore text
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-25-7ad31f584a13&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>x<span class="ansi-blue-fg">=</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give an integer: "</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> x<span class="ansi-blue-fg">=</span>int<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">if</span> x <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span>     a<span class="ansi-blue-fg">=</span>x
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Give an integer: -1
+The absolute value of -1 is 1
 </pre></div></div>
 </div>
 <p>The general from of an if-else statement is</p>
@@ -1126,23 +1099,8 @@ textmore text
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-26-64f8c53bf202&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>c<span class="ansi-blue-fg">=</span>float<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number: "</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">if</span> c <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"c is positive"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">elif</span> c<span class="ansi-blue-fg">&lt;</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"c is negative"</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Give a number: 3
+c is positive
 </pre></div></div>
 </div>
 </div>
@@ -1873,7 +1831,7 @@ the main function for creating inputs to the <code class="docutils literal notra
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;zip object at 0x7f566c5d96c8&gt;
+&lt;zip object at 0x7fb8141907c8&gt;
 [(1, 'first'), (2, 'second'), (3, 'third')]
 </pre></div></div>
 </div>
@@ -2482,7 +2440,7 @@ reverse_dictionary(d)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;map object at 0x7f566c5f06d8&gt;
+&lt;map object at 0x7fb81413ef60&gt;
 </pre></div></div>
 </div>
 <p>The map function returns a map object for efficiency reasons. However, since we only want print the contents, we first convert it to a list and then print it:</p>

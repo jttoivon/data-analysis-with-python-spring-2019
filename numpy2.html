@@ -977,7 +977,7 @@ Indices: [1 0 3 2 4]
 <div class="admonition note">
 <p>Exercise 3 (most frequent first)</p>
 </div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">most_frequent_first</span></code> that gets a two dimensional array and an index <code class="docutils literal notranslate"><span class="pre">c</span></code> of a column as parameters. The function should then return the array whose rows are sorted so that those rows with the most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code> come first, then come the rows with the second most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code>, and so on.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">most_frequent_first</span></code> that gets a two dimensional array and an index <code class="docutils literal notranslate"><span class="pre">c</span></code> of a column as parameters. The function should then return the array whose rows are sorted based on column <code class="docutils literal notranslate"><span class="pre">c</span></code>, in the following way. Rows are ordered so that those rows with the most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code> come first, then come the rows with the second most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code>, and so on. Therefore, the values outside column <code class="docutils literal notranslate"><span class="pre">c</span></code> don’t affect the ordering in any way.</p>
 <p>Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">:</span>
  <span class="p">[[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">]</span>
@@ -1003,7 +1003,7 @@ Indices: [1 0 3 2 4]
  <span class="p">[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p>If we look at the last column, we see that the number 1 appears three times, then both numbers 2 and 0 appear twice, and lastly numbers 3, 9, and 4 appear only once. Note that, for example, among those rows that contain in column <code class="docutils literal notranslate"><span class="pre">c</span></code> a number that appear twice the order can be arbitrary.</p>
+<p>If we look at the last column, we see that the number 1 appears three times, then both numbers 2 and 0 appear twice, and lastly numbers 3, 9, and 4 appear only once. Note that, for example, among those rows that contain in column <code class="docutils literal notranslate"><span class="pre">c</span></code> a number that appear twice in column <code class="docutils literal notranslate"><span class="pre">c</span></code> the order can be arbitrary.</p>
 <p>Hint: the function <code class="docutils literal notranslate"><span class="pre">np.unique</span></code> may be useful.</p>
 <hr/></div>
 <div class="section" id="Matrix-operations">

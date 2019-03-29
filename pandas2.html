@@ -435,15 +435,15 @@ div.rendered_html tbody tr:hover {
 <tbody>
 <tr>
 <th>a</th>
-<td>-1.462611</td>
-<td>-1.495618</td>
-<td>0.892739</td>
+<td>0.016234</td>
+<td>0.461137</td>
+<td>-0.115746</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-1.396031</td>
-<td>0.621594</td>
-<td>2.194388</td>
+<td>-0.227009</td>
+<td>0.828969</td>
+<td>0.528258</td>
 </tr>
 </tbody>
 </table>
@@ -528,15 +528,15 @@ div.rendered_html tbody tr:hover {
 <tbody>
 <tr>
 <th>a</th>
-<td>-1.051675</td>
-<td>-0.973919</td>
-<td>-0.389786</td>
+<td>0.936015</td>
+<td>-1.657722</td>
+<td>-0.199519</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-0.693603</td>
-<td>1.137073</td>
-<td>-0.121115</td>
+<td>0.806177</td>
+<td>0.184297</td>
+<td>-0.370917</td>
 </tr>
 </tbody>
 </table>
@@ -2550,6 +2550,7 @@ dtype: object
 <div class="admonition note">
 <p>Exercise 15 (last week)</p>
 </div>
+<p>This exercise can give two points at maximum!</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">last_week</span></code> that reads the top40 data set mentioned in the above exercise. The function should then try to reconstruct the top40 list of the previous week based on that week’s list. Try to do this as well as possible. You can fill the values that are impossible to reconstruct by missing value symbols. Your solution should work for a top40 list of any week. So don’t rely on specific features of this top40 list.</p>
 <p>Hint. First create the last week’s top40 list of those songs that are also on this week’s list. Then add those entries that were not on this week’s list. Finally sort by position.</p>
 <p>Hint 2. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method of Series and DataFrame can be useful. It can also be nested.</p>
@@ -2712,6 +2713,7 @@ dtype: object
 <div class="admonition note">
 <p>Exercise 17 (cleaning data)</p>
 </div>
+<p>This exercise can give two points at maximum!</p>
 <p>The entries in the following table of US presidents are not uniformly formatted. Make function <code class="docutils literal notranslate"><span class="pre">cleaning_data</span></code> that reads the table from the tsv file <code class="docutils literal notranslate"><span class="pre">src/presidents.tsv</span></code> and returns the cleaned version of it. Note, you must do the edits programmatically using the string edit methods, not by creating a new DataFrame by hand. The columns should have <code class="docutils literal notranslate"><span class="pre">dtype</span></code>s <code class="docutils literal notranslate"><span class="pre">object</span></code>, <code class="docutils literal notranslate"><span class="pre">integer</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">integer</span></code>, <code class="docutils literal notranslate"><span class="pre">object</span></code>. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method of DataFrames can be helpful, likewise the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/api.html#string-handling">string
 methods</a> of Series objects. You get an additional point, if you manage to get the columns President and Vice-president right!</p>
 <table class="docutils align-center">
