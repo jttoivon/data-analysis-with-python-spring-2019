@@ -28,5 +28,6 @@ def process(filename):
         f.write(str(soup))
 
 for filename in sys.argv[1:]:
+    print("Processing file %s" % filename)
     process(filename)
 
