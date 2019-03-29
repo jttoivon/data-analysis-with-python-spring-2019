@@ -9,7 +9,7 @@ addons:
       - pandoc
 install:
 #  - pip install pandoc==2.2.3
-  - pip install Sphinx==1.8.5
+  - pip install Sphinx==1.8.5     # too recent version breaks links to exercises
   - pip install nbsphinx==0.4.2
   - pip install ipykernel
   - pip install sphinx_rtd_theme

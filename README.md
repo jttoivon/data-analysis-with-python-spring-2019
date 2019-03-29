@@ -28,7 +28,7 @@ The html pages will be stored under `_build/html/` folder.
 
 Create a new branch for your repository with name `gh-pages`.
 This is where the html pages will be stored.
-They will be visible at https://<account>.github.io/data-analysis-with-python-spring-2019/
+They will be visible at `https://<account>.github.io/data-analysis-with-python-spring-2019/`
 
 GitHub can be instructed to notify Travis CI every time something is
 pushed to the git repository. Travis will then pull the most recent versions
