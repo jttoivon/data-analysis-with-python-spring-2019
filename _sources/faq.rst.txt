@@ -68,6 +68,10 @@ Now it should work also on Windows.
        import os
        return os.path.join(os.path.dirname(sys.argv[0]), "..", "src", filename)
 
+Note: the ``get_path`` contruct does not work in Jupyter, as the
+first command line parameter (``sys.argv[0]``) in Jupyter does not refer
+to your program (``myprogram.py``), but instead to a certain system program.
+
 
 Tests complain about missing attribute assert_called, assert_called_once, ...
 -----------------------------------------------------------------------------

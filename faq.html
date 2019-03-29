@@ -189,6 +189,9 @@ Now it should work also on Windows.</p>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s2">".."</span><span class="p">,</span> <span class="s2">"src"</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Note: the <code class="docutils literal notranslate"><span class="pre">get_path</span></code> contruct does not work in Jupyter, as the
+first command line parameter (<code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code>) in Jupyter does not refer
+to your program (<code class="docutils literal notranslate"><span class="pre">myprogram.py</span></code>), but instead to a certain system program.</p>
 </div>
 <div class="section" id="tests-complain-about-missing-attribute-assert-called-assert-called-once">
 <h2>Tests complain about missing attribute assert_called, assert_called_once, …<a class="headerlink" href="#tests-complain-about-missing-attribute-assert-called-assert-called-once" title="Permalink to this headline">¶</a></h2>
