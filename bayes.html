@@ -324,24 +324,23 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/bayes.ipynb">bayes.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/bayes.ipynb">bayes.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/bayes.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-1-(blob-classification)">Exercise 1 (blob classification)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-2-(plant-classification)">Exercise 2 (plant classification)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-3-(word-classification)">Exercise 3 (word classification)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-1-(blob-classification)">Exercise 1 (blob classification)</a></td>
+<td><a class="reference external" href="#Exercise-2-(plant-classification)">Exercise 2 (plant classification)</a></td>
+<td><a class="reference external" href="#Exercise-3-(word-classification)">Exercise 3 (word classification)</a></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="#Exercise-4-(spam-detection)">Exercise 4 (spam detection)</a></p></td>
-<td></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-4-(spam-detection)">Exercise 4 (spam detection)</a></td>
+<td> </td>
+<td> </td>
 </tr>
 </tbody>
 </table>
@@ -922,27 +921,25 @@ as it is encrypted.
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 1 (blob classification)</p>
-</div>
+<div class="admonition note"><a id="Exercise-1-(blob-classification)">Exercise 1 (blob classification)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">blob_classification</span></code> that gets feature matrix X and label vector y as parameters. It should then return the accuracy score of the prediction. Do the prediction using <code class="docutils literal notranslate"><span class="pre">GaussianNB</span></code>, and use <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function from <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> to split the dataset in to two equal halves: one for training and one for testing. Give parameter <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code> to the splitting function so that the result is deterministic. Use training set size of 75% of the whole data.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 2 (plant classification)</p>
-</div>
+<div class="admonition note"><a id="Exercise-2-(plant-classification)">Exercise 2 (plant classification)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">plant_classification</span></code> that does the following:</p>
 <ul>
-<li><p>loads the iris dataset using sklearn (<code class="docutils literal notranslate"><span class="pre">sklearn.datasets.load_iris</span></code>)</p></li>
-<li><p>splits the data into training and testing part using the <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function so that the training set size is 80% of the whole data (give the call also the <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code> argument to make the result deterministic)</p></li>
-<li><p>use Gaussian naive Bayes to fit the training data</p></li>
-<li><p>predict labels of the test data</p></li>
-<li><p>the function should return the accuracy score of the prediction performance (<code class="docutils literal notranslate"><span class="pre">sklearn.metrics.accuracy_score</span></code>)</p>
+<li><p class="first">loads the iris dataset using sklearn (<code class="docutils literal notranslate"><span class="pre">sklearn.datasets.load_iris</span></code>)</p>
+</li>
+<li><p class="first">splits the data into training and testing part using the <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function so that the training set size is 80% of the whole data (give the call also the <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code> argument to make the result deterministic)</p>
+</li>
+<li><p class="first">use Gaussian naive Bayes to fit the training data</p>
+</li>
+<li><p class="first">predict labels of the test data</p>
+</li>
+<li><p class="first">the function should return the accuracy score of the prediction performance (<code class="docutils literal notranslate"><span class="pre">sklearn.metrics.accuracy_score</span></code>)</p>
 <hr/></li>
 </ul>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 3 (word classification)</p>
-</div>
+<div class="admonition note"><a id="Exercise-3-(word-classification)">Exercise 3 (word classification)</a></div>
 <p>Part 1.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">get_features</span></code> that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
 <p>Part 2.</p>
@@ -950,8 +947,8 @@ as it is encrypted.
 <p>Part 3.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> that returns the tuple (X, y) of the feature matrix and the target vector. Use the labels 0 and 1 for Finnish and English, respectively. Use the supplied functions load_finnish() and load_english() to get the lists of words. Filter the lists in the following ways:</p>
 <ul class="simple">
-<li><p>Convert the Finnish words to lowercase, and then filter out those words that contain characters that don’t belong to the alphabet.</p></li>
-<li><p>For the English words first filter out those words that begin with an uppercase letter to get rid of proper nouns. Then proceed as with the Finnish words.</p></li>
+<li>Convert the Finnish words to lowercase, and then filter out those words that contain characters that don’t belong to the alphabet.</li>
+<li>For the English words first filter out those words that begin with an uppercase letter to get rid of proper nouns. Then proceed as with the Finnish words.</li>
 </ul>
 <p>Use get_features function you made earlier to form the feature matrix.</p>
 <p>Part 4.</p>
@@ -961,23 +958,21 @@ as it is encrypted.
 <p>The cv parameter of <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> can be either an integer, which specifies the number of folds, or it can be a <em>cross-validation generator</em> that generates the (train set,test set) pairs. What happens if you pass the following cross-validation generator to <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> as a parameter: <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.KFold(n_splits=5,</span> <span class="pre">shuffle=True,</span> <span class="pre">random_state=0)</span></code>.</p>
 <p>Why the difference?</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 4 (spam detection)</p>
-</div>
+<div class="admonition note"><a id="Exercise-4-(spam-detection)">Exercise 4 (spam detection)</a></div>
 <p>In the src folder there are two files: ham.txt.gz and spam.txt.gz. The files are preprocessed versions of the files from <a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email per line. The file ham.txt.gz contains emails that are non-spam, and, conversely, emails in file spam.txt are spam. The email headers have been removed, except for the subject line, and non-ascii characters have been deleted.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">spam_detection</span></code> that does the following:</p>
 <ul class="simple">
-<li><p>reads these files. Use function open from gzip module, since the files are compressed.</p></li>
-<li><p>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</p></li>
-<li><p>use labels 0 for ham and 1 for spam</p></li>
-<li><p>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>. Use 75% of the data for training</p></li>
-<li><p>train a <code class="docutils literal notranslate"><span class="pre">MultinomialNB</span></code> model, and use it to predict the labels for the test set</p></li>
+<li>reads these files. Use function open from gzip module, since the files are compressed.</li>
+<li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
+<li>use labels 0 for ham and 1 for spam</li>
+<li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>. Use 75% of the data for training</li>
+<li>train a <code class="docutils literal notranslate"><span class="pre">MultinomialNB</span></code> model, and use it to predict the labels for the test set</li>
 </ul>
 <p>The function should return a triple consisting of</p>
 <ul class="simple">
-<li><p>accuracy score of the prediction</p></li>
-<li><p>size of test sample</p></li>
-<li><p>number of misclassified sample points</p></li>
+<li>accuracy score of the prediction</li>
+<li>size of test sample</li>
+<li>number of misclassified sample points</li>
 </ul>
 <p>Pass the function’s random_state parameter to function <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
 <hr/><!--NAVIGATION--></div>

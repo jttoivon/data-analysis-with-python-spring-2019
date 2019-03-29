@@ -324,20 +324,19 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/pandas1.ipynb">pandas1.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/pandas1.ipynb">pandas1.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/pandas1.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-13-(read-series)">Exercise 13 (read series)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-14-(operations-on-series)">Exercise 14 (operations on series)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-15-(inverse-series)">Exercise 15 (inverse series)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-13-(read-series)">Exercise 13 (read series)</a></td>
+<td><a class="reference external" href="#Exercise-14-(operations-on-series)">Exercise 14 (operations on series)</a></td>
+<td><a class="reference external" href="#Exercise-15-(inverse-series)">Exercise 15 (inverse series)</a></td>
 </tr>
 </tbody>
 </table>
@@ -1068,8 +1067,7 @@ dtype: int64
 </div>
 </div>
 <div class="admonition warning">
-<p>Note a special case here: if the indices are not integers, then the last index of the slice is included in the result. This is contrary to slicing with integers!</p>
-</div>
+Note a special case here: if the indices are not integers, then the last index of the slice is included in the result. This is contrary to slicing with integers!</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
@@ -1155,23 +1153,17 @@ Jones
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 13 (read series)</p>
-</div>
+<div class="admonition note"><a id="Exercise-13-(read-series)">Exercise 13 (read series)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">read_series</span></code> that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. The index and values are strings (in this case <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is <code class="docutils literal notranslate"><span class="pre">object</span></code>). An empty line signals the end of Series. Malformed input should cause an exception. An input line is malformed, if it is non-empty and, when split at whitespace, does not result in two parts.</p>
 <p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 14 (operations on series)</p>
-</div>
+<div class="admonition note"><a id="Exercise-14-(operations-on-series)">Exercise 14 (operations on series)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">create_series</span></code> that gets two lists of numbers as parameters. Both lists should have length 3. The function should first create two Series, <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>. The first series should have values from the first parameter list and have corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The second series should get its values from the second parameter list and have again the corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The function should return the pair of these Series.</p>
 <p>Then, write a function <code class="docutils literal notranslate"><span class="pre">modify_series</span></code> that gets two Series as parameters. It should add to the first Series <code class="docutils literal notranslate"><span class="pre">s1</span></code> a new value with index <code class="docutils literal notranslate"><span class="pre">d</span></code>. The new value should be the same as the value in Series <code class="docutils literal notranslate"><span class="pre">s2</span></code> with index <code class="docutils literal notranslate"><span class="pre">b</span></code>. Then delete the element from <code class="docutils literal notranslate"><span class="pre">s2</span></code> that has index <code class="docutils literal notranslate"><span class="pre">b</span></code>. Now the first Series should have four values, while the second list has only two values. Adding a new element to a Series can be achieved by assignment, like with dictionaries. Deletion of an element from a Series
 can be done with the <code class="docutils literal notranslate"><span class="pre">del</span></code> statement.</p>
 <p>Test these functions from the main function. Try adding together the Series returned by the <code class="docutils literal notranslate"><span class="pre">modify_series</span></code> function. The operations on Series use the indices to keep the element-wise operations <em>aligned</em>. If for some index the operation could not be performed, the resulting value will be <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (Not A Number).</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 15 (inverse series)</p>
-</div>
+<div class="admonition note"><a id="Exercise-15-(inverse-series)">Exercise 15 (inverse series)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">inverse_series</span></code> that get a Series as a parameter and returns a new series, whose indices and values have swapped roles. Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <p>What happens if some value appears multiple times in the original Series? What happens if you use this value to index the resulting Series?</p>
 <hr/><p>One may notice that there are similarities between Python’s dictionaries and Pandas’ Series, both can be thought to access values using keys. The difference is that Series requires that the indices have all the same type, and similarly, all the values have the same type. This restriction allows creation of fast data structures.</p>
@@ -1205,16 +1197,15 @@ Name: Presidents, dtype: object
 <div class="section" id="Summary-(week-3)">
 <h2>Summary (week 3)<a class="headerlink" href="#Summary-(week-3)" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>You found that comparisons are also vectorized operations, and that the result of a comparison can be used to mask (i.e. restrict) further operations on arrays</p></li>
-<li><p>You can select a list of columns using fancy indexing</p></li>
-<li><p>An application of NumPy arrays: basic linear algebra operations and solving systems of linear equations</p></li>
-<li><p>You know the building blocks of matplotlib’s figures. You can create figures based on NumPy arrays and you can adjust the attributes of figures</p></li>
-<li><p>You understand how (raster) images are organized as NumPy arrays. You can manipulate images using Numpy’s array operations.</p></li>
-<li><p>In Pandas it is standard to use rows of DataFrames as samples and columns as variables</p></li>
-<li><p>Both rows and columns of Pandas DataFrames can have names, i.e. indices</p>
-<ul>
-<li><p>Operations maintain these indices even when adding or removing rows or columns</p></li>
-<li><p>Indices also allow several operations to be combined meaningfully and easily</p></li>
+<li>You found that comparisons are also vectorized operations, and that the result of a comparison can be used to mask (i.e. restrict) further operations on arrays</li>
+<li>You can select a list of columns using fancy indexing</li>
+<li>An application of NumPy arrays: basic linear algebra operations and solving systems of linear equations</li>
+<li>You know the building blocks of matplotlib’s figures. You can create figures based on NumPy arrays and you can adjust the attributes of figures</li>
+<li>You understand how (raster) images are organized as NumPy arrays. You can manipulate images using Numpy’s array operations.</li>
+<li>In Pandas it is standard to use rows of DataFrames as samples and columns as variables</li>
+<li>Both rows and columns of Pandas DataFrames can have names, i.e. indices<ul>
+<li>Operations maintain these indices even when adding or removing rows or columns</li>
+<li>Indices also allow several operations to be combined meaningfully and easily</li>
 </ul>
 </li>
 </ul>

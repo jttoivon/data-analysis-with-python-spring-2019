@@ -326,18 +326,17 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/image_processing.ipynb">image_processing.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/image_processing.ipynb">image_processing.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/image_processing.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 51%"/>
-<col style="width: 49%"/>
+<col width="51%"/>
+<col width="49%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-11-(to-grayscale)">Exercise 11 (to grayscale)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-12-(radial-fade)">Exercise 12 (radial fade)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-11-(to-grayscale)">Exercise 11 (to grayscale)</a></td>
+<td><a class="reference external" href="#Exercise-12-(radial-fade)">Exercise 12 (radial fade)</a></td>
 </tr>
 </tbody>
 </table>
@@ -462,9 +461,7 @@ The image consists of 487600 pixels
 </div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 11 (to grayscale)</p>
-</div>
+<div class="admonition note"><a id="Exercise-11-(to-grayscale)">Exercise 11 (to grayscale)</a></div>
 <p>This exercise can give two points at maximum!</p>
 <p>Part 1.</p>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">to_grayscale</span></code> that takes an RGB image (three dimensional array) and returns a two dimensional gray-scale image. The conversion to gray-scale should take a weighted average of the red, green, and blue values and use that as the value of gray. The first axis is the x, the second is y, and the third is the color components (red, green, blue). Use the weights 0.2126, 0.7152, and 0.0722 for red, green, and blue, respectively. These weights are so because the human eye is most
@@ -473,9 +470,7 @@ sensitive to green color and least sensitive to blue color.</p>
 <p>Part 2.</p>
 <p>Write functions <code class="docutils literal notranslate"><span class="pre">to_red</span></code>, <code class="docutils literal notranslate"><span class="pre">to_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">to_blue</span></code> that get a three dimensional array as a parameter and return a three dimensional arrays. For instance, the function <code class="docutils literal notranslate"><span class="pre">to_red</span></code> should zero out the green and blue color components and return the result. In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function create a figure with three subfigures: the top one should be the red image, the middle one the green image, and the bottom one the blue image.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 12 (radial fade)</p>
-</div>
+<div class="admonition note"><a id="Exercise-12-(radial-fade)">Exercise 12 (radial fade)</a></div>
 <p>Make program that does fading of an image as earlier, except now not in horizontal direction but in radial direction. As we move away from the centre of the image, the pixels fade to black.</p>
 <p>Part1.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">center</span></code> that returns coordinate pair (center_y, center_x) of the image center. Note that these coordinates might not be integers. Example of usage:</p>
@@ -563,20 +558,20 @@ Number of clusters is 12
 <p>Although this method we used was very simple, it could still be used for example to automatically count number of birds or stars in an image. Of course, humans can do this easily, but when there are hundreds or thousands of images, then it is better to use machines to do this mechanical work.</p>
 <p>There is large number of applications of image processing of which we list only a few here:</p>
 <ul class="simple">
-<li><p>denoising</p></li>
-<li><p>deblurring</p></li>
-<li><p>image segmentation</p></li>
-<li><p>feature extraction</p></li>
-<li><p>zooming, rotating</p></li>
-<li><p>filtering</p></li>
+<li>denoising</li>
+<li>deblurring</li>
+<li>image segmentation</li>
+<li>feature extraction</li>
+<li>zooming, rotating</li>
+<li>filtering</li>
 </ul>
 <div class="section" id="Additional-libraries">
 <h3>Additional libraries<a class="headerlink" href="#Additional-libraries" title="Permalink to this headline">¶</a></h3>
 <p>The are several libraries written in Python that allow easy processing of images. Few examples of these:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://python-pillow.org/">pillow</a></p></li>
-<li><p><a class="reference external" href="https://scikit-image.org/">scikit-image</a></p></li>
-<li><p>In Scipy there is the subpackage <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">ndimage</a> that also contains routines for processing images</p></li>
+<li><a class="reference external" href="https://python-pillow.org/">pillow</a></li>
+<li><a class="reference external" href="https://scikit-image.org/">scikit-image</a></li>
+<li>In Scipy there is the subpackage <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">ndimage</a> that also contains routines for processing images</li>
 </ul>
 <!--NAVIGATION--></div>
 </div>

@@ -330,28 +330,27 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/pandas3.ipynb">pandas3.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/pandas3.ipynb">pandas3.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/pandas3.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-1-(split-date-continues)">Exercise 1 (split date continues)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-2-(cycling-weather)">Exercise 2 (cycling weather)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-3-(top-bands)">Exercise 3 (top bands)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-1-(split-date-continues)">Exercise 1 (split date continues)</a></td>
+<td><a class="reference external" href="#Exercise-2-(cycling-weather)">Exercise 2 (cycling weather)</a></td>
+<td><a class="reference external" href="#Exercise-3-(top-bands)">Exercise 3 (top bands)</a></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="#Exercise-4-(cyclists-per-day)">Exercise 4 (cyclists per day)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-6-(suicide-fractions)">Exercise 6 (suicide fractions)</a></p></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-4-(cyclists-per-day)">Exercise 4 (cyclists per day)</a></td>
+<td><a class="reference external" href="#Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></td>
+<td><a class="reference external" href="#Exercise-6-(suicide-fractions)">Exercise 6 (suicide fractions)</a></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-8-(bicycle-timeseries)">Exercise 8 (bicycle timeseries)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-9-(commute)">Exercise 9 (commute)</a></p></td>
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></td>
+<td><a class="reference external" href="#Exercise-8-(bicycle-timeseries)">Exercise 8 (bicycle timeseries)</a></td>
+<td><a class="reference external" href="#Exercise-9-(commute)">Exercise 9 (commute)</a></td>
 </tr>
 </tbody>
 </table>
@@ -1043,14 +1042,12 @@ Indexes have overlapping values: [0, 1]
 </div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 1 (split date continues)</p>
-</div>
+<div class="admonition note"><a id="Exercise-1-(split-date-continues)">Exercise 1 (split date continues)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">split_date_continues</span></code> that does</p>
 <ul class="simple">
-<li><p>read the bicycle data set</p></li>
-<li><p>clean the data set of columns/rows that contain only missing values</p></li>
-<li><p>drops the <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column and replaces it with its splitted components as before</p></li>
+<li>read the bicycle data set</li>
+<li>clean the data set of columns/rows that contain only missing values</li>
+<li>drops the <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column and replaces it with its splitted components as before</li>
 </ul>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function to do this. The function should return a DataFrame with 25 columns (first five related to the date and then the rest 20 conserning the measument location.</p>
 <hr/></div>
@@ -1608,15 +1605,11 @@ Indexes have overlapping values: [0, 1]
 </div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 2 (cycling weather)</p>
-</div>
+<div class="admonition note"><a id="Exercise-2-(cycling-weather)">Exercise 2 (cycling weather)</a></div>
 <p>Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns ‘m’, ‘d’, ‘Time’, and ‘Time zone’.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 3 (top bands)</p>
-</div>
+<div class="admonition note"><a id="Exercise-3-(top-bands)">Exercise 3 (top bands)</a></div>
 <p>Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
@@ -1752,7 +1745,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7f90c1400198&gt;
+<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7fc9a51ea1d0&gt;
 </pre></div>
 </div>
 </div>
@@ -2175,7 +2168,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7f90c1420400&gt;
+<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7fc9a4b5b1d0&gt;
 </pre></div>
 </div>
 </div>
@@ -4111,29 +4104,21 @@ Name: Precipitation, dtype: float64
 </div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 4 (cyclists per day)</p>
-</div>
+<div class="admonition note"><a id="Exercise-4-(cyclists-per-day)">Exercise 4 (cyclists per day)</a></div>
 <p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.</p>
 <p>Part 1.</p>
 <p>Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
 <p>Part 2.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 5 (best record company)</p>
-</div>
+<div class="admonition note"><a id="Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></div>
 <p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</a> ). Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 6 (suicide fractions)</p>
-</div>
+<div class="admonition note"><a id="Exercise-6-(suicide-fractions)">Exercise 6 (suicide fractions)</a></div>
 <p>Load the suicide data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv</a>) . This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">suicide_fractions</span></code> that loads the data set and returns a Series that has the country as the (row) index and as the column the fraction of suicides per population in that country. In more detail, this fraction is the average of suicide fractions. The information about year, sex and age is not used.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 7 (suicide weather)</p>
-</div>
+<div class="admonition note"><a id="Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></div>
 <p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise.</p>
 <p>Implement function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> as described below. Download the dataset of average temperature (over years 1961-1990) in different countries from <code class="docutils literal notranslate"><span class="pre">src/List_of_countries_by_average_yearly_temperature.html</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a>) . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contains column headers and which column contains row headers.
 Maku sure you use the country as the (row) index for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
@@ -4943,20 +4928,16 @@ could not convert string to float: '−5'
 </div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 8 (bicycle timeseries)</p>
-</div>
+<div class="admonition note"><a id="Exercise-8-(bicycle-timeseries)">Exercise 8 (bicycle timeseries)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> that</p>
 <ul class="simple">
-<li><p>reads the data set</p></li>
-<li><p>cleans it</p></li>
-<li><p>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex (that is, to row names)</p></li>
-<li><p>returns the new DataFrame</p></li>
+<li>reads the data set</li>
+<li>cleans it</li>
+<li>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex (that is, to row names)</li>
+<li>returns the new DataFrame</li>
 </ul>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 9 (commute)</p>
-</div>
+<div class="admonition note"><a id="Exercise-9-(commute)">Exercise 9 (commute)</a></div>
 <p>In function <code class="docutils literal notranslate"><span class="pre">commute</span></code> do the following:</p>
 <p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, aggregate by summing. Set the <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> column to numbers from one to seven. Then set the column <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> as the (row) index. Return the resulting DataFrame from the function.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the DataFrame. Xticklabels should be the weekdays. Don’t forget to call <code class="docutils literal notranslate"><span class="pre">show</span></code> function!</p>

@@ -327,28 +327,27 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/numpy2.ipynb">numpy2.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/numpy2.ipynb">numpy2.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/numpy2.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-1-(column-comparison)">Exercise 1 (column comparison)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-2-(first-half-second-half)">Exercise 2 (first half second half)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-3-(most-frequent-first)">Exercise 3 (most frequent first)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-1-(column-comparison)">Exercise 1 (column comparison)</a></td>
+<td><a class="reference external" href="#Exercise-2-(first-half-second-half)">Exercise 2 (first half second half)</a></td>
+<td><a class="reference external" href="#Exercise-3-(most-frequent-first)">Exercise 3 (most frequent first)</a></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="#Exercise-4-(matrix-power)">Exercise 4 (matrix power)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-5-(correlation)">Exercise 5 (correlation)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-6-(meeting-lines)">Exercise 6 (meeting lines)</a></p></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-4-(matrix-power)">Exercise 4 (matrix power)</a></td>
+<td><a class="reference external" href="#Exercise-5-(correlation)">Exercise 5 (correlation)</a></td>
+<td><a class="reference external" href="#Exercise-6-(meeting-lines)">Exercise 6 (meeting lines)</a></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-7-(meeting-planes)">Exercise 7 (meeting planes)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-8-(almost-meeting-lines)">Exercise 8 (almost meeting lines)</a></p></td>
-<td></td>
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-7-(meeting-planes)">Exercise 7 (meeting planes)</a></td>
+<td><a class="reference external" href="#Exercise-8-(almost-meeting-lines)">Exercise 8 (almost meeting lines)</a></td>
+<td> </td>
 </tr>
 </tbody>
 </table>
@@ -638,9 +637,7 @@ Number of days with the temperature below zero 49
 </div>
 <p>Compare this result with the original array <code class="docutils literal notranslate"><span class="pre">a</span></code> to make sure you understand what’s going on!</p>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 1 (column comparison)</p>
-</div>
+<div class="admonition note"><a id="Exercise-1-(column-comparison)">Exercise 1 (column comparison)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">column_comparison</span></code> that gets a two dimensional array as parameter. The function should return a new array containing those rows from the input that have the value in the second column larger than in the second last column. You may assume that the input contains at least two columns. Don’t use loops, but instead vectorized operations. Try out your function in the main function.</p>
 <p>For array</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">8</span> <span class="mi">9</span> <span class="mi">3</span> <span class="mi">8</span> <span class="mi">8</span><span class="p">]</span>
@@ -657,9 +654,7 @@ Number of days with the temperature below zero 49
 </pre></div>
 </div>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 2 (first half second half)</p>
-</div>
+<div class="admonition note"><a id="Exercise-2-(first-half-second-half)">Exercise 2 (first half second half)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">first_half_second_half</span></code> that gets a two dimensional array of shape <code class="docutils literal notranslate"><span class="pre">(n,2*m)</span></code> as a parameter. The input array has <code class="docutils literal notranslate"><span class="pre">2*m</span></code> columns. The output from the function should be a matrix with those rows from the input that have the sum of the first <code class="docutils literal notranslate"><span class="pre">m</span></code> elements larger than the sum of the last <code class="docutils literal notranslate"><span class="pre">m</span></code> elements on the row. Your solution should call the <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> function or the corresponding method exactly twice.</p>
 <hr/></div>
 <div class="section" id="Fancy-indexing">
@@ -974,9 +969,7 @@ Indices: [1 0 3 2 4]
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 3 (most frequent first)</p>
-</div>
+<div class="admonition note"><a id="Exercise-3-(most-frequent-first)">Exercise 3 (most frequent first)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">most_frequent_first</span></code> that gets a two dimensional array and an index <code class="docutils literal notranslate"><span class="pre">c</span></code> of a column as parameters. The function should then return the array whose rows are sorted based on column <code class="docutils literal notranslate"><span class="pre">c</span></code>, in the following way. Rows are ordered so that those rows with the most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code> come first, then come the rows with the second most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code>, and so on. Therefore, the values outside column <code class="docutils literal notranslate"><span class="pre">c</span></code> don’t affect the ordering in any way.</p>
 <p>Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">:</span>
@@ -1127,13 +1120,13 @@ Inverted matrix:
  [ 0.56666667  0.3        -0.53333333]
  [-0.25555556 -0.23333333  0.37777778]]
 Matrix product:
-[[ 1.00000000e+00  0.00000000e+00  4.44089210e-16]
+[[ 1.00000000e+00 -2.77555756e-17  3.33066907e-16]
  [ 7.21644966e-16  1.00000000e+00  1.11022302e-16]
- [-4.44089210e-16 -2.22044605e-16  1.00000000e+00]]
+ [ 0.00000000e+00 -2.22044605e-16  1.00000000e+00]]
 Matrix product the other way:
-[[ 1.0000000e+00 -8.8817842e-16  0.0000000e+00]
- [ 4.4408921e-16  1.0000000e+00  8.8817842e-16]
- [ 0.0000000e+00 -4.4408921e-16  1.0000000e+00]]
+[[ 1.00000000e+00 -5.55111512e-16  0.00000000e+00]
+ [-2.22044605e-16  1.00000000e+00  8.88178420e-16]
+ [ 1.11022302e-16 -3.33066907e-16  1.00000000e+00]]
 </pre></div></div>
 </div>
 <p>Let’s try mapping a vector with the matrix and its inverse:</p>
@@ -1159,23 +1152,19 @@ Matrix product the other way:
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 4 (matrix power)</p>
-</div>
+<div class="admonition note"><a id="Exercise-4-(matrix-power)">Exercise 4 (matrix power)</a></div>
 <p>Repeat the functionality of the NumPy function <code class="docutils literal notranslate"><span class="pre">numpy.linalg.matrix_power</span></code>, which raises a square matrix of shape (m,m) to the <code class="docutils literal notranslate"><span class="pre">n</span></code>th power. Here the multiplication is the matrix multiplication. Square matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> raised to power <code class="docutils literal notranslate"><span class="pre">n</span></code> is therefore <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">@</span> <span class="pre">a</span> <span class="pre">@</span> <span class="pre">...</span> <span class="pre">@</span> <span class="pre">a</span></code> where <code class="docutils literal notranslate"><span class="pre">a</span></code> is repeated <code class="docutils literal notranslate"><span class="pre">n</span></code> times. When n is zero then <span class="math notranslate nohighlight">\(a^0\)</span> is equal to <code class="docutils literal notranslate"><span class="pre">np.eye(m)</span></code>.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">matrix_power</span></code> that gets as first argument a square matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> and as second argument a non-negative integer <code class="docutils literal notranslate"><span class="pre">n</span></code>. The function should return the matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> multiplied by itself <code class="docutils literal notranslate"><span class="pre">n-1</span></code> times. Use Python’s reduce function and a generator expression.</p>
 <p>Extend the <code class="docutils literal notranslate"><span class="pre">matrix_power</span></code> function. For negative powers, we define <span class="math notranslate nohighlight">\(a^{-1}\)</span> to be equal to the multiplicative inverse of <code class="docutils literal notranslate"><span class="pre">a</span></code>. You can use NumPy’s function <code class="docutils literal notranslate"><span class="pre">numpy.linalg.inv</span></code> for this. And you may assume that the input matrix is invertible.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 5 (correlation)</p>
-</div>
+<div class="admonition note"><a id="Exercise-5-(correlation)">Exercise 5 (correlation)</a></div>
 <p>This exercise can give two points at maximum!</p>
 <p>Load the iris dataset using the provided function <code class="docutils literal notranslate"><span class="pre">load()</span></code> in the stub solution. The four columns of the returned array correspond to</p>
 <ul class="simple">
-<li><p>sepal length (cm)</p></li>
-<li><p>sepal width (cm)</p></li>
-<li><p>petal length (cm)</p></li>
-<li><p>petal width (cm)</p></li>
+<li>sepal length (cm)</li>
+<li>sepal width (cm)</li>
+<li>petal length (cm)</li>
+<li>petal width (cm)</li>
 </ul>
 <p>Part 1. What is the Pearson correlation between the variables <code class="docutils literal notranslate"><span class="pre">sepal</span> <span class="pre">length</span></code> and <code class="docutils literal notranslate"><span class="pre">petal</span> <span class="pre">length</span></code>. Compute this using the <code class="docutils literal notranslate"><span class="pre">scipy.stats.pearsonr</span></code> function. It returns a tuple whose first element is the correlation. Write a function <code class="docutils literal notranslate"><span class="pre">lengths</span></code> that loads the data and returns the correlation.</p>
 <p>Part 2. What are the correlations between all the variables. Write a function <code class="docutils literal notranslate"><span class="pre">correlations</span></code> that returns an array of shape (4,4) containing the correlations. Use the function <code class="docutils literal notranslate"><span class="pre">np.corrcoef</span></code>. Which pair of variables is the most highly correlated?</p>
@@ -1210,19 +1199,13 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots a_{nm}x_m = b_n\\\end{split}\]</div>
 \[A \cdot x = b\]</div>
 <p>where <span class="math notranslate nohighlight">\(A\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, the unknown <span class="math notranslate nohighlight">\(x\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>, and <span class="math notranslate nohighlight">\(b\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,1)</span></code>.</p>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 6 (meeting lines)</p>
-</div>
+<div class="admonition note"><a id="Exercise-6-(meeting-lines)">Exercise 6 (meeting lines)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">meeting_lines</span></code> that gets the coefficients of two lines as parameters and returns the point where the two lines meet. The equations for the lines are <span class="math notranslate nohighlight">\(y=a_1x + b_1\)</span> and <span class="math notranslate nohighlight">\(y=a_2x + b_2\)</span>. Use the <code class="docutils literal notranslate"><span class="pre">np.linalg.solve</span></code> function. Create a main function to test your solution.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 7 (meeting planes)</p>
-</div>
+<div class="admonition note"><a id="Exercise-7-(meeting-planes)">Exercise 7 (meeting planes)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">meeting_planes</span></code> that gets the coefficients of three planes as parameters and returns the point where the planes meet. The equations for the planes are: <span class="math notranslate nohighlight">\(z =a_1y + b_1x+ c_1\)</span>, <span class="math notranslate nohighlight">\(z =a_2y + b_2x+ c_2\)</span>, and <span class="math notranslate nohighlight">\(z =a_3y + b_3x+ c_3\)</span>.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 8 (almost meeting lines)</p>
-</div>
+<div class="admonition note"><a id="Exercise-8-(almost-meeting-lines)">Exercise 8 (almost meeting lines)</a></div>
 <p>In the earlier “meeting lines” exercise there is a problem if the lines don’t meet at all. Extend that solution so that it tells the meeting point if it exists, and otherwise finds the point that is closest to the both lines. You can use the <code class="docutils literal notranslate"><span class="pre">numpy.linalg.lstsq</span></code> for this.</p>
 <p>Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">exact</span> <span class="o">=</span> <span class="n">almost_meeting_lines</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>

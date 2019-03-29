@@ -340,24 +340,23 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/numpy.ipynb">numpy.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/numpy.ipynb">numpy.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/numpy.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-11-(rows-and-columns)">Exercise 11 (rows and columns)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-13-(diamond)">Exercise 13 (diamond)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-11-(rows-and-columns)">Exercise 11 (rows and columns)</a></td>
+<td><a class="reference external" href="#Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></td>
+<td><a class="reference external" href="#Exercise-13-(diamond)">Exercise 13 (diamond)</a></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="#Exercise-14-(vector-lengths)">Exercise 14 (vector lengths)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-15-(vector-angles)">Exercise 15 (vector angles)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-16-(multiplication-table-revisited)">Exercise 16 (multiplication table revisited)</a></p></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-14-(vector-lengths)">Exercise 14 (vector lengths)</a></td>
+<td><a class="reference external" href="#Exercise-15-(vector-angles)">Exercise 15 (vector angles)</a></td>
+<td><a class="reference external" href="#Exercise-16-(multiplication-table-revisited)">Exercise 16 (multiplication table revisited)</a></td>
 </tr>
 </tbody>
 </table>
@@ -367,26 +366,26 @@ div.rendered_html tbody tr:hover {
 homogeneity of arrays allows highly optimized functions that use arrays as their inputs and outputs.</p>
 <p>There are several uses for high-dimensional arrays in data analysis. For instance, they can be used to:</p>
 <ul class="simple">
-<li><p>store matrices, solve systems of linear equations, find eigenvalues/vectors, find matrix decompositions, and solve other problems familiar from linear algebra</p></li>
-<li><p>store multi-dimensional measurement data. For example, an element <code class="docutils literal notranslate"><span class="pre">a[i,j]</span></code> in a 2-dimensional array might store the temperature <span class="math notranslate nohighlight">\(t_{ij}\)</span> measured at coordinates i, j on a 2-dimension surface.</p></li>
-<li><p>images and videos can be represented as NumPy arrays:</p></li>
-<li><p>a gray-scale image can be represented as a two dimensional array</p></li>
-<li><p>a color image can be represented as a three dimensional image, the third dimension contains the color components red, green, and blue</p></li>
-<li><p>a color video can be represented as a four dimensional array</p></li>
-<li><p>a 2-dimensional table might store a sequence of <em>samples</em>, and each sample might be divided into <em>features</em>. For example, we could measure the weather conditions once per day, and the conditions could include the temperature, direction and speed of wind, and the amount of rain. Then we would have one sample per day, and the features would be the temperature, wind, and rain. In the standard representation of this kind of tabular data, the rows corresponds to samples and the columns correspond
-to features. We see more of this kind of data in the chapters on Pandas and Scikit-learn.</p></li>
+<li>store matrices, solve systems of linear equations, find eigenvalues/vectors, find matrix decompositions, and solve other problems familiar from linear algebra</li>
+<li>store multi-dimensional measurement data. For example, an element <code class="docutils literal notranslate"><span class="pre">a[i,j]</span></code> in a 2-dimensional array might store the temperature <span class="math notranslate nohighlight">\(t_{ij}\)</span> measured at coordinates i, j on a 2-dimension surface.</li>
+<li>images and videos can be represented as NumPy arrays:</li>
+<li>a gray-scale image can be represented as a two dimensional array</li>
+<li>a color image can be represented as a three dimensional image, the third dimension contains the color components red, green, and blue</li>
+<li>a color video can be represented as a four dimensional array</li>
+<li>a 2-dimensional table might store a sequence of <em>samples</em>, and each sample might be divided into <em>features</em>. For example, we could measure the weather conditions once per day, and the conditions could include the temperature, direction and speed of wind, and the amount of rain. Then we would have one sample per day, and the features would be the temperature, wind, and rain. In the standard representation of this kind of tabular data, the rows corresponds to samples and the columns correspond
+to features. We see more of this kind of data in the chapters on Pandas and Scikit-learn.</li>
 </ul>
 <p>In this chapter we will go through:</p>
 <ul class="simple">
-<li><p>Creation of arrays</p></li>
-<li><p>Array types and attributes</p></li>
-<li><p>Accessing arrays with indexing and slicing</p></li>
-<li><p>Reshaping of arrays</p></li>
-<li><p>Combining and splitting arrays</p></li>
-<li><p>Fast operations on arrays</p></li>
-<li><p>Aggregations of arrays</p></li>
-<li><p>Rules of binary array operations</p></li>
-<li><p>Matrix operations familiar from linear algebra</p></li>
+<li>Creation of arrays</li>
+<li>Array types and attributes</li>
+<li>Accessing arrays with indexing and slicing</li>
+<li>Reshaping of arrays</li>
+<li>Combining and splitting arrays</li>
+<li>Fast operations on arrays</li>
+<li>Aggregations of arrays</li>
+<li>Rules of binary array operations</li>
+<li>Matrix operations familiar from linear algebra</li>
 </ul>
 <p>We start by importing the NumPy library, and we use the standard abbreviation <code class="docutils literal notranslate"><span class="pre">np</span></code> for it.</p>
 <div class="nbinput nblast docutils container">
@@ -558,10 +557,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[6.92818225e-310, 6.92818225e-310, 2.14321575e-312,
-        8.48798317e-313],
-       [1.06099790e-312, 2.42092166e-322, 6.92818225e-310,
-        6.92818225e-310]])
+<span></span>array([[6.93659079e-310, 6.93659079e-310, 0.00000000e+000,
+        0.00000000e+000],
+       [0.00000000e+000, 0.00000000e+000, 6.93659079e-310,
+        1.63041663e-322]])
 </pre></div>
 </div>
 </div>
@@ -645,9 +644,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[5.75281027e-01, 1.52888812e-01, 3.99861716e-01, 9.92762641e-01],
-       [8.10532483e-01, 6.36606786e-02, 9.83337683e-02, 4.45480756e-01],
-       [6.58554648e-01, 4.07132812e-01, 5.77649078e-04, 9.20487902e-01]])
+<span></span>array([[0.65536014, 0.19384482, 0.87344806, 0.96324216],
+       [0.27225526, 0.73460139, 0.5361385 , 0.06550352],
+       [0.59232833, 0.96846536, 0.17964428, 0.69569902]])
 </pre></div>
 </div>
 </div>
@@ -665,9 +664,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[-1.32430898, -0.40246021, -1.2852888 ,  0.44956771],
-       [-1.28588397, -1.83105003,  0.95056406, -1.12061857],
-       [-0.21855244,  0.14796416, -0.10218638, -1.48368243]])
+<span></span>array([[ 1.13997779,  0.12812764, -0.44629094, -1.99069008],
+       [-0.20838329, -0.07364231,  0.9899911 ,  1.21597223],
+       [ 1.09993489, -1.16613005,  0.40091693, -0.85122195]])
 </pre></div>
 </div>
 </div>
@@ -685,9 +684,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 2,  8,  5,  6],
-       [ 5,  4, -1,  7],
-       [ 4,  7,  5,  2]])
+<span></span>array([[ 0,  5,  4, -1],
+       [ 0, -1,  1,  4],
+       [ 5,  4,  4, -1]])
 </pre></div>
 </div>
 </div>
@@ -815,9 +814,9 @@ d has dim 2, shape (1, 4), size 4, and dtype int64:
 </div>
 <p>Note above how Python printed the three dimensional array. The general rules of printing an n-dimensional array as a nested list are:</p>
 <ul class="simple">
-<li><p>the last dimension is printed from left to right,</p></li>
-<li><p>the second-to-last is printed from top to bottom,</p></li>
-<li><p>the rest are also printed from top to bottom, with each slice separated from the next by an empty line.</p></li>
+<li>the last dimension is printed from left to right,</li>
+<li>the second-to-last is printed from top to bottom,</li>
+<li>the rest are also printed from top to bottom, with each slice separated from the next by an empty line.</li>
 </ul>
 </div>
 <div class="section" id="Indexing,-slicing-and-reshaping">
@@ -1059,8 +1058,7 @@ dc has dim 2, shape (4, 1), size 4, and dtype int64:
 </pre></div></div>
 </div>
 <div class="admonition warning">
-<p>Note the 1d array and the row and column vectors, which are 2d arrays, are fundamentally different objects, even though they look similar. They behave differently when we combine or otherwise operate arrays of different shapes, as we shall see in the next section and later in this material.</p>
-</div>
+Note the 1d array and the row and column vectors, which are 2d arrays, are fundamentally different objects, even though they look similar. They behave differently when we combine or otherwise operate arrays of different shapes, as we shall see in the next section and later in this material.</div>
 <p>An alternative syntax to create, for example, column or row vectors is through the <code class="docutils literal notranslate"><span class="pre">np.newaxis</span></code> keyword. Sometimes this is easier or more natural than with the <code class="docutils literal notranslate"><span class="pre">reshape</span></code> method:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
@@ -1096,9 +1094,7 @@ dcol has dim 2, shape (4, 1), size 4, and dtype int64:
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 11 (rows and columns)</p>
-</div>
+<div class="admonition note"><a id="Exercise-11-(rows-and-columns)">Exercise 11 (rows and columns)</a></div>
 <p>Write two functions, <code class="docutils literal notranslate"><span class="pre">get_rows</span></code> and <code class="docutils literal notranslate"><span class="pre">get_columns</span></code>, that get a two dimensional array as parameter. They should return the list of rows and columns of the array, respectively. The rows and columns should be one dimensional arrays. You may use the <em>transpose</em> operation, which flips rows to columns, in your solution. The transpose is done by the <code class="docutils literal notranslate"><span class="pre">T</span></code> method:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
@@ -1370,9 +1366,7 @@ part 3:
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 12 (row and column vectors)</p>
-</div>
+<div class="admonition note"><a id="Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></div>
 <p>Create function <code class="docutils literal notranslate"><span class="pre">get_row_vectors</span></code> that returns a list of rows from the input array of shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, but this time the rows must have shape <code class="docutils literal notranslate"><span class="pre">(1,m)</span></code>. Similarly, create function <code class="docutils literal notranslate"><span class="pre">get_columns_vectors</span></code> that returns a list of columns (each having shape <code class="docutils literal notranslate"><span class="pre">(n,1)</span></code>) of the input matrix .</p>
 <p>Example: for a 2x3 input matrix</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">5</span> <span class="mi">0</span> <span class="mi">3</span><span class="p">]</span>
@@ -1393,9 +1387,7 @@ part 3:
 </div>
 <p>The above output is basically just the returned lists printed with <code class="docutils literal notranslate"><span class="pre">print</span></code>. Only some whitespace is adjusted to make it look nicer. Output is not tested.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 13 (diamond)</p>
-</div>
+<div class="admonition note"><a id="Exercise-13-(diamond)">Exercise 13 (diamond)</a></div>
 <p>Create a function <code class="docutils literal notranslate"><span class="pre">diamond</span></code> that returns a two dimensional integer array where the <code class="docutils literal notranslate"><span class="pre">1</span></code>s form a diamond shape. Rest of the numbers are <code class="docutils literal notranslate"><span class="pre">0</span></code>. The function should get a parameter that tells the length of a side of the diamond. Do this using the <code class="docutils literal notranslate"><span class="pre">eye</span></code> and <code class="docutils literal notranslate"><span class="pre">concatenate</span></code> functions of NumPy and array slicing.</p>
 <p>Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">diamond</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
@@ -1561,102 +1553,101 @@ Row sums: [25 19 15]
 </div>
 <p><img alt="aggregation" src="_images/aggregation.svg"/></p>
 <div class="admonition warning">
-<p>Note that most of the aggregation functions in NumPy have corresponding methods. In addition, Python language has builtin functions <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">any</span></code>, and <code class="docutils literal notranslate"><span class="pre">all</span></code> for sequences. Make sure you don’t accidentally use these for arrays, since they may have slightly different semantics, and they will be significantly slower than NumPy’s functions and methods.</p>
-</div>
-<table class="docutils align-center">
+Note that most of the aggregation functions in NumPy have corresponding methods. In addition, Python language has builtin functions <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">any</span></code>, and <code class="docutils literal notranslate"><span class="pre">all</span></code> for sequences. Make sure you don’t accidentally use these for arrays, since they may have slightly different semantics, and they will be significantly slower than NumPy’s functions and methods.</div>
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 36%"/>
-<col style="width: 34%"/>
-<col style="width: 30%"/>
+<col width="36%"/>
+<col width="34%"/>
+<col width="30%"/>
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Python function</p></th>
-<th class="head"><p>NumPy function</p></th>
-<th class="head"><p>NumPy method</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Python function</th>
+<th class="head">NumPy function</th>
+<th class="head">NumPy method</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>sum</p></td>
-<td><p>np.sum</p></td>
-<td><p>a.sum</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>sum</td>
+<td>np.sum</td>
+<td>a.sum</td>
 </tr>
-<tr class="row-odd"><td><ul class="simple">
+<tr class="row-odd"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.prod</p></td>
-<td><p>a.prod</p></td>
+<td>np.prod</td>
+<td>a.prod</td>
 </tr>
-<tr class="row-even"><td><ul class="simple">
+<tr class="row-even"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.mean</p></td>
-<td><p>a.mean</p></td>
+<td>np.mean</td>
+<td>a.mean</td>
 </tr>
-<tr class="row-odd"><td><ul class="simple">
+<tr class="row-odd"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.std</p></td>
-<td><p>a.std</p></td>
+<td>np.std</td>
+<td>a.std</td>
 </tr>
-<tr class="row-even"><td><ul class="simple">
+<tr class="row-even"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.var</p></td>
-<td><p>a.var</p></td>
+<td>np.var</td>
+<td>a.var</td>
 </tr>
-<tr class="row-odd"><td><p>min</p></td>
-<td><p>np.min</p></td>
-<td><p>a.min</p></td>
+<tr class="row-odd"><td>min</td>
+<td>np.min</td>
+<td>a.min</td>
 </tr>
-<tr class="row-even"><td><p>max</p></td>
-<td><p>np.max</p></td>
-<td><p>a.max</p></td>
+<tr class="row-even"><td>max</td>
+<td>np.max</td>
+<td>a.max</td>
 </tr>
-<tr class="row-odd"><td><ul class="simple">
+<tr class="row-odd"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.argmin</p></td>
-<td><p>a.argmin</p></td>
+<td>np.argmin</td>
+<td>a.argmin</td>
 </tr>
-<tr class="row-even"><td><ul class="simple">
+<tr class="row-even"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.argmax</p></td>
-<td><p>a.argmax</p></td>
+<td>np.argmax</td>
+<td>a.argmax</td>
 </tr>
-<tr class="row-odd"><td><ul class="simple">
+<tr class="row-odd"><td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
-<td><p>np.median</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>np.percentile</p></td>
-<td><ul class="simple">
+<td>np.median</td>
+<td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>any</p></td>
-<td><p>np.any</p></td>
-<td><p>a.any</p></td>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.percentile</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
 </tr>
-<tr class="row-even"><td><p>all</p></td>
-<td><p>np.all</p></td>
-<td><p>a.all</p></td>
+<tr class="row-odd"><td>any</td>
+<td>np.any</td>
+<td>a.any</td>
+</tr>
+<tr class="row-even"><td>all</td>
+<td>np.all</td>
+<td>a.all</td>
 </tr>
 </tbody>
 </table>
@@ -1676,7 +1667,7 @@ Row sums: [25 19 15]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-4.59 µs ± 23 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+4.64 µs ± 17.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1693,20 +1684,16 @@ Row sums: [25 19 15]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-101 µs ± 208 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+101 µs ± 317 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 14 (vector lengths)</p>
-</div>
+<div class="admonition note"><a id="Exercise-14-(vector-lengths)">Exercise 14 (vector lengths)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">vector_lengths</span></code> that gets a two dimensional array of shape (n,m) as a parameter. Each row in this array corresponds to a vector. The function should return an array of shape (n,), that has the length of each vector in the input. The length is defined by the usual <a class="reference external" href="https://en.wikipedia.org/wiki/Norm_(mathematics)#Euclidean_norm">Euclidean norm</a>. Don’t use loops at all in your solution. Instead use vectorized operations. You must use at least the <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> and the <code class="docutils literal notranslate"><span class="pre">np.sqrt</span></code>
 functions. You can’t use the function <code class="docutils literal notranslate"><span class="pre">scipy.linalg.norm</span></code>. Test your function in the main function.</p>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 15 (vector angles)</p>
-</div>
+<div class="admonition note"><a id="Exercise-15-(vector-angles)">Exercise 15 (vector angles)</a></div>
 <p>Let x and y be m-dimensional vectors. The angle <span class="math notranslate nohighlight">\(\alpha\)</span> between two vectors is defined by the equation <span class="math notranslate nohighlight">\(\cos_{xy}(\alpha):=\frac{\langle x,y\rangle}{||x|| ||y||}\)</span>, where the angle brackets denote the <a class="reference external" href="https://en.wikipedia.org/wiki/Inner_product_space#Euclidean_space">inner product</a>, and <span class="math notranslate nohighlight">\(||x||:=\sqrt{\langle x,x \rangle}\)</span>.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">vector_angles</span></code> that gets two arrays X and Y with same shape (n,m) as parameters. Each row in the arrays corresponds to a vector. The function should return vector of shape (n,) with the corresponding angles between vectors of <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> in degrees, not in radians. Again, don’t use loops, but use vectorized operations.</p>
 <p>Note: function <code class="docutils literal notranslate"><span class="pre">np.arccos</span></code> is only defined on the domain [-1.0,1.0]. If you try to compute <code class="docutils literal notranslate"><span class="pre">np.arccos(1.000000001)</span></code>, it will fail. These kind of errors can occur due to use of finite precision in numerical computations. Force the argument to be in the correct range (<code class="docutils literal notranslate"><span class="pre">clip</span></code> method).</p>
@@ -1867,10 +1854,10 @@ broadcasted_b has dim 2, shape (3, 3), size 9, and dtype int64:
 </div>
 <p>So, both arrays were broadcasted, but in different ways. Let’s next go through the <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.14.0/reference/ufuncs.html#broadcasting">rules</a> how the broadcasting work.</p>
 <ol class="arabic simple">
-<li><p>All input arrays with <code class="docutils literal notranslate"><span class="pre">ndim</span></code> smaller than the input array of largest <code class="docutils literal notranslate"><span class="pre">ndim</span></code>, have 1’s prepended to their shapes.</p></li>
-<li><p>The size in each dimension of the output shape is the maximum of all the input sizes in that dimension.</p></li>
-<li><p>An input can be used in the calculation if its size in a particular dimension either matches the output size in that dimension, or has value exactly 1.</p></li>
-<li><p>If an input has a dimension size of 1 in its shape, the first data entry in that dimension will be used for all calculations along that dimension. In other words, the stepping machinery of the ufunc will simply not step along that dimension (the stride will be 0 for that dimension).</p></li>
+<li>All input arrays with <code class="docutils literal notranslate"><span class="pre">ndim</span></code> smaller than the input array of largest <code class="docutils literal notranslate"><span class="pre">ndim</span></code>, have 1’s prepended to their shapes.</li>
+<li>The size in each dimension of the output shape is the maximum of all the input sizes in that dimension.</li>
+<li>An input can be used in the calculation if its size in a particular dimension either matches the output size in that dimension, or has value exactly 1.</li>
+<li>If an input has a dimension size of 1 in its shape, the first data entry in that dimension will be used for all calculations along that dimension. In other words, the stepping machinery of the ufunc will simply not step along that dimension (the stride will be 0 for that dimension).</li>
 </ol>
 <p>Finally an example of a situation where the two array are not compatible:</p>
 <div class="nbinput docutils container">
@@ -1897,9 +1884,7 @@ operands could not be broadcast together with shapes (3,) (2,)
 </pre></div></div>
 </div>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 16 (multiplication table revisited)</p>
-</div>
+<div class="admonition note"><a id="Exercise-16-(multiplication-table-revisited)">Exercise 16 (multiplication table revisited)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">multiplication_table</span></code> that gets a positive integer <code class="docutils literal notranslate"><span class="pre">n</span></code> as parameter. The function should return an array with shape (n,n). The element at index <code class="docutils literal notranslate"><span class="pre">(i,j)</span></code> should be <code class="docutils literal notranslate"><span class="pre">i*j</span></code>. Don’t use <code class="docutils literal notranslate"><span class="pre">for</span></code> loops! In your solution, rely on broadcasting, the <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> function, reshaping and vectorized operators. Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">multiplication_table</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 <span class="p">[[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
@@ -1912,31 +1897,28 @@ operands could not be broadcast together with shapes (3,) (2,)
 <div class="section" id="Summary-(week-2)">
 <h2>Summary (week 2)<a class="headerlink" href="#Summary-(week-2)" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>We have learned how regular expressions can be used to specify regular sets of strings</p>
-<ul>
-<li><p>We know how to find out if a string matches a regular expression</p></li>
-<li><p>We know how to extract pieces of text that match a RE</p></li>
-<li><p>We can replace matches to a RE with another string</p></li>
+<li>We have learned how regular expressions can be used to specify regular sets of strings<ul>
+<li>We know how to find out if a string matches a regular expression</li>
+<li>We know how to extract pieces of text that match a RE</li>
+<li>We can replace matches to a RE with another string</li>
 </ul>
 </li>
-<li><p>We can read (and write) a text file either line by line or whole file at the same time</p></li>
-<li><p>We also know how to specify the encoding of the file. The utf-8 encoding is a very common and can represent nearly every character or symbol of any (natural) language</p></li>
-<li><p>Program’s parameters are in the array <code class="docutils literal notranslate"><span class="pre">sys.argv</span></code>, and we can return a value from the program with the function <code class="docutils literal notranslate"><span class="pre">sys.exit</span></code></p></li>
-<li><p>The file streams <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>, <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>, and <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> allow basic textual input and output to and from the program</p></li>
-<li><p>Every value in Python is an object</p>
-<ul>
-<li><p>Classes are user defined data types, they tell how to construct instances (objects) of that type</p></li>
-<li><p>Relationship between objects and classes: <code class="docutils literal notranslate"><span class="pre">isinstance</span></code></p></li>
-<li><p>Relationship between classes: <code class="docutils literal notranslate"><span class="pre">issubclass</span></code></p></li>
+<li>We can read (and write) a text file either line by line or whole file at the same time</li>
+<li>We also know how to specify the encoding of the file. The utf-8 encoding is a very common and can represent nearly every character or symbol of any (natural) language</li>
+<li>Program’s parameters are in the array <code class="docutils literal notranslate"><span class="pre">sys.argv</span></code>, and we can return a value from the program with the function <code class="docutils literal notranslate"><span class="pre">sys.exit</span></code></li>
+<li>The file streams <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>, <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>, and <code class="docutils literal notranslate"><span class="pre">sys.stderr</span></code> allow basic textual input and output to and from the program</li>
+<li>Every value in Python is an object<ul>
+<li>Classes are user defined data types, they tell how to construct instances (objects) of that type</li>
+<li>Relationship between objects and classes: <code class="docutils literal notranslate"><span class="pre">isinstance</span></code></li>
+<li>Relationship between classes: <code class="docutils literal notranslate"><span class="pre">issubclass</span></code></li>
 </ul>
 </li>
-<li><p>Exceptions signal exceptional situations, not necessarily errors</p>
-<ul>
-<li><p>We know how catch and raise exceptions</p></li>
+<li>Exceptions signal exceptional situations, not necessarily errors<ul>
+<li>We know how catch and raise exceptions</li>
 </ul>
 </li>
-<li><p>The efficiency of NumPy is based on the fact that the same operations can be performed on elements fast, if all the elements have the same type. These are called vectorized operations</p></li>
-<li><p>We know how to create, reshape, perform basic access, combine, split, and aggregate arrays</p></li>
+<li>The efficiency of NumPy is based on the fact that the same operations can be performed on elements fast, if all the elements have the same type. These are called vectorized operations</li>
+<li>We know how to create, reshape, perform basic access, combine, split, and aggregate arrays</li>
 </ul>
 <!--NAVIGATION--></div>
 </div>

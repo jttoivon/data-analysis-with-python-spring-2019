@@ -329,24 +329,23 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/linear_regression.ipynb">linear_regression.ipynb</a>.
+This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/linear_regression.ipynb">linear_regression.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/linear_regression.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></p>
-</div>
-<!--NAVIGATION--><table class="docutils align-center">
+<span class="raw-html"><br/></span></div>
+<!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
-<col style="width: 33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-10-(linear-regression)">Exercise 10 (linear regression)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-11-(mystery-data)">Exercise 11 (mystery data)</a></p></td>
-<td><p><a class="reference external" href="#Exercise-12-(coefficient-of-determination)">Exercise 12 (coefficient of determination)</a></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-10-(linear-regression)">Exercise 10 (linear regression)</a></td>
+<td><a class="reference external" href="#Exercise-11-(mystery-data)">Exercise 11 (mystery data)</a></td>
+<td><a class="reference external" href="#Exercise-12-(coefficient-of-determination)">Exercise 12 (coefficient of determination)</a></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="#Exercise-13-(cycling-weather-continues)">Exercise 13 (cycling weather continues)</a></p></td>
-<td></td>
-<td></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-13-(cycling-weather-continues)">Exercise 13 (cycling weather continues)</a></td>
+<td> </td>
+<td> </td>
 </tr>
 </tbody>
 </table>
@@ -457,8 +456,7 @@ Intercept: 2.1379475205341354
 </div>
 <p>In this case, the coefficient is the slope of the fitted line, and the intercept is the point where the fitted line intersects with the y-axis.</p>
 <div class="admonition warning">
-<p>Note that in scikit-learn the attributes of the model that store the learned parameters have always an underscore at the end of the name. This applies to all algorithms in sklearn, not only the linear regression. This naming style allows one to easily spot the learned model parameters from other attributes.</p>
-</div>
+Note that in scikit-learn the attributes of the model that store the learned parameters have always an underscore at the end of the name. This applies to all algorithms in sklearn, not only the linear regression. This naming style allows one to easily spot the learned model parameters from other attributes.</div>
 <p>The parameters estimated by the regression algorithm were quite close to the parameters that generated the data: coefficient 2 and intercept 1. Try experimenting with the number of data points and/or the standard deviation, to see if you can improve the estimated parameters.</p>
 <div class="section" id="Multiple-features">
 <h3>Multiple features<a class="headerlink" href="#Multiple-features" title="Permalink to this headline">¶</a></h3>
@@ -574,7 +572,7 @@ product:
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Coefficients: [-36.65414588 -20.17228669   0.15359003]
-Intercept: -167.16046606447708
+Intercept: -167.16046606443342
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -586,17 +584,13 @@ Intercept: -167.16046606447708
 </div>
 <p>Linear and squared are not enough to explain the data, but the linear regression manages to fit quite well a polynomial curve to the data points, when cubic variables are included!</p>
 <hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 10 (linear regression)</p>
-</div>
+<div class="admonition note"><a id="Exercise-10-(linear-regression)">Exercise 10 (linear regression)</a></div>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">fit_line</span></code> that gets one dimensional arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> as parameters. The function should return the tuple <code class="docutils literal notranslate"><span class="pre">(slope,</span> <span class="pre">intercept)</span></code> of the fitted line. Write a main program that tests the <code class="docutils literal notranslate"><span class="pre">fit_line</span></code> function with some example arrays. The main function should produce output in the following form:</p>
 <p>Slope: 1.0 Intercept: 1.16666666667</p>
 <p>Part 2.</p>
 <p>Modify your program to plot the fitted line using matplotlib, in addition to the textual output. Plot also the original data points.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 11 (mystery data)</p>
-</div>
+<div class="admonition note"><a id="Exercise-11-(mystery-data)">Exercise 11 (mystery data)</a></div>
 <p>Read the tab separated file <code class="docutils literal notranslate"><span class="pre">mystery_data.tsv</span></code>. Its first five columns define the features, and the last column is the response. Use scikit-learns’s <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> to fit this data. Implement function <code class="docutils literal notranslate"><span class="pre">mystery_data</span></code> that reads this file and learns and returns the regression coefficients for the five features. You don’t have to fit the intercept. The <code class="docutils literal notranslate"><span class="pre">main</span></code> method will print output in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X1</span> <span class="ow">is</span> <span class="o">...</span>
 <span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X2</span> <span class="ow">is</span> <span class="o">...</span>
@@ -607,9 +601,7 @@ Intercept: -167.16046606447708
 </div>
 <p>Which features you think are needed to explain the response Y?</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 12 (coefficient of determination)</p>
-</div>
+<div class="admonition note"><a id="Exercise-12-(coefficient-of-determination)">Exercise 12 (coefficient of determination)</a></div>
 <p>Using the same data as in the previous exercise, instead of printing the regression coefficients, print the <em>coefficient of determination</em>. The coefficient of determination, denoted by R2, tells how well the linear regression fits the data. The maximum value of the coefficient of determination is 1. That means the best possible fit.</p>
 <p>Part 1.</p>
 <p>Using all the features (X1 to X5), fit the data using a linear regression. Get the coefficient of determination using the <code class="docutils literal notranslate"><span class="pre">score</span></code> method of the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> class. Write a function <code class="docutils literal notranslate"><span class="pre">coefficient_of_determination</span></code> to do all this. It should return a list containing the R2-score as the only value.</p>
@@ -626,9 +618,7 @@ Intercept: -167.16046606447708
 </div>
 <p>How small can the R2-score be? Experiment both with fitting the intercept and without fitting the intercept.</p>
 <hr/><hr class="docutils"/>
-<div class="admonition note">
-<p>Exercise 13 (cycling weather continues)</p>
-</div>
+<div class="admonition note"><a id="Exercise-13-(cycling-weather-continues)">Exercise 13 (cycling weather continues)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather_continues</span></code> that tries to explain with linear regression the variable of a cycling measuring station’s counts using the weather data from corresponding day. The function should take the name of a (cycling) measuring station as a parameter and return the regression coefficients and the score. In more detail:</p>
 <p>Read the weather data set from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Use forward fill to fill the missing values. Read the cycling data set from folder <code class="docutils literal notranslate"><span class="pre">src</span></code> and restrict it to year 2017. Further, get the sums of cycling counts for each day. Merge the two datasets by the year, month, and day. In the linear regression use as explanatory variables the following columns <code class="docutils literal notranslate"><span class="pre">'Precipitation</span> <span class="pre">amount</span> <span class="pre">(mm)'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Snow</span> <span class="pre">depth</span> <span class="pre">(cm)'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'Air</span> <span class="pre">temperature</span> <span class="pre">(degC)'</span></code>. Explain the variable (measuring station), whose name is
 given as a parameter to the function <code class="docutils literal notranslate"><span class="pre">cycling_weather_continues</span></code>. Fit also the intercept. The function should return a pair, whose first element is the regression coefficients and the second element is the score. Above, you may need to use the method <code class="docutils literal notranslate"><span class="pre">reset_index</span></code> (its counterpart is the method <code class="docutils literal notranslate"><span class="pre">set_index</span></code>).</p>
@@ -646,41 +636,37 @@ given as a parameter to the function <code class="docutils literal notranslate">
 <div class="section" id="Additional-information">
 <h2>Additional information<a class="headerlink" href="#Additional-information" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>The <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> library concentrates on machine learning. Check out library <a class="reference external" href="http://www.statsmodels.org/stable/index.html">statsmodels</a> for a more statistical viewpoint to regression.</p></li>
+<li>The <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> library concentrates on machine learning. Check out library <a class="reference external" href="http://www.statsmodels.org/stable/index.html">statsmodels</a> for a more statistical viewpoint to regression.</li>
 </ul>
 </div>
 <div class="section" id="Summary-(week-5)">
 <h2>Summary (week 5)<a class="headerlink" href="#Summary-(week-5)" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> and <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> can both combine two DataFrames, but the way the combining is done differs. The function <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> concatenates based on <em>indices</em> of DataFrames, whereas <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> combines based on the <em>content</em> of common variable(s).</p></li>
-<li><p>The option <code class="docutils literal notranslate"><span class="pre">join="outer</span></code> to <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> can create missing values, but <code class="docutils literal notranslate"><span class="pre">join=inner</span></code> cannot. The former gives the union of indices and the latter gives the intersection of indices.</p></li>
-<li><p>With <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> overlapping indices can:</p>
-<ul>
-<li><p>cause an error</p></li>
-<li><p>cause renumbering of indices</p></li>
-<li><p>create hierarchical indices</p></li>
+<li><code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> and <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> can both combine two DataFrames, but the way the combining is done differs. The function <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> concatenates based on <em>indices</em> of DataFrames, whereas <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> combines based on the <em>content</em> of common variable(s).</li>
+<li>The option <code class="docutils literal notranslate"><span class="pre">join="outer</span></code> to <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> can create missing values, but <code class="docutils literal notranslate"><span class="pre">join=inner</span></code> cannot. The former gives the union of indices and the latter gives the intersection of indices.</li>
+<li>With <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> overlapping indices can:<ul>
+<li>cause an error</li>
+<li>cause renumbering of indices</li>
+<li>create hierarchical indices</li>
 </ul>
 </li>
-<li><p>Merging can join elements</p>
-<ul>
-<li><p>one-to-one</p></li>
-<li><p>one-to-many</p></li>
-<li><p>many-to-many</p></li>
+<li>Merging can join elements<ul>
+<li>one-to-one</li>
+<li>one-to-many</li>
+<li>many-to-many</li>
 </ul>
 </li>
-<li><p>In grouping a DataFrame can be thought to be split into smaller DataFrames. The major classes of operations on these groups are:</p>
-<ul>
-<li><p>aggregate</p></li>
-<li><p>filter</p></li>
-<li><p>transform (retains shape)</p></li>
-<li><p>apply</p></li>
+<li>In grouping a DataFrame can be thought to be split into smaller DataFrames. The major classes of operations on these groups are:<ul>
+<li>aggregate</li>
+<li>filter</li>
+<li>transform (retains shape)</li>
+<li>apply</li>
 </ul>
 </li>
-<li><p>Series which are indexed by time are called time series</p></li>
-<li><p>Linear regression can be used to find out linear relationships between variables</p>
-<ul>
-<li><p>can have more than one feature (explanatory variable)</p></li>
-<li><p>fitting polynomials is still linear regression</p></li>
+<li>Series which are indexed by time are called time series</li>
+<li>Linear regression can be used to find out linear relationships between variables<ul>
+<li>can have more than one feature (explanatory variable)</li>
+<li>fitting polynomials is still linear regression</li>
 </ul>
 </li>
 </ul>
