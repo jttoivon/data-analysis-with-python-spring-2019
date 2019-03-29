@@ -325,17 +325,18 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/matplotlib.ipynb">matplotlib.ipynb</a>.
+<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/matplotlib.ipynb">matplotlib.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/matplotlib.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></div>
-<!--NAVIGATION--><table border="1" class="docutils">
+<span class="raw-html"><br/></span></p>
+</div>
+<!--NAVIGATION--><table class="docutils align-center">
 <colgroup>
-<col width="53%"/>
-<col width="47%"/>
+<col style="width: 53%"/>
+<col style="width: 47%"/>
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="#Exercise-9-(multiple-graphs)">Exercise 9 (multiple graphs)</a></td>
-<td><a class="reference external" href="#Exercise-10-(subfigures)">Exercise 10 (subfigures)</a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-9-(multiple-graphs)">Exercise 9 (multiple graphs)</a></p></td>
+<td><p><a class="reference external" href="#Exercise-10-(subfigures)">Exercise 10 (subfigures)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -390,7 +391,9 @@ This page was generated from <a class="reference external" href="https://github.
 <p>The key components of any matplotlib figure and the terminology is shown in the below image. The toplevel object is <code class="docutils literal notranslate"><span class="pre">figure</span></code> and it can contain one or more <code class="docutils literal notranslate"><span class="pre">subfigures</span></code>, which are strangely called <code class="docutils literal notranslate"><span class="pre">axes</span></code> in matplotlib.</p>
 <p><img alt="components of a figure" src="_images/example_figure2.png"/></p>
 <hr class="docutils"/>
-<div class="admonition note"><a id="Exercise-9-(multiple-graphs)">Exercise 9 (multiple graphs)</a></div>
+<div class="admonition note">
+<p>Exercise 9 (multiple graphs)</p>
+</div>
 <p>In the above plot the x coordinates were implicitly set to the indices of the array <code class="docutils literal notranslate"><span class="pre">a</span></code>, that is, <code class="docutils literal notranslate"><span class="pre">arange(10)</span></code>. Find out from the documentation of <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> how to specify the x coordinates explicitly. Find out also how to draw multiple graphs in one figure.</p>
 <p>Make your <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the following two graphs. The first graphs has x coordinates 2,4,6,7 and y coordinates 4,3,5,1. The second graph has x coordinates 1,2,3,4 and y coordinates 4,2,3,1.</p>
 <p>Add also a title and some labels for x axis and y axis. Note that in the non-interactive mode you have to call <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> for the figure to show.</p>
@@ -432,7 +435,9 @@ This page was generated from <a class="reference external" href="https://github.
 <p>Note the similarity to the random number generators in Python: the function like <code class="docutils literal notranslate"><span class="pre">np.random.randn</span></code> use the global random number generator. But if you want to use multiple random number generators at the same time, you first have to create the generators using the call <code class="docutils literal notranslate"><span class="pre">rng1=np.random.RandomState(seed)</span></code> and then use the <em>method</em> <code class="docutils literal notranslate"><span class="pre">rng1.randn</span></code>.</p>
 <p>So with both random number generators and matplotlib plots you can choose between using one global object, and functions referring to it, at a time, or using several objects and their methods to refer to multiple objects at the same time.</p>
 <hr class="docutils"/>
-<div class="admonition note"><a id="Exercise-10-(subfigures)">Exercise 10 (subfigures)</a></div>
+<div class="admonition note">
+<p>Exercise 10 (subfigures)</p>
+</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">subfigures</span></code> that creates a figure that has two subfigures (two <em>axes</em> in matplotlib parlance). The function gets an array <code class="docutils literal notranslate"><span class="pre">a</span></code> as a parameter. In the left subfigure draw using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> <em>method</em> a graph, whose x coordinates are in the first column of <code class="docutils literal notranslate"><span class="pre">a</span></code> and the y coordinates are in the second column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. In the right subfigure draw using the <code class="docutils literal notranslate"><span class="pre">scatter</span></code> <em>method</em> a set of points whose x coords are again in the first column of <code class="docutils literal notranslate"><span class="pre">a</span></code> and whose y coordinates are in the
 second column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Additionally, the points should get their color from the third column of <code class="docutils literal notranslate"><span class="pre">a</span></code>, and size of the point from the fourth column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. For this, use the <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span></code> named parameters of <code class="docutils literal notranslate"><span class="pre">scatter</span></code>, respectively</p>
 <p>Test your function <code class="docutils literal notranslate"><span class="pre">subfigure</span></code> from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
@@ -441,9 +446,9 @@ second column of <code class="docutils literal notranslate"><span class="pre">a<
 <h2>Other data visualization libraries for Python<a class="headerlink" href="#Other-data-visualization-libraries-for-Python" title="Permalink to this headline">¶</a></h2>
 <p>The development of matplotlib library started already in 2003. In some ways this old age shows as figures that don’t look very pretty compared to the figures created with more modern alternatives. Also, it can be quite complicated to create a simple figure. Here’s a list of some common modern libraries:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://seaborn.pydata.org/index.html">Seaborn</a> is a higher-level plotting library that is build on top of matplotlib. It allows easy creation of more complicated plots. The figures it produces also look prettier than ones created by matplotlib with its default settings.</li>
-<li><a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a> creates html pages as output that can be viewed with a web browser. Since it doesn’t create static images, like many other plotting libraries, but html pages which can containg Javascript, this allows the plots to be interactive. Interactive can here mean that you can e.g. zoom or pan the image, or you can have control elements (button, sliders, etc) that adjust the image.</li>
-<li><a class="reference external" href="http://holoviews.org/">Holoviews</a>: even higher-level library build on top of Bokeh and matplotlib</li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/index.html">Seaborn</a> is a higher-level plotting library that is build on top of matplotlib. It allows easy creation of more complicated plots. The figures it produces also look prettier than ones created by matplotlib with its default settings.</p></li>
+<li><p><a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a> creates html pages as output that can be viewed with a web browser. Since it doesn’t create static images, like many other plotting libraries, but html pages which can containg Javascript, this allows the plots to be interactive. Interactive can here mean that you can e.g. zoom or pan the image, or you can have control elements (button, sliders, etc) that adjust the image.</p></li>
+<li><p><a class="reference external" href="http://holoviews.org/">Holoviews</a>: even higher-level library build on top of Bokeh and matplotlib</p></li>
 </ul>
 <!--NAVIGATION--></div>
 </div>

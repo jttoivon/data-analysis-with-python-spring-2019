@@ -326,19 +326,20 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/clustering.ipynb">clustering.ipynb</a>.
+<p>This page was generated from <a class="reference external" href="https://github.com/jttoivon/data-analysis-with-python-spring-2019/blob/master/clustering.ipynb">clustering.ipynb</a>.
 <span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/data-analysis-with-python-spring-2019/blob/master/clustering.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
-<span class="raw-html"><br/></span></div>
-<!--NAVIGATION--><table border="1" class="docutils">
+<span class="raw-html"><br/></span></p>
+</div>
+<!--NAVIGATION--><table class="docutils align-center">
 <colgroup>
-<col width="33%"/>
-<col width="33%"/>
-<col width="33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="#Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></td>
-<td><a class="reference external" href="#Exercise-6-(nonconvex-clusters)">Exercise 6 (nonconvex clusters)</a></td>
-<td><a class="reference external" href="#Exercise-7-(binding-sites)">Exercise 7 (binding sites)</a></td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference external" href="#Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></p></td>
+<td><p><a class="reference external" href="#Exercise-6-(nonconvex-clusters)">Exercise 6 (nonconvex clusters)</a></p></td>
+<td><p><a class="reference external" href="#Exercise-7-(binding-sites)">Exercise 7 (binding sites)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -347,13 +348,13 @@ This page was generated from <a class="reference external" href="https://github.
 <p>Clustering is one of the types of unsupervised learning. It is similar to classification: the aim is to give a label to each data point. However, unlike in classification, we are not given any examples of labels associated with the data points. We must infer from the data, which data points belong to the same cluster. This can be achieved using some notion of distance between the data points. Data points in the same cluster are somehow close to each other.</p>
 <p>One of the simplest clustering methods is the <em>k-means clustering</em>. It aims at producing a clustering that is optimal in the following sense:</p>
 <ul class="simple">
-<li>the <em>centre of each cluster</em> is the average of all points in the cluster</li>
-<li>any point in a cluster is closer to its centre than to a centre of any other cluster</li>
+<li><p>the <em>centre of each cluster</em> is the average of all points in the cluster</p></li>
+<li><p>any point in a cluster is closer to its centre than to a centre of any other cluster</p></li>
 </ul>
 <p>The k-means clustering is first given the wanted number of clusters, say k, as a <em>hyperparameter</em>. Next, to start the algorithm, k points from the data set are chosen randomly as cluster centres. Then the following phases are repeated iteratively:</p>
 <ul class="simple">
-<li>any data point is set to belong to a cluster, whose centre is closest to it</li>
-<li>then for each cluster a new centre is chosen as the average of the data points in the cluster</li>
+<li><p>any data point is set to belong to a cluster, whose centre is closest to it</p></li>
+<li><p>then for each cluster a new centre is chosen as the average of the data points in the cluster</p></li>
 </ul>
 <p>This procedure is repeated until the clusters no longer change. This kind of algorithm is called an Expectation-Maximization (EM) algorithm, which is known to converge.</p>
 <div class="section" id="Simple-example">
@@ -433,9 +434,9 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[ 2.07464749  0.9869902 ]
+[[-1.36512238  7.70188306]
+ [ 2.07464749  0.9869902 ]
  [-1.70639178  2.9104771 ]
- [-1.36512238  7.70188306]
  [ 0.86008475  4.31501411]]
 </pre></div></div>
 </div>
@@ -473,7 +474,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Accuracy score is 0.0
+Accuracy score is 0.49
 </pre></div></div>
 </div>
 <p>Oops! Even though the clusters could match almost perfectly to the original, their labels might be permuted. Let’s select randomly one point from each cluster and check their labels from the original data labels. Then we use this label for the whole cluster. In essence, we are renaming the clusters, not re-clustering the data.</p>
@@ -508,7 +509,7 @@ Accuracy score is 0.0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[1, 2, 3, 0]
+[3, 1, 2, 0]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -707,10 +708,14 @@ Accuracy score is 0.7935447968836951
 </div>
 <p>This is quite a good result for such a simple algorithm!</p>
 <hr class="docutils"/>
-<div class="admonition note"><a id="Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></div>
+<div class="admonition note">
+<p>Exercise 5 (plant clustering)</p>
+</div>
 <p>Using the same iris data set that you saw earlier in the classification, apply k-means clustering with 3 clusters. Create a function <code class="docutils literal notranslate"><span class="pre">plant_clustering</span></code> that loads the iris data set, clusters the data and returns the accuracy_score.</p>
 <hr class="docutils"/>
-<div class="admonition note"><a id="Exercise-6-(nonconvex-clusters)">Exercise 6 (nonconvex clusters)</a></div>
+<div class="admonition note">
+<p>Exercise 6 (nonconvex clusters)</p>
+</div>
 <p>Read the tab separated file data.tsv from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder into a DataFrame. The dataset has two features X1 and X2, and the label y. Cluster the feature matrix using DBSCAN with different values for the eps parameter. Use values in <code class="docutils literal notranslate"><span class="pre">np.arange(0.05,</span> <span class="pre">0.2,</span> <span class="pre">0.05)</span></code> for clustering. For each clustering, collect the accuracy score, the number of clusters, and the number of outliers. Return these values in a DataFrame, where <code class="docutils literal notranslate"><span class="pre">eps</span></code> is the index and the columns are names as in the below example.</p>
 <p>Note that DBSCAN uses label -1 to denote outliers , that is, those data points that didn’t fit well in any cluster. You have to modify the find_permutation function to handle this: ignore the outlier data points from the accuracy score computation. In addition, if the number of clusters is not the same as the number of labels in the original data, set the accuracy score to NaN.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     eps   Score  Clusters  Outliers
@@ -727,10 +732,10 @@ Accuracy score is 0.7935447968836951
 <h2>Hierarchical clustering<a class="headerlink" href="#Hierarchical-clustering" title="Permalink to this headline">¶</a></h2>
 <p>Hierarchical clustering works by first putting each data point in their own cluster and then merging clusters based on some rule, until there are only the wanted number of clusters remaining. For this to work, there needs to be a distance measure between the data points. With this distance measure <code class="docutils literal notranslate"><span class="pre">d</span></code>, we can define another distance measure between the <strong>clusters</strong> U and V using one of the following methods (<em>linkages</em>):</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">single</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \min_{u \in U, v \in V} d(u,v)\)</span></li>
-<li><code class="docutils literal notranslate"><span class="pre">complete</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \max_{u \in U, v \in V} d(u,v)\)</span></li>
-<li><code class="docutils literal notranslate"><span class="pre">average</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \sum_{u \in U, v \in V} \frac{d(u,v)}{|U||V|}\)</span></li>
-<li><code class="docutils literal notranslate"><span class="pre">ward</span></code>: tries to minimize the variance in each cluster</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">single</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \min_{u \in U, v \in V} d(u,v)\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complete</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \max_{u \in U, v \in V} d(u,v)\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">average</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \sum_{u \in U, v \in V} \frac{d(u,v)}{|U||V|}\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ward</span></code>: tries to minimize the variance in each cluster</p></li>
 </ul>
 <p>At each iteration of the algorithm two clusters that are closest to each other are merged. After this the distance between the clusters are recomputed, and then it continues to the next iteration.</p>
 <p>Below is an example with a botanical dataset with 150 samples from three species. Each species appears in the dataset 50 times. Each sample point has 4 features, which are basically dimensions of the “leaves” of the flower.</p>
@@ -768,7 +773,9 @@ Accuracy score is 0.7935447968836951
 </div>
 <p>With sharp eye and good will one can discern three clusters in the above heatmap and dendrogram.</p>
 <hr class="docutils"/>
-<div class="admonition note"><a id="Exercise-7-(binding-sites)">Exercise 7 (binding sites)</a></div>
+<div class="admonition note">
+<p>Exercise 7 (binding sites)</p>
+</div>
 <p>A binding site is a piece of DNA where a certain protein prefers to bind. The piece of DNA can be described as a string consisting of letters A, C, G, and T, which correspond to nucleotides Adenine, Cytosine, Guanine, and Thymine. In this exercise the length of binding sites is eight nucleotides. They are stored in the file <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>, and the binding sites there are classified into two classes.</p>
 <p>Part 1. Write function <code class="docutils literal notranslate"><span class="pre">toint</span></code> that converts a nucleotide to an integer. Use the following mapping:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">-&gt;</span> <span class="mi">0</span>
