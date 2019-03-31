@@ -388,14 +388,14 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[ 0.          0.52631579  1.05263158  1.57894737  2.10526316  2.63157895
-  3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
-  6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
-  9.47368421 10.        ]
-[ 2.76405235  2.45278879  4.08400114  6.39878794  7.07808431  5.28588001
-  8.26587789  8.21706384  9.31783378 10.88428271 11.67035936 14.03322088
- 14.39261667 14.80588554 16.18070534 17.12314801 19.33618434 18.68957858
- 20.26043612 20.14590426]
+[  0.           0.52631579   1.05263158   1.57894737   2.10526316
+   2.63157895   3.15789474   3.68421053   4.21052632   4.73684211
+   5.26315789   5.78947368   6.31578947   6.84210526   7.36842105
+   7.89473684   8.42105263   8.94736842   9.47368421  10.        ]
+[  2.76405235   2.45278879   4.08400114   6.39878794   7.07808431
+   5.28588001   8.26587789   8.21706384   9.31783378  10.88428271
+  11.67035936  14.03322088  14.39261667  14.80588554  16.18070534
+  17.12314801  19.33618434  18.68957858  20.26043612  20.14590426]
 </pre></div></div>
 </div>
 <p>Next we import the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> class.</p>
@@ -449,9 +449,9 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Parameters: [1.88627741] 2.1379475205341354
-Coefficient: 1.8862774144823005
-Intercept: 2.1379475205341354
+Parameters: [ 1.88627741] 2.13794752053
+Coefficient: 1.88627741448
+Intercept: 2.13794752053
 </pre></div></div>
 </div>
 <p>In this case, the coefficient is the slope of the fitted line, and the intercept is the point where the fitted line intersects with the y-axis.</p>
@@ -491,7 +491,7 @@ Note that in scikit-learn the attributes of the model that store the learned par
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(array([5.69493795e+00, 3.36972233e+00, 4.20919214e-03]), 0.0)
+<span></span>(array([  5.69493795e+00,   3.36972233e+00,   4.20919214e-03]), 0.0)
 </pre></div>
 </div>
 </div>
@@ -519,17 +519,17 @@ x:
  [ 4  5  6]
  [ 7  8 10]]
 b:
- [[5.69493795e+00]
- [3.36972233e+00]
- [4.20919214e-03]]
+ [[  5.69493795e+00]
+ [  3.36972233e+00]
+ [  4.20919214e-03]]
 y:
- [[12.44701018]
- [39.6536186 ]
- [66.8644362 ]]
+ [[ 12.44701018]
+ [ 39.6536186 ]
+ [ 66.8644362 ]]
 product:
- [[12.44701018]
- [39.6536186 ]
- [66.8644362 ]]
+ [[ 12.44701018]
+ [ 39.6536186 ]
+ [ 66.8644362 ]]
 </pre></div></div>
 </div>
 </div>
@@ -572,7 +572,7 @@ product:
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Coefficients: [-36.65414588 -20.17228669   0.15359003]
-Intercept: -167.16046606447708
+Intercept: -167.160466064
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

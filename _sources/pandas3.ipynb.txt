@@ -438,7 +438,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 3 (top bands)</div>\n",
     "\n",
-    "Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the `src` folder (`https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv`).\n",
+    "Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the `src` folder.\n",
     "\n",
     "<hr/>"
    ]
@@ -698,7 +698,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 5 (best record company)</div>\n",
     "\n",
-    "We use again the UK top 40 data set from the first week of 1964 in the `src` folder (https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv ). Here we define \"goodness\" of a record company (`Publisher`) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function `best_record_company`.\n",
+    "We use again the UK top 40 data set from the first week of 1964 in the `src` folder. Here we define \"goodness\" of a record company (`Publisher`) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function `best_record_company`.\n",
     "\n",
     "<hr/>"
    ]
@@ -709,7 +709,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 6 (suicide fractions)</div>\n",
     "\n",
-    "Load the suicide data set from `src` folder (https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv) . This data was originally downloaded from [Kaggle](https://www.kaggle.com/szamil/who-suicide-statistics). Kaggle contains lots of interesting open data sets.\n",
+    "Load the suicide data set from `src` folder. This data was originally downloaded from [Kaggle](https://www.kaggle.com/szamil/who-suicide-statistics). Kaggle contains lots of interesting open data sets.\n",
     "\n",
     "Write function `suicide_fractions` that loads the data set and returns a Series that has the country as the (row) index and as the column the fraction of suicides per population in that country. In more detail, this fraction is the average of suicide fractions. The information about year, sex and age is not used.\n",
     "\n",

@@ -1610,7 +1610,7 @@ Indexes have overlapping values: [0, 1]
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-3-(top-bands)">Exercise 3 (top bands)</a></div>
-<p>Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
+<p>Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
 <h2>Aggregates and groupings<a class="headerlink" href="#Aggregates-and-groupings" title="Permalink to this headline">¶</a></h2>
@@ -1745,7 +1745,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7f9a5ee21be0&gt;
+<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7f51d9434828&gt;
 </pre></div>
 </div>
 </div>
@@ -2168,7 +2168,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7f9a5e78f550&gt;
+<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7f51d8da9358&gt;
 </pre></div>
 </div>
 </div>
@@ -4112,10 +4112,10 @@ Name: Precipitation, dtype: float64
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></div>
-<p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</a> ). Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
+<p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-6-(suicide-fractions)">Exercise 6 (suicide fractions)</a></div>
-<p>Load the suicide data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv</a>) . This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
+<p>Load the suicide data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">suicide_fractions</span></code> that loads the data set and returns a Series that has the country as the (row) index and as the column the fraction of suicides per population in that country. In more detail, this fraction is the average of suicide fractions. The information about year, sex and age is not used.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></div>

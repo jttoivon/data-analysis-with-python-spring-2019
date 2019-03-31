@@ -434,15 +434,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>-0.513601</td>
-<td>0.567241</td>
-<td>-0.327806</td>
+<td>0.236275</td>
+<td>-0.106181</td>
+<td>-0.319189</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-1.267236</td>
-<td>0.918932</td>
-<td>1.157866</td>
+<td>-0.417624</td>
+<td>-0.400768</td>
+<td>0.520597</td>
 </tr>
 </tbody>
 </table>
@@ -527,15 +527,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>1.763423</td>
-<td>-1.041620</td>
-<td>0.264485</td>
+<td>1.482577</td>
+<td>-1.551788</td>
+<td>-0.105214</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-1.548474</td>
-<td>1.071006</td>
-<td>0.722036</td>
+<td>0.072132</td>
+<td>-0.886753</td>
+<td>-1.232355</td>
 </tr>
 </tbody>
 </table>
@@ -920,7 +920,7 @@ Name: b, dtype: int64
 </div>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-3-(municipal-information)">Exercise 3 (municipal information)</a></div>
-<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function load a data set of municipal information from the src folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/statistics/municipal.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/statistics/municipal.tsv</a> originally from <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/en/">Statistics Finland</a>). Use the function <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, and note that the separator is a tabulator.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function load a data set of municipal information from the src folder (originally from <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/en/">Statistics Finland</a>). Use the function <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, and note that the separator is a tabulator.</p>
 <p>Print the shape of the DataFrame and the column names in the following format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Shape</span><span class="p">:</span> <span class="n">r</span><span class="p">,</span><span class="n">c</span>
 <span class="n">Columns</span><span class="p">:</span>
@@ -1246,7 +1246,7 @@ Name: 1, dtype: object
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-8-(subsetting-by-positions)">Exercise 8 (subsetting by positions)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">subsetting_by_positions</span></code> that does the following.</p>
-<p>Read the data set of the top forty singles from the beginning of the year 1964 from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</span></code>). Return the top 10 entries and only the columns <code class="docutils literal notranslate"><span class="pre">Title</span></code> and <code class="docutils literal notranslate"><span class="pre">Artist</span></code>. Get these elements by their positions, that is, by using a single call to the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> attribute. The function should return these as a DataFrame.</p>
+<p>Read the data set of the top forty singles from the beginning of the year 1964 from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Return the top 10 entries and only the columns <code class="docutils literal notranslate"><span class="pre">Title</span></code> and <code class="docutils literal notranslate"><span class="pre">Artist</span></code>. Get these elements by their positions, that is, by using a single call to the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> attribute. The function should return these as a DataFrame.</p>
 <hr/></div>
 <div class="section" id="Summary-statistics">
 <h2>Summary statistics<a class="headerlink" href="#Summary-statistics" title="Permalink to this headline">¶</a></h2>
@@ -1402,7 +1402,7 @@ dtype: float64
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-9-(snow-depth)">Exercise 9 (snow depth)</a></div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">snow_depth</span></code> that reads in the weather DataFrame from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv</span></code>) and returns the maximum amount of snow in the year 2017.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">snow_depth</span></code> that reads in the weather DataFrame from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder and returns the maximum amount of snow in the year 2017.</p>
 <p>Print the result in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Max</span> <span class="n">snow</span> <span class="n">depth</span><span class="p">:</span> <span class="n">xx</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
@@ -1440,8 +1440,8 @@ have the same number of rows. Let’s use the <code class="docutils literal notr
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([-1.,  7., 13., 10., 12.,  9.,  8.,  5.,  6.,  4.,  3., 15., 14.,
-        2., nan,  0.])
+<span></span>array([ -1.,   7.,  13.,  10.,  12.,   9.,   8.,   5.,   6.,   4.,   3.,
+        15.,  14.,   2.,  nan,   0.])
 </pre></div>
 </div>
 </div>
@@ -2457,7 +2457,7 @@ dtype: object
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-12-(cyclists)">Exercise 12 (cyclists)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cyclists</span></code> that does the following.</p>
-<p>Load the Helsinki bicycle data set from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (address <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/hel/Helsingin_pyorailijamaarat.csv</span></code>). The dataset contain number of cyclists passing by measuring points per hour. The data is gathered over about four years, and there are 20 measuring points around Helsinki. The dataset contains some empty rows at the end. Get rid of these. Also, get rid of columns that contain only missing values. Return the cleaned dataset.</p>
+<p>Load the Helsinki bicycle data set from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://hri.fi/data/dataset//helsingin-pyorailijamaarat">https://hri.fi/data/dataset//helsingin-pyorailijamaarat</a>). The dataset contain number of cyclists passing by measuring points per hour. The data is gathered over about four years, and there are 20 measuring points around Helsinki. The dataset contains some empty rows at the end. Get rid of these. Also, get rid of columns that contain only missing values. Return the cleaned dataset.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-13-(missing-value-types)">Exercise 13 (missing value types)</a></div>
 <p>Make function <code class="docutils literal notranslate"><span class="pre">missing_value_types</span></code> that returns the following DataFrame. Use the <code class="docutils literal notranslate"><span class="pre">State</span></code> column as the (row) index. The value types for the two other columns should be <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">object</span></code>, respectively. Replace the dashes with the appropriate missing value symbols.</p>
@@ -2515,7 +2515,7 @@ dtype: object
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-14-(special-missing-values)">Exercise 14 (special missing values)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">special_missing_values</span></code> that does the following.</p>
-<p>Read the data set of the top forty singles from the beginning of the year 1964 from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</span></code>). Return the rows whose singles’ position dropped compared to last week’s position (column LW=Last Week).</p>
+<p>Read the data set of the top forty singles from the beginning of the year 1964 from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Return the rows whose singles’ position dropped compared to last week’s position (column LW=Last Week).</p>
 <p>To do this you first have to convert the special values “New” and “Re” (Re-entry) to missing values (<code class="docutils literal notranslate"><span class="pre">None</span></code>).</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-15-(last-week)">Exercise 15 (last week)</a></div>
@@ -2649,7 +2649,7 @@ dtype: object
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-16-(split-date)">Exercise 16 (split date)</a></div>
-<p>Read again the bicycle data set from <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/hel/Helsingin_pyorailijamaarat.csv</span></code>, and clean it as in the earlier exercise. Then split the <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into a DataFrame with five columns with column names <code class="docutils literal notranslate"><span class="pre">Weekday</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>, <code class="docutils literal notranslate"><span class="pre">Year</span></code>, and <code class="docutils literal notranslate"><span class="pre">Hour</span></code>. Note that you also need to to do some conversions. To get Hours, drop the colon and minutes. Convert field <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> according the following rule:</p>
+<p>Read again the bicycle data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder, and clean it as in the earlier exercise. Then split the <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into a DataFrame with five columns with column names <code class="docutils literal notranslate"><span class="pre">Weekday</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>, <code class="docutils literal notranslate"><span class="pre">Year</span></code>, and <code class="docutils literal notranslate"><span class="pre">Hour</span></code>. Note that you also need to to do some conversions. To get Hours, drop the colon and minutes. Convert field <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> according the following rule:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ma</span> <span class="o">-&gt;</span> <span class="n">Mon</span>
 <span class="n">ti</span> <span class="o">-&gt;</span> <span class="n">Tue</span>
 <span class="n">ke</span> <span class="o">-&gt;</span> <span class="n">Wed</span>
