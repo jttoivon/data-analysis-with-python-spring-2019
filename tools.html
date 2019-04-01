@@ -142,23 +142,23 @@ There are three methods of running Python code:</p>
 <p>If you just quickly want to try out something, then maybe the easiest
 option is to use the IPython interactive shell. To do this,
 first start the terminal program to get a command prompt.
-Then give the command <cite>ipython3</cite> and press enter.
+Then give the command <code class="docutils literal notranslate"><span class="pre">ipython3</span></code> and press enter.
 Then you can write Python commands and execute them by pressing enter.
 Note that IPython supports tab completion. Try this out
-by first writing <cite>pri</cite> and then pressing the tabulator key.
-It should complete the command to <cite>print</cite>. IPython can tab complete
+by first writing <code class="docutils literal notranslate"><span class="pre">pri</span></code> and then pressing the tabulator key.
+It should complete the command to <code class="docutils literal notranslate"><span class="pre">print</span></code>. IPython can tab complete
 keywords; function, module, method, and variable names, and so on.
-You can quit the the IPython shell by given the command <cite>exit</cite> and
+You can quit the the IPython shell by given the command <code class="docutils literal notranslate"><span class="pre">exit</span></code> and
 pressing enter.</p>
 <p>The following video will show an example session of using IPython.</p>
 <script async="" id="asciicast-GssT7MymqOsusdvOqZUgH9JMC" src="https://asciinema.org/a/GssT7MymqOsusdvOqZUgH9JMC.js">
 </script></div>
 <div class="section" id="jupyter-notebook">
 <h2>Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h2>
-<p>Again in the command prompt, issue command <cite>jupyter-notebook</cite>.
+<p>Again in the command prompt, issue command <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>.
 It should start the Jupyter server and open a tab in the web browser
-that is connected to the server. There you can click the <cite>new</cite> button
-and select <cite>Python 3</cite>. Click on the cell, write your Python code
+that is connected to the server. There you can click the <code class="docutils literal notranslate"><span class="pre">new</span></code> button
+and select <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code>. Click on the cell, write your Python code
 there, and execute it by pressing control-enter.
 You can check the following video for introduction to Jupyter notebook:</p>
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope;
@@ -170,30 +170,30 @@ Python code, you can click the ‘open in colab’ link at the top of the page
 to open the notebook in Google’s colab service. There it is possible
 to edit code and reexecute it.</p>
 <p>Alternatively, you can download the notebooks with command
-<cite>git clone https://github.com/jttoivon/x</cite>. Then start
-Jupyter notebook with command <cite>jupyter-notebook</cite>.</p>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/jttoivon/data-analysis-with-python-spring-2019</span></code>. Then start
+Jupyter notebook with command <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>.</p>
 </div>
 <div class="section" id="executing-a-file-containing-python-code">
 <h2>Executing a file containing Python code<a class="headerlink" href="#executing-a-file-containing-python-code" title="Permalink to this headline">¶</a></h2>
 <p>In your favorite text editor write some Python code, and save
-it to a file with <cite>.py</cite> extension, for example <cite>myprogram.py</cite>. Then you can execute
-the program with the command <cite>python3 myprogram.py</cite>. In all the exercises
+it to a file with <code class="docutils literal notranslate"><span class="pre">.py</span></code> ext`ension, for example <code class="docutils literal notranslate"><span class="pre">myprogram.py</span></code>. Then you can execute
+the program with the command <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">myprogram.py</span></code>. In all the exercises
 of this course you write your solution to a text file (a stub file is provided
 where you can add the missing pieces). To run your solution to an exercise, for example
-the “hello world” exercise, use <cite>python3 src/hello_world.py</cite>. This
+the “hello world” exercise, use <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">src/hello_world.py</span></code>. This
 of course depends on what is your currect folder.</p>
 <p>If you are running some unix based operation system, like Linux or macOS, you
 can make the file directly executable in the following way. Add as the first line of you
-program the line <cite>#!/usr/bin/env python</cite> and
-on command line issue command <cite>chmod u+x myprogram.py</cite>. Then
-you can execute the file from command line with <cite>./myprogram.py</cite>.</p>
+program the line <code class="docutils literal notranslate"><span class="pre">#!/usr/bin/env</span> <span class="pre">python</span></code> and
+on command line issue command <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span> <span class="pre">myprogram.py</span></code>. Then
+you can execute the file from command line with <code class="docutils literal notranslate"><span class="pre">./myprogram.py</span></code>.</p>
 </div>
 <div class="section" id="correct-software-versions">
 <h2>Correct software versions<a class="headerlink" href="#correct-software-versions" title="Permalink to this headline">¶</a></h2>
-<p>It can be that the command <cite>python</cite> still refers to the old python2 version.
+<p>It can be that the command <code class="docutils literal notranslate"><span class="pre">python</span></code> still refers to the old python2 version.
 This course relies completely on a newer python version. Therefore I have
-used the command <cite>python3</cite> everywhere to be sure the old version python2
-is not used. You can check the version number with the <cite>–version</cite> option.
+used the command <code class="docutils literal notranslate"><span class="pre">python3</span></code> everywhere to be sure the old version python2
+is not used. You can check the version number with the <code class="docutils literal notranslate"><span class="pre">--version</span></code> option.
 For example in the following way:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jttoivon@dx6-cs-05:$ python --version
 Python 2.7.15rc1
@@ -202,7 +202,7 @@ Python 3.6.7
 </pre></div>
 </div>
 <p>If you have Anaconda correctly installed, then the Python version should
-be new enough and <cite>python</cite> command should refer to <cite>python3</cite>, not <cite>python2</cite>.
+be new enough and <code class="docutils literal notranslate"><span class="pre">python</span></code> command should refer to <code class="docutils literal notranslate"><span class="pre">python3</span></code>, not <code class="docutils literal notranslate"><span class="pre">python2</span></code>.
 The versions of additional libraries that are know to work are:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -239,7 +239,7 @@ The versions of additional libraries that are know to work are:</p>
 <p>More recent versions should work as well. You can check the software
 version of your installation with the following Python script:
 <a class="reference external" href="https://github.com/jttoivon/x/blob/master/versions.py">versions.py</a>
-Download the script and execute it with <cite>python3 versions.py</cite>.</p>
+Download the script and execute it with <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">versions.py</span></code>.</p>
 </div>
 </div>
 </div>
