@@ -159,7 +159,9 @@
     "\n",
     "Part 2.\n",
     "\n",
-    "Using the function `radial_distance` write function `radial_mask` that takes an image as a parameter and returns an array with same height and width filled with values between 0.0 and 1.0. Do this by dividing the distance array by its maximum. To make sure that in the resulting array values near the center of array are close to 1 and closer to the edges of the array are values closer to 0, subtract the previous array from 1.\n",
+    "Create function `scale(a, tmin=0.0, tmax=1.0)` that returns a copy of the array `a` with its elements scaled to be in the range `[tmin,tmax]`.\n",
+    "\n",
+    "Using the functions `radial_distance` and `scale` write function `radial_mask` that takes an image as a parameter and returns an array with same height and width filled with values between 0.0 and 1.0. Do this using the `scale` function.  To make the resulting array values near the center of array to be close to 1 and closer to the edges of the array are values closer to be 0, subtract the previous array from 1.\n",
     "\n",
     "Write also function `radial_fade` that returns the image multiplied by its radial mask.\n",
     "\n",
@@ -287,7 +289,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.7.1"
   }
  },
  "nbformat": 4,

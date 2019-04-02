@@ -373,8 +373,8 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(530, 920, 3)
-The image consists of 487600 pixels
+(368, 640, 3)
+The image consists of 235520 pixels
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -450,7 +450,7 @@ The image consists of 487600 pixels
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(530, 920, 3)
+(368, 640, 3)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -481,7 +481,8 @@ sensitive to green color and least sensitive to blue color.</p>
 <p>The function should work both for two and three dimensional images, that is grayscale and color images.</p>
 <p>Write also function <code class="docutils literal notranslate"><span class="pre">radial_distance</span></code> that returns for image with width <code class="docutils literal notranslate"><span class="pre">w</span></code> and height <code class="docutils literal notranslate"><span class="pre">h</span></code> an array with shape (h,w), where the number at index (i,j) gives the euclidean distance from the point (i,j) to the center of the image.</p>
 <p>Part 2.</p>
-<p>Using the function <code class="docutils literal notranslate"><span class="pre">radial_distance</span></code> write function <code class="docutils literal notranslate"><span class="pre">radial_mask</span></code> that takes an image as a parameter and returns an array with same height and width filled with values between 0.0 and 1.0. Do this by dividing the distance array by its maximum. To make sure that in the resulting array values near the center of array are close to 1 and closer to the edges of the array are values closer to 0, subtract the previous array from 1.</p>
+<p>Create function <code class="docutils literal notranslate"><span class="pre">scale(a,</span> <span class="pre">tmin=0.0,</span> <span class="pre">tmax=1.0)</span></code> that returns a copy of the array <code class="docutils literal notranslate"><span class="pre">a</span></code> with its elements scaled to be in the range <code class="docutils literal notranslate"><span class="pre">[tmin,tmax]</span></code>.</p>
+<p>Using the functions <code class="docutils literal notranslate"><span class="pre">radial_distance</span></code> and <code class="docutils literal notranslate"><span class="pre">scale</span></code> write function <code class="docutils literal notranslate"><span class="pre">radial_mask</span></code> that takes an image as a parameter and returns an array with same height and width filled with values between 0.0 and 1.0. Do this using the <code class="docutils literal notranslate"><span class="pre">scale</span></code> function. To make the resulting array values near the center of array to be close to 1 and closer to the edges of the array are values closer to be 0, subtract the previous array from 1.</p>
 <p>Write also function <code class="docutils literal notranslate"><span class="pre">radial_fade</span></code> that returns the image multiplied by its radial mask.</p>
 <p>Test your functions in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, which should create, using matplotlib, a figure that has three subfigures stacked vertically. On top the original <code class="docutils literal notranslate"><span class="pre">painting.png</span></code>, in the middle the mask, and on the bottom the faded image.</p>
 <hr/><div class="section" id="Finding-clusters-in-an-image">
