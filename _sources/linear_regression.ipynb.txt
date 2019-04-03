@@ -259,10 +259,15 @@
    "metadata": {},
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 10 (linear regression)</div>\n",
+    "\n",
+    "Part 1.\n",
+    "\n",
     "Write a function `fit_line` that gets one dimensional arrays `x` and `y` as parameters. The function should return the tuple `(slope, intercept)` of the fitted line. Write a main program that tests the `fit_line` function with some example arrays. The main function should produce output in the following form:\n",
     "\n",
-    "Slope: 1.0<br/>\n",
+    "```\n",
+    "Slope: 1.0\n",
     "Intercept: 1.16666666667\n",
+    "```\n",
     "\n",
     "Part 2.\n",
     "\n",
@@ -276,7 +281,7 @@
    "metadata": {},
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 11 (mystery data)</div>\n",
-    "Read the tab separated file `mystery_data.tsv`. Its first five columns define the features, and the last column is the response. Use scikit-learns's `LinearRegression` to fit this data. Implement function `mystery_data` that reads this file and learns and returns the regression coefficients for the five features. You don't have to fit the intercept. The `main` method will print output in the following form:\n",
+    "Read the tab separated file `mystery_data.tsv`. Its first five columns define the features, and the last column is the response. Use scikit-learn's `LinearRegression` to fit this data. Implement function `mystery_data` that reads this file and learns and returns the regression coefficients for the five features. You don't have to fit the intercept. The `main` method should print output in the following form:\n",
     "\n",
     "```\n",
     "Coefficient of X1 is ...\n",
@@ -300,11 +305,11 @@
     "\n",
     "Part 1.\n",
     "\n",
-    "Using all the features (X1 to X5), fit the data using a linear regression. Get the coefficient of determination using the `score` method of the `LinearRegression` class. Write a function `coefficient_of_determination` to do all this. It should return a list containing the R2-score as the only value.\n",
+    "Using all the features (X1 to X5), fit the data using a linear regression (include the intercept). Get the coefficient of determination using the `score` method of the `LinearRegression` class. Write a function `coefficient_of_determination` to do all this. It should return a list containing the R2-score as the only value.\n",
     "\n",
     "Part 2.\n",
     "\n",
-    "Extend your function so that it also returns R2-scores related to linear regression with each single feature in turn. The `coefficient_of_determination` (https://en.wikipedia.org/wiki/Coefficient_of_determination) function should therefore return a list with six R2-scores. To achieve this, your function should call both the `fit` method and the `score` method six times. \n",
+    "Extend your function so that it also returns R2-scores related to linear regression with each single feature in turn. The `coefficient_of_determination` (https://en.wikipedia.org/wiki/Coefficient_of_determination) function should therefore return a list with six R2-scores (the first score is for five features, like in Part 1). To achieve this, your function should call both the `fit` method and the `score` method six times. \n",
     "\n",
     "The output from the main method should look like this:\n",
     "```\n",
@@ -412,7 +417,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.7.1"
   }
  },
  "nbformat": 4,

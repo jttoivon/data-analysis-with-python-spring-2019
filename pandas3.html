@@ -1610,7 +1610,7 @@ Indexes have overlapping values: [0, 1]
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-3-(top-bands)">Exercise 3 (top bands)</a></div>
-<p>Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.</p>
+<p>Merge the DataFrames UK top40 and the bands DataFrame that are stored in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
 <h2>Aggregates and groupings<a class="headerlink" href="#Aggregates-and-groupings" title="Permalink to this headline">¶</a></h2>
@@ -1745,7 +1745,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7fba404e5128&gt;
+<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7fc76201ab38&gt;
 </pre></div>
 </div>
 </div>
@@ -2168,7 +2168,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7fba3fe7a2e8&gt;
+<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7fc76198d2b0&gt;
 </pre></div>
 </div>
 </div>
@@ -4105,14 +4105,13 @@ Name: Precipitation, dtype: float64
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-4-(cyclists-per-day)">Exercise 4 (cyclists per day)</a></div>
-<p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.</p>
 <p>Part 1.</p>
-<p>Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
+<p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group. Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
 <p>Part 2.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></div>
-<p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
+<p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks on chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-6-(suicide-fractions)">Exercise 6 (suicide fractions)</a></div>
 <p>Load the suicide data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
@@ -4120,7 +4119,7 @@ Name: Precipitation, dtype: float64
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></div>
 <p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise.</p>
-<p>Implement function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> as described below. Download the dataset of average temperature (over years 1961-1990) in different countries from <code class="docutils literal notranslate"><span class="pre">src/List_of_countries_by_average_yearly_temperature.html</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a>) . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contains column headers and which column contains row headers.
+<p>Implement function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> as described below. We use the dataset of average temperature (over years 1961-1990) in different countries from <code class="docutils literal notranslate"><span class="pre">src/List_of_countries_by_average_yearly_temperature.html</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a>) . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contains column headers and which column contains row headers.
 Maku sure you use the country as the (row) index for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
 <p>The return value of the function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> is a tuple (suicide_rows, temperature_rows, common_rows, spearman_correlation) The output from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function should be of the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Suicide</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
@@ -4135,7 +4134,7 @@ Maku sure you use the country as the (row) index for both of the DataFrames. Wha
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">s</span><span class="o">=</span><span class="s2">"</span><span class="se">\u2212</span><span class="s2">5"</span>
+<span></span><span class="n">s</span><span class="o">=</span><span class="s2">"</span><span class="se">\u2212</span><span class="s2">"</span> <span class="s2">"5"</span>   <span class="c1"># unicode minus sign and five</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -4933,7 +4932,7 @@ could not convert string to float: '−5'
 <ul class="simple">
 <li>reads the data set</li>
 <li>cleans it</li>
-<li>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex (that is, to row names)</li>
+<li>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex (that is, to row names) of that DataFrame</li>
 <li>returns the new DataFrame</li>
 </ul>
 <hr/><hr class="docutils"/>
@@ -4941,7 +4940,7 @@ could not convert string to float: '−5'
 <p>In function <code class="docutils literal notranslate"><span class="pre">commute</span></code> do the following:</p>
 <p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, aggregate by summing. Set the <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> column to numbers from one to seven. Then set the column <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> as the (row) index. Return the resulting DataFrame from the function.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the DataFrame. Xticklabels should be the weekdays. Don’t forget to call <code class="docutils literal notranslate"><span class="pre">show</span></code> function!</p>
-<p>If you want the xticklabels to be <code class="docutils literal notranslate"><span class="pre">['Mon',</span> <span class="pre">'Tue',</span> <span class="pre">'Wed',</span> <span class="pre">'Thu',</span> <span class="pre">'Fr',</span> <span class="pre">'Sat',</span> <span class="pre">'Sun']</span></code> instead of numbers, then it may get a bit messy. There seems to be a problem with non-numeric <code class="docutils literal notranslate"><span class="pre">x</span></code> values. You could try the following after plotting, but you don’t have to:</p>
+<p>If you want the xticklabels to be <code class="docutils literal notranslate"><span class="pre">['Mon',</span> <span class="pre">'Tue',</span> <span class="pre">'Wed',</span> <span class="pre">'Thu',</span> <span class="pre">'Fr',</span> <span class="pre">'Sat',</span> <span class="pre">'Sun']</span></code> instead of numbers (1,..,7), then it may get a bit messy. There seems to be a problem with non-numeric <code class="docutils literal notranslate"><span class="pre">x</span></code> values. You could try the following after plotting, but you don’t have to:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weekdays</span><span class="o">=</span><span class="s2">"x mon tue wed thu fri sat sun"</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">weekdays</span><span class="p">)</span>
 </pre></div>
