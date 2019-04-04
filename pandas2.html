@@ -434,15 +434,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>-0.237177</td>
-<td>0.302953</td>
-<td>0.786820</td>
+<td>0.263261</td>
+<td>0.632682</td>
+<td>0.420457</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-0.349977</td>
-<td>0.620974</td>
-<td>-1.979628</td>
+<td>0.225400</td>
+<td>-1.684351</td>
+<td>-1.844643</td>
 </tr>
 </tbody>
 </table>
@@ -485,7 +485,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 </div>
-<p>If either <code class="docutils literal notranslate"><span class="pre">columns</span></code> or <code class="docutils literal notranslate"><span class="pre">index</span></code> argument is left out, then an integer index will be used:</p>
+<p>If either <code class="docutils literal notranslate"><span class="pre">columns</span></code> or <code class="docutils literal notranslate"><span class="pre">index</span></code> argument is left out, then an implicit integer index will be used:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -527,15 +527,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>1.627542</td>
-<td>0.315906</td>
-<td>0.591138</td>
+<td>0.468555</td>
+<td>0.217322</td>
+<td>-0.806751</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-0.320952</td>
-<td>-0.831276</td>
-<td>-1.114922</td>
+<td>-0.899998</td>
+<td>-1.911768</td>
+<td>-0.013943</td>
 </tr>
 </tbody>
 </table>
@@ -2457,7 +2457,7 @@ dtype: object
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-12-(cyclists)">Exercise 12 (cyclists)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cyclists</span></code> that does the following.</p>
-<p>Load the Helsinki bicycle data set from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://hri.fi/data/dataset//helsingin-pyorailijamaarat">https://hri.fi/data/dataset//helsingin-pyorailijamaarat</a>). The dataset contain number of cyclists passing by measuring points per hour. The data is gathered over about four years, and there are 20 measuring points around Helsinki. The dataset contains some empty rows at the end. Get rid of these. Also, get rid of columns that contain only missing values. Return the cleaned dataset.</p>
+<p>Load the Helsinki bicycle data set from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://hri.fi/data/dataset//helsingin-pyorailijamaarat">https://hri.fi/data/dataset//helsingin-pyorailijamaarat</a>). The dataset contains the number of cyclists passing by measuring points per hour. The data is gathered over about four years, and there are 20 measuring points around Helsinki. The dataset contains some empty rows at the end. Get rid of these. Also, get rid of columns that contain only missing values. Return the cleaned dataset.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-13-(missing-value-types)">Exercise 13 (missing value types)</a></div>
 <p>Make function <code class="docutils literal notranslate"><span class="pre">missing_value_types</span></code> that returns the following DataFrame. Use the <code class="docutils literal notranslate"><span class="pre">State</span></code> column as the (row) index. The value types for the two other columns should be <code class="docutils literal notranslate"><span class="pre">float</span></code> and <code class="docutils literal notranslate"><span class="pre">object</span></code>, respectively. Replace the dashes with the appropriate missing value symbols.</p>
@@ -2520,7 +2520,8 @@ dtype: object
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-15-(last-week)">Exercise 15 (last week)</a></div>
 <p>This exercise can give two points at maximum!</p>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">last_week</span></code> that reads the top40 data set mentioned in the above exercise. The function should then try to reconstruct the top40 list of the previous week based on that week’s list. Try to do this as well as possible. You can fill the values that are impossible to reconstruct by missing value symbols. Your solution should work for a top40 list of any week. So don’t rely on specific features of this top40 list.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">last_week</span></code> that reads the top40 data set mentioned in the above exercise. The function should then try to reconstruct the top40 list of the previous week based on that week’s list. Try to do this as well as possible. You can fill the values that are impossible to reconstruct by missing value symbols. Your solution should work for a top40 list of any week. So don’t rely on specific features of this top40 list. The column <code class="docutils literal notranslate"><span class="pre">WoC</span></code> means “Weeks on Chart”, that is, on how many weeks
+this song has been on the top 40 list.</p>
 <p>Hint. First create the last week’s top40 list of those songs that are also on this week’s list. Then add those entries that were not on this week’s list. Finally sort by position.</p>
 <p>Hint 2. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method of Series and DataFrame can be useful. It can also be nested.</p>
 <p>You get a second point, if you get the columns <code class="docutils literal notranslate"><span class="pre">LW</span></code> and <code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">Pos</span></code> correct.</p>
@@ -2740,7 +2741,7 @@ methods</a> of Series objects. You get an additional point, if you manage to get
 </li>
 <li>You know how to access rows, columns and individual elements of DataFrames</li>
 <li>You can use the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method to get a quick overview of a DataFrame</li>
-<li>You now how missing values are represented in Series and DataFrames, and you know how to manipulate them</li>
+<li>You know how missing values are represented in Series and DataFrames, and you know how to manipulate them</li>
 <li>There are similarities between Python’s string methods and the vectorized forms of string operations in Series and DataFrames</li>
 <li>You can do complicated text processing with the <code class="docutils literal notranslate"><span class="pre">str.replace</span></code> method combined with regular expressions</li>
 <li>The powerful <code class="docutils literal notranslate"><span class="pre">where</span></code> method is the vectorized form of Python’s <code class="docutils literal notranslate"><span class="pre">if-else</span></code> construct</li>
