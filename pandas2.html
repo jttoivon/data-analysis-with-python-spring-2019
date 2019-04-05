@@ -74,6 +74,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#Alternative-indexing-and-data-selection">Alternative indexing and data selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Summary-statistics">Summary statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Missing-data">Missing data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Converting-columns-from-one-type-to-another">Converting columns from one type to another</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#String-processing">String processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Summary-(week-4)">Summary (week 4)</a></li>
 </ul>
@@ -434,15 +435,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>0.263261</td>
-<td>0.632682</td>
-<td>0.420457</td>
+<td>-1.174811</td>
+<td>1.329804</td>
+<td>-1.259771</td>
 </tr>
 <tr>
 <th>b</th>
-<td>0.225400</td>
-<td>-1.684351</td>
-<td>-1.844643</td>
+<td>0.906855</td>
+<td>1.355782</td>
+<td>0.227427</td>
 </tr>
 </tbody>
 </table>
@@ -527,15 +528,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>0.468555</td>
-<td>0.217322</td>
-<td>-0.806751</td>
+<td>0.391581</td>
+<td>1.789715</td>
+<td>0.812635</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-0.899998</td>
-<td>-1.911768</td>
-<td>-0.013943</td>
+<td>-1.930097</td>
+<td>-0.356163</td>
+<td>-1.268931</td>
 </tr>
 </tbody>
 </table>
@@ -2526,11 +2527,227 @@ this song has been on the top 40 list.</p>
 <p>Hint 2. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method of Series and DataFrame can be useful. It can also be nested.</p>
 <p>You get a second point, if you get the columns <code class="docutils literal notranslate"><span class="pre">LW</span></code> and <code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">Pos</span></code> correct.</p>
 <hr/></div>
+<div class="section" id="Converting-columns-from-one-type-to-another">
+<h2>Converting columns from one type to another<a class="headerlink" href="#Converting-columns-from-one-type-to-another" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways of converting a column to another type. For converting single columns (a Series) one can use the <code class="docutils literal notranslate"><span class="pre">pd.to_numeric</span></code> function or the <code class="docutils literal notranslate"><span class="pre">map</span></code> method. For converting several columns in one go one can use the <code class="docutils literal notranslate"><span class="pre">astype</span></code> method. We will give a few examples of use of these methods/functions. For more details, look from the Pandas documentation.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">"1"</span><span class="p">,</span><span class="s2">"2"</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>                           <span class="c1"># str -&gt; int</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>0    1
+1    2
+dtype: int64
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>                               <span class="c1"># int -&gt; str</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>0    1
+1    2
+dtype: object
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]),</span> <span class="n">downcast</span><span class="o">=</span><span class="s2">"integer"</span><span class="p">)</span>   <span class="c1"># object -&gt; int</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>0    1
+1    1
+dtype: int8
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s2">"a"</span><span class="p">]),</span> <span class="n">errors</span><span class="o">=</span><span class="s2">"coerce"</span><span class="p">)</span>      <span class="c1"># conversion error produces Nan</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>0    1.0
+1    NaN
+dtype: float64
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>                            <span class="c1"># works for a single series</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>0    1
+1    2
+dtype: object
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"a"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="s2">"b"</span> <span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="s2">"c"</span> <span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a    int64
+b    int64
+c    int64
+dtype: object
+   a  b  c
+0  1  4  7
+1  2  5  8
+2  3  6  9
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>                       <span class="c1"># Convert all columns</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.0</td>
+<td>4.0</td>
+<td>7.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2.0</td>
+<td>5.0</td>
+<td>8.0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3.0</td>
+<td>6.0</td>
+<td>9.0</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">"b"</span> <span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="s2">"c"</span> <span class="p">:</span> <span class="nb">str</span><span class="p">})</span>    <span class="c1"># different types for columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a      int64
+b    float64
+c     object
+dtype: object
+   a    b  c
+0  1  4.0  7
+1  2  5.0  8
+2  3  6.0  9
+</pre></div></div>
+</div>
+</div>
 <div class="section" id="String-processing">
 <h2>String processing<a class="headerlink" href="#String-processing" title="Permalink to this headline">¶</a></h2>
 <p>If the elements in a column are strings, then the vectorized versions of Python’s string processing methods are available. These are accessed through the <code class="docutils literal notranslate"><span class="pre">str</span></code> attribute of a Series or a DataFrame. For example, to capitalize all the strings of a Series, we can use the <code class="docutils literal notranslate"><span class="pre">str.capitalize</span></code> method:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2540,7 +2757,7 @@ this song has been on the top 40 list.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2554,7 +2771,7 @@ dtype: object
 </div>
 <p>One can find all the available methods by pressing the tab key after the text <code class="docutils literal notranslate"><span class="pre">names.str.</span></code> in a Python prompt. Try it in below cell!</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2564,7 +2781,7 @@ dtype: object
 </div>
 <p>We can split a column or Series into several columns using the <code class="docutils literal notranslate"><span class="pre">split</span></code> method. For example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2574,7 +2791,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2588,7 +2805,7 @@ dtype: object
 </div>
 <p>This is not exactly what we wanted: now each element is a list. We need to use the <code class="docutils literal notranslate"><span class="pre">expand</span></code> parameter to split into columns:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2597,7 +2814,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">

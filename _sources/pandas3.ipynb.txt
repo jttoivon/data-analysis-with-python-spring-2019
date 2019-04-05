@@ -679,7 +679,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 4 (cyclists per day)</div>\n",
     "\n",
-    "\n",
+    "This exercise can give two points at maximum!\n",
     "\n",
     "Part 1.\n",
     "\n",
