@@ -754,7 +754,7 @@ Name: A, dtype: object
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Indexes have overlapping values: [0, 1]
+Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div></div>
 </div>
 <p>Secondly, we can ask for automatic renumbering of rows:</p>
@@ -972,17 +972,61 @@ Indexes have overlapping values: [0, 1]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
 </div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-15-67a87fd06ba9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>d<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> sort<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>    <span class="ansi-red-fg"># sort option is used to silence a deprecation message</span>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-red-fg">TypeError</span>: concat() got an unexpected keyword argument 'sort'
-</pre></div></div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>A0</td>
+<td>B0</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>A1</td>
+<td>B1</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>NaN</td>
+<td>B2</td>
+<td>C2</td>
+</tr>
+<tr>
+<th>3</th>
+<td>NaN</td>
+<td>B3</td>
+<td>C3</td>
+</tr>
+</tbody>
+</table>
+</div></div>
 </div>
 <p>It expanded the non-existing cases with <code class="docutils literal notranslate"><span class="pre">NaN</span></code>s. This method is called an <em>outer join</em>, which forms the union of columns in the two DataFrames. The alternative is <em>inner join</em>, which forms the intersection of columns:</p>
 <div class="nbinput docutils container">
@@ -1435,25 +1479,25 @@ Indexes have overlapping values: [0, 1]
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>Author</th>
 <th>Title</th>
+<th>Author</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th>0</th>
-<td>Tolstoi</td>
 <td>War and Peace</td>
+<td>Tolstoi</td>
 </tr>
 <tr>
 <th>1</th>
-<td>Terry Pratchett</td>
 <td>Good Omens</td>
+<td>Terry Pratchett</td>
 </tr>
 <tr>
 <th>2</th>
-<td>Neil Gaiman</td>
 <td>Good Omens</td>
+<td>Neil Gaiman</td>
 </tr>
 </tbody>
 </table>
@@ -1558,46 +1602,46 @@ Indexes have overlapping values: [0, 1]
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>Author</th>
 <th>Title</th>
+<th>Author</th>
 <th>Library</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th>0</th>
-<td>Tolstoi</td>
 <td>War and Peace</td>
+<td>Tolstoi</td>
 <td>Oodi</td>
 </tr>
 <tr>
 <th>1</th>
-<td>Tolstoi</td>
 <td>War and Peace</td>
+<td>Tolstoi</td>
 <td>Kallio</td>
 </tr>
 <tr>
 <th>2</th>
-<td>Terry Pratchett</td>
 <td>Good Omens</td>
+<td>Terry Pratchett</td>
 <td>Oodi</td>
 </tr>
 <tr>
 <th>3</th>
-<td>Terry Pratchett</td>
 <td>Good Omens</td>
+<td>Terry Pratchett</td>
 <td>Pasila</td>
 </tr>
 <tr>
 <th>4</th>
-<td>Neil Gaiman</td>
 <td>Good Omens</td>
+<td>Neil Gaiman</td>
 <td>Oodi</td>
 </tr>
 <tr>
 <th>5</th>
-<td>Neil Gaiman</td>
 <td>Good Omens</td>
+<td>Neil Gaiman</td>
 <td>Pasila</td>
 </tr>
 </tbody>
@@ -1745,7 +1789,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.DataFrameGroupBy object at 0x7fe2ac11b860&gt;
+<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7f5d5551b0b8&gt;
 </pre></div>
 </div>
 </div>
@@ -2168,7 +2212,7 @@ Indexes have overlapping values: [0, 1]
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.SeriesGroupBy object at 0x7fe2ac90bb38&gt;
+<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7f5d5552ca20&gt;
 </pre></div>
 </div>
 </div>
