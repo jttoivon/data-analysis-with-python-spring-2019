@@ -218,6 +218,8 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 8 (explained variance)</div>\n",
     "\n",
+    "This exercise can give two points at maximum!\n",
+    "\n",
     "Part 1.\n",
     "\n",
     "Write function `explained_variance` which reads the tab separated file \"data.tsv\". The data contains 10 features. Then fit PCA to the data. The function should return two lists (or 1D arrays). The first list should contain the variances of all the features.  The second list should consist of the explained variances returned by the PCA.\n",
@@ -277,7 +279,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.7.1"
   }
  },
  "nbformat": 4,

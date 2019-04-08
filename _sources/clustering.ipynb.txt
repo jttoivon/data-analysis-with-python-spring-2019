@@ -379,7 +379,9 @@
     "#### <div class=\"alert alert-info\">Exercise 5 (plant clustering)</div>\n",
     "\n",
     "Using the same iris data set that you saw earlier in the classification, apply k-means clustering with 3 clusters.\n",
-    "Create a function `plant_clustering` that loads the iris data set, clusters the data and returns the accuracy_score."
+    "Create a function `plant_clustering` that loads the iris data set, clusters the data and returns the accuracy_score.\n",
+    "\n",
+    "<hr/>"
    ]
   },
   {
@@ -387,6 +389,8 @@
    "metadata": {},
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 6 (nonconvex clusters)</div>\n",
+    "\n",
+    "This exercise can give four points at maximum!\n",
     "\n",
     "Read the tab separated file data.tsv from the `src` folder into a DataFrame. The dataset has two features X1 and X2, and the label y. Cluster the feature matrix using DBSCAN with different values for the eps parameter. Use values in `np.arange(0.05, 0.2, 0.05)` for clustering. For each clustering, collect the accuracy score, the number of clusters, and the number of outliers. Return these values in a DataFrame, where `eps` is the index and the columns are names as in the below example.\n",
     "\n",
@@ -452,6 +456,8 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 7 (binding sites)</div>\n",
     "\n",
+    "This exercise can give three points at maximum!\n",
+    "\n",
     "A binding site is a piece of DNA where a certain protein prefers to bind. The piece of DNA can be described as a string consisting of letters A, C, G, and T, which correspond to nucleotides Adenine, Cytosine, Guanine, and Thymine.\n",
     "In this exercise the length of binding sites is eight nucleotides. They are stored in the file `data.seq`,\n",
     "and the binding sites there are classified into two classes.\n",
@@ -505,7 +511,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.7.1"
   }
  },
  "nbformat": 4,

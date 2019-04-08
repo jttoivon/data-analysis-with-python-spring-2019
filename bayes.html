@@ -368,7 +368,9 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
@@ -393,18 +395,8 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-2-21bd85837381&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>datasets <span class="ansi-green-fg">import</span> make_blobs
-<span class="ansi-green-intense-fg ansi-bold">      2</span> X<span class="ansi-blue-fg">,</span>y <span class="ansi-blue-fg">=</span> make_blobs<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> centers<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> random_state<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> cluster_std<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1.5</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>colors<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">=</span>colors<span class="ansi-blue-fg">[</span>y<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> s<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">for</span> label<span class="ansi-blue-fg">,</span> c <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>colors<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined
-</pre></div></div>
+<img alt="_images/bayes_5_0.png" src="_images/bayes_5_0.png"/>
+</div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -490,18 +482,8 @@ Standard deviations: [[ 2.06097005  2.47716872]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-6-30a1c1151361&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>xlim<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>ylim<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">15</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> plot_ellipse<span class="ansi-blue-fg">(</span>plt<span class="ansi-blue-fg">.</span>gca<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>theta_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>identity<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">*</span>model<span class="ansi-blue-fg">.</span>sigma_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> plot_ellipse<span class="ansi-blue-fg">(</span>plt<span class="ansi-blue-fg">.</span>gca<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>theta_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>identity<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">*</span>model<span class="ansi-blue-fg">.</span>sigma_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
-</pre></div></div>
+<img alt="_images/bayes_12_0.png" src="_images/bayes_12_0.png"/>
+</div>
 </div>
 <p><em>Accuracy score</em> gives a measure about how well we managed to predict the labels. The maximum value is 1.0.</p>
 <div class="nbinput docutils container">
@@ -509,7 +491,8 @@ Standard deviations: [[ 2.06097005  2.47716872]
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">y_fitted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
+<span class="n">y_fitted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_fitted</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy score is"</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
 </pre></div>
@@ -520,14 +503,7 @@ Standard deviations: [[ 2.06097005  2.47716872]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-7-0f86c689b648&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> y_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>acc<span class="ansi-blue-fg">=</span>accuracy_score<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">,</span>y_fitted<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> acc<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'accuracy_score' is not defined
+Accuracy score is 1.0
 </pre></div></div>
 </div>
 <p>The score was the best possible, which is not a surprise, since we tried to predict the data we had already seen! Later we will split our data into two parts: one for learning the model and the other for testing its predictive skills.</p>
@@ -558,18 +534,8 @@ Standard deviations: [[ 2.06097005  2.47716872]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-8-3672cce933ba&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> cov=np.array([[ 4.68, -4.32],
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>  [-4.32,  4.68]])
-<span class="ansi-green-intense-fg ansi-bold">      3</span> mean1 <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> mean2 <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> n<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">500</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined
-</pre></div></div>
+<img alt="_images/bayes_18_0.png" src="_images/bayes_18_0.png"/>
+</div>
 </div>
 <p>The two clusters seem to be quite separate. Let’s try naive Bayesian classification on this data.</p>
 <div class="nbinput nblast docutils container">
@@ -598,10 +564,10 @@ Standard deviations: [[ 2.06097005  2.47716872]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Means: [[-1.64939095 -9.36891451]
- [ 1.29327924 -1.24101221]]
-Standard deviations: [[ 2.06097005  2.47716872]
- [ 3.33164807  2.22401384]]
+Means: [[ 0.08622033 -0.12808879]
+ [ 0.02402293  3.97056031]]
+Standard deviations: [[ 4.21422344  4.30707418]
+ [ 4.73166586  4.64585376]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -621,22 +587,20 @@ Standard deviations: [[ 2.06097005  2.47716872]
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-11-7a8817e5ebad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> y_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>colors<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span>colors<span class="ansi-blue-fg">[</span>y_fitted<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"0"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"1"</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined
+Accuracy score is 0.823
 </pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/bayes_22_1.png" src="_images/bayes_22_1.png"/>
+</div>
 </div>
 <p>Even thought the score is quite good, we can see from the plot that the algorithm didn’t have good models for the data. We can plot the models the algorithm used:</p>
 <div class="nbinput docutils container">
@@ -657,18 +621,8 @@ Standard deviations: [[ 2.06097005  2.47716872]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-7e8d24a22fdb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>xlim<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>ylim<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">15</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> e1<span class="ansi-blue-fg">=</span>plot_ellipse<span class="ansi-blue-fg">(</span>plt<span class="ansi-blue-fg">.</span>gca<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>theta_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>identity<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">*</span>model<span class="ansi-blue-fg">.</span>sigma_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"0"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> e2<span class="ansi-blue-fg">=</span>plot_ellipse<span class="ansi-blue-fg">(</span>plt<span class="ansi-blue-fg">.</span>gca<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>theta_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>identity<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">*</span>model<span class="ansi-blue-fg">.</span>sigma_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"1"</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
-</pre></div></div>
+<img alt="_images/bayes_24_0.png" src="_images/bayes_24_0.png"/>
+</div>
 </div>
 <p>The problem with naive Bayesian classification is that it tries to model the data using Gaussian distributions, which are aligned along the x and y axes. With this example data we would have needed Gaussian distributions which are “tilted”.</p>
 </div>
@@ -781,14 +735,7 @@ Test data: Data: &lt;class 'list'&gt; 1574 Target &lt;class 'list'&gt; 1574
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-16-c9e0e66d6afa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">,</span> train<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> labels_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>test<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> accuracy_score<span class="ansi-blue-fg">(</span>labels_fitted<span class="ansi-blue-fg">,</span> test<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'accuracy_score' is not defined
+Accuracy score is 0.920584498094
 </pre></div></div>
 </div>
 <p>The classifier seem to work quite well! Notice that now we used separate data for testing the model.</p>
@@ -940,6 +887,7 @@ as it is encrypted.
 </ul>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-3-(word-classification)">Exercise 3 (word classification)</a></div>
+<p>This exercise can give four points at maximum!</p>
 <p>Part 1.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">get_features</span></code> that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
 <p>Part 2.</p>
@@ -959,10 +907,10 @@ as it is encrypted.
 <p>Why the difference?</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-4-(spam-detection)">Exercise 4 (spam detection)</a></div>
-<p>In the src folder there are two files: ham.txt.gz and spam.txt.gz. The files are preprocessed versions of the files from <a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email per line. The file ham.txt.gz contains emails that are non-spam, and, conversely, emails in file spam.txt are spam. The email headers have been removed, except for the subject line, and non-ascii characters have been deleted.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder there are two files: <code class="docutils literal notranslate"><span class="pre">ham.txt.gz</span></code> and <code class="docutils literal notranslate"><span class="pre">spam.txt.gz</span></code>. The files are preprocessed versions of the files from <a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email per line. The file <code class="docutils literal notranslate"><span class="pre">ham.txt.gz</span></code> contains emails that are non-spam, and, conversely, emails in file <code class="docutils literal notranslate"><span class="pre">spam.txt</span></code> are spam. The email headers have been removed, except for the subject line, and non-ascii characters have been deleted.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">spam_detection</span></code> that does the following:</p>
 <ul class="simple">
-<li>reads these files. Use function open from gzip module, since the files are compressed.</li>
+<li>reads these files. Use function <code class="docutils literal notranslate"><span class="pre">open</span></code> from <code class="docutils literal notranslate"><span class="pre">gzip</span></code> module, since the files are compressed.</li>
 <li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
 <li>use labels 0 for ham and 1 for spam</li>
 <li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>. Use 75% of the data for training</li>
