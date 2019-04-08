@@ -102,7 +102,7 @@ The versions of additional libraries that are know to work are:
 +==============+=========+
 | numpy        | 1.13.3  |
 +--------------+---------+
-| pandas       | 0.22.0  |
+| pandas       | 0.23.0  |
 +--------------+---------+
 | matplotlib   | 2.1.1   |
 +--------------+---------+
