@@ -481,10 +481,14 @@
     "Write function `growing_municipalities` that gets subset of municipalities (a DataFrame) as a parameter and returns the proportion of municipalities with increasing population in that subset.\n",
     "\n",
     "Test your function from the `main` function using some subset of the municipalities.\n",
-    "Print the result in the following form using 1 decimal precision.\n",
+    "Print the proportion as percentages using 1 decimal precision.\n",
     "\n",
     "Example output:\n",
+    "\n",
+    "```\n",
     "Proportion of growing municipalities: 12.4%\n",
+    "```\n",
+    "\n",
     "<hr/>"
    ]
   },
