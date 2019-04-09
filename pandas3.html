@@ -1789,7 +1789,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7fe92c2d9898&gt;
+<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7f8cc5af4ac8&gt;
 </pre></div>
 </div>
 </div>
@@ -2212,7 +2212,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7fe92bbfd9e8&gt;
+<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7f8cc54764a8&gt;
 </pre></div>
 </div>
 </div>
@@ -4165,7 +4165,7 @@ Name: Precipitation, dtype: float64
 <div class="admonition note"><a id="Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></div>
 <p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise.</p>
 <p>Implement function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> as described below. We use the dataset of average temperature (over years 1961-1990) in different countries from <code class="docutils literal notranslate"><span class="pre">src/List_of_countries_by_average_yearly_temperature.html</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a>) . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contains column headers and which column contains row headers.
-Maku sure you use the country as the (row) index for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
+Therefore, you have to give both <code class="docutils literal notranslate"><span class="pre">index_col</span></code> and <code class="docutils literal notranslate"><span class="pre">header</span></code> parameters to <code class="docutils literal notranslate"><span class="pre">read_html</span></code>. Maku sure you use the country as the (row) index for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
 <p>The return value of the function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> is a tuple (suicide_rows, temperature_rows, common_rows, spearman_correlation) The output from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function should be of the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Suicide</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
 <span class="n">Temperature</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
