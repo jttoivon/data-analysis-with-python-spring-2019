@@ -273,7 +273,7 @@
     "\n",
     "Part 2.\n",
     "\n",
-    "Modify your program to plot the fitted line using matplotlib, in addition to the textual output. Plot also the original data points.\n",
+    "Modify your `main` function to plot the fitted line using matplotlib, in addition to the textual output. Plot also the original data points.\n",
     "\n",
     "<hr/>"
    ]
