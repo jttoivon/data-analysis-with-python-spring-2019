@@ -68,8 +68,9 @@ Schedule
 
 Every week there are 15 - 20 programming exercises that you must
 solve and then submit to the TMC system for checking.
-In order to continue with next week's exercises you
-need to get at least 80% of the **points** from exercises of the previous week.
+In order to continue with next week's exercises (and on this course), you
+need to get a certain percentage of the **points** from exercises of the previous week.
+These requirements are specified in the below table for each exercise week.
 Note that from some exercises it is possible to get more than one point.
 These exercises are divided into *parts*, where the parts are shown
 as Part 1, Part 2, etc. Each part gives one point.
@@ -82,35 +83,35 @@ so finish and submit your solutions early.
 Teaching workshop (pajaopetus) will be held weekly in Exactum building
 in Kumpula in room B221 on Thurdays 10.00 - 12.00 (14.3. - 5.5.).
 
-+------+-----------------+----------------------+
-| Week | Deadline        | Theme                |
-+======+=================+======================+
-| 1    | 18.3.2019 23.59 | Basics of Python I   |
-+------+-----------------+----------------------+
-| 2    | 25.3.2019 23.59 | Basics of Python II, |
-|      |                 | NumPy I              |
-+------+-----------------+----------------------+
-| 3    | 1.4.2019 23.59  | NumPy II,            |
-|      |                 | Visualization,       |
-|      |                 | Image processing,    |
-|      |                 | Data Analysis        |
-|      |                 | with Pandas I        |
-+------+-----------------+----------------------+
-| 4    | 8.4.2019 23.59  | Data Analysis        |
-|      |                 | with Pandas II       |
-+------+-----------------+----------------------+
-| 5    | 15.4.2019 23.59 | Data Analysis        |
-|      |                 | with Pandas III,     |
-|      |                 | Machine learning I   |
-+------+-----------------+----------------------+
-| 6    | 29.4.2019 23.59 | Machine learning II, |
-|      |                 | Project              |
-+------+-----------------+----------------------+
-| 7    | 6.5.2019 23.59  | Project continues    |
-+------+-----------------+----------------------+
-| 8    | 13.5.2019 23.59 | Peer review,         |
-|      |                 | Exam                 |
-+------+-----------------+----------------------+
++------+-----------------+-----------------+----------------------+
+| Week | Deadline        | Points required | Theme                |
++======+=================+=================+======================+
+| 1    | 18.3.2019 23.59 |     80%         | Basics of Python I   |
++------+-----------------+-----------------+----------------------+
+| 2    | 25.3.2019 23.59 |     80%         | Basics of Python II, |
+|      |                 |                 | NumPy I              |
++------+-----------------+-----------------+----------------------+
+| 3    | 1.4.2019 23.59  |     80%         | NumPy II,            |
+|      |                 |                 | Visualization,       |
+|      |                 |                 | Image processing,    |
+|      |                 |                 | Data Analysis        |
+|      |                 |                 | with Pandas I        |
++------+-----------------+-----------------+----------------------+
+| 4    | 8.4.2019 23.59  |     75%         | Data Analysis        |
+|      |                 |                 | with Pandas II       |
++------+-----------------+-----------------+----------------------+
+| 5    | 15.4.2019 23.59 |     70%         | Data Analysis        |
+|      |                 |                 | with Pandas III,     |
+|      |                 |                 | Machine learning I   |
++------+-----------------+-----------------+----------------------+
+| 6    | 29.4.2019 23.59 |     65%         | Machine learning II, |
+|      |                 |                 | Project              |
++------+-----------------+-----------------+----------------------+
+| 7    | 6.5.2019 23.59  |                 | Project continues    |
++------+-----------------+-----------------+----------------------+
+| 8    | 13.5.2019 23.59 |                 | Peer review,         |
+|      |                 |                 | Exam                 |
++------+-----------------+-----------------+----------------------+
 
 Discussion forum
 ----------------

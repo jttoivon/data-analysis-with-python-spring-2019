@@ -564,10 +564,10 @@ Accuracy score is 1.0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Means: [[ 0.02621809  0.04086141]
- [ 0.02361222  3.97379418]]
-Standard deviations: [[ 5.03534534  5.09052248]
- [ 4.68185297  4.95795357]]
+Means: [[-0.06495256  0.03192876]
+ [ 0.10149711  3.90288342]]
+Standard deviations: [[ 5.13821991  5.05349987]
+ [ 4.16683002  4.18388877]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -592,7 +592,7 @@ Standard deviations: [[ 5.03534534  5.09052248]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Accuracy score is 0.822
+Accuracy score is 0.821
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -910,10 +910,10 @@ as it is encrypted.
 <p>In the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder there are two files: <code class="docutils literal notranslate"><span class="pre">ham.txt.gz</span></code> and <code class="docutils literal notranslate"><span class="pre">spam.txt.gz</span></code>. The files are preprocessed versions of the files from <a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email per line. The file <code class="docutils literal notranslate"><span class="pre">ham.txt.gz</span></code> contains emails that are non-spam, and, conversely, emails in file <code class="docutils literal notranslate"><span class="pre">spam.txt</span></code> are spam. The email headers have been removed, except for the subject line, and non-ascii characters have been deleted.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">spam_detection</span></code> that does the following:</p>
 <ul class="simple">
-<li>reads these files. Use function <code class="docutils literal notranslate"><span class="pre">open</span></code> from <code class="docutils literal notranslate"><span class="pre">gzip</span></code> module, since the files are compressed.</li>
+<li>reads these files. Use function <code class="docutils literal notranslate"><span class="pre">open</span></code> from <code class="docutils literal notranslate"><span class="pre">gzip</span></code> module, since the files are compressed. From each file take only <code class="docutils literal notranslate"><span class="pre">fraction</span></code> of reads from the start of the file, where <code class="docutils literal notranslate"><span class="pre">fraction</span></code> is a parameter to <code class="docutils literal notranslate"><span class="pre">spam_detection</span></code>, and should be in the range <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>.</li>
 <li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
 <li>use labels 0 for ham and 1 for spam</li>
-<li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>. Use 75% of the data for training</li>
+<li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>. Use 75% of the data for training. Pass the random_state parameter from <code class="docutils literal notranslate"><span class="pre">spam_detection</span></code> to <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</li>
 <li>train a <code class="docutils literal notranslate"><span class="pre">MultinomialNB</span></code> model, and use it to predict the labels for the test set</li>
 </ul>
 <p>The function should return a triple consisting of</p>
@@ -922,7 +922,7 @@ as it is encrypted.
 <li>size of test sample</li>
 <li>number of misclassified sample points</li>
 </ul>
-<p>Pass the function’s random_state parameter to function <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
+<p>Note. The tests use the <code class="docutils literal notranslate"><span class="pre">fraction</span></code> parameter with value 0.1 to ease to load on the TMC server. If full data were used and the solution did something non-optimal, it could use huge amounts of memory, causing the solution to fail.</p>
 <hr/><!--NAVIGATION--></div>
 </div>
 </div>
