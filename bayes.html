@@ -564,10 +564,10 @@ Accuracy score is 1.0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Means: [[-0.02774784  0.04182125]
- [ 0.20714693  3.82991759]]
-Standard deviations: [[ 4.55733919  4.8724191 ]
- [ 5.20188854  4.99095258]]
+Means: [[ 0.01177359 -0.02376012]
+ [-0.03349284  4.02557675]]
+Standard deviations: [[ 4.73027247  4.81020566]
+ [ 4.83307351  4.88543572]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -592,7 +592,7 @@ Standard deviations: [[ 4.55733919  4.8724191 ]
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Accuracy score is 0.82
+Accuracy score is 0.824
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -889,7 +889,7 @@ as it is encrypted.
 <div class="admonition note"><a id="Exercise-3-(word-classification)">Exercise 3 (word classification)</a></div>
 <p>This exercise can give four points at maximum!</p>
 <p>Part 1.</p>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">get_features</span></code> that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">get_features</span></code> that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“. The values should be the number of times the corresponding character appears in the word.</p>
 <p>Part 2.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">contains_valid_chars</span></code> that takes a string as a parameter and returns the truth value of whether all the characters in the string belong to the alphabet or not.</p>
 <p>Part 3.</p>
