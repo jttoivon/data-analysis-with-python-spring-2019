@@ -113,6 +113,53 @@ in Kumpula in room B221 on Thurdays 10.00 - 12.00 (14.3. - 5.5.).
 |      |                 |                 | Exam                 |
 +------+-----------------+-----------------+----------------------+
 
+Renewal course in May
+---------------------
+
+The instructions are the same except for the points mentioned below.
+There is a single deadline for the exercises, but the exercises unlock
+only after the specified amount of points is achieved from the previous week.
+Use command ``tmc download hy-dap-spring-2019-renewal`` to download the exercises.
+You can check your points from the `TMC server <https://tmc.mooc.fi/org/hy/courses/465>`__.
+The deadlines, shown below, are hard and no exceptions will be made,
+so finish and submit your solutions early.
+
+No teaching workshop will be held.
+
+There is a Telegram group for this renewal course at
+`https://t.me/dap19srenewal <https://t.me/dap19srenewal>`__.
+The browser version can be reached here `Telegram <https://web.telegram.org>`__.
+
++------+-----------------+-----------------+----------------------+
+| Week | Deadline        | Points required | Theme                |
++======+=================+=================+======================+
+| 1    | 15.5.2019 23.59 |     80%         | Basics of Python I   |
++------+-----------------+-----------------+----------------------+
+| 2    | 15.5.2019 23.59 |     80%         | Basics of Python II, |
+|      |                 |                 | NumPy I              |
++------+-----------------+-----------------+----------------------+
+| 3    | 15.5.2019 23.59 |     80%         | NumPy II,            |
+|      |                 |                 | Visualization,       |
+|      |                 |                 | Image processing,    |
+|      |                 |                 | Data Analysis        |
+|      |                 |                 | with Pandas I        |
++------+-----------------+-----------------+----------------------+
+| 4    | 15.5.2019 23.59 |     75%         | Data Analysis        |
+|      |                 |                 | with Pandas II       |
++------+-----------------+-----------------+----------------------+
+| 5    | 15.5.2019 23.59 |     70%         | Data Analysis        |
+|      |                 |                 | with Pandas III,     |
+|      |                 |                 | Machine learning I   |
++------+-----------------+-----------------+----------------------+
+| 6    | 15.5.2019 23.59 |     65%         | Machine learning II, |
+|      |                 |                 | Project              |
++------+-----------------+-----------------+----------------------+
+| 7    | 22.5.2019 23.59 |                 | Project continues    |
++------+-----------------+-----------------+----------------------+
+| 8    | 29.5.2019 23.59 |                 | Peer review,         |
+|      |                 |                 | Exam                 |
++------+-----------------+-----------------+----------------------+
+
 Discussion forum
 ----------------
 
