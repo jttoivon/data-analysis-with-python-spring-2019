@@ -477,7 +477,7 @@
     "```\n",
     "The function should return a pair, whose first element is the feature matrix and the second element is the label vector.\n",
     "\n",
-    "Part 2. Create function `cluster_euclidean` that gets a filename as parameter. Get the features and labels using the function from part 1. Perform hierarchical clustering using the function `sklearn.cluster.AgglomerativeClustering`. Get two clusters using `average` linkage and `euclidean` affinity. Fit the model and predict the labels. The function should return the accuracy score.\n",
+    "Part 2. Create function `cluster_euclidean` that gets a filename as parameter. Get the features and labels using the function from part 1. Perform hierarchical clustering using the function `sklearn.cluster.AgglomerativeClustering`. Get two clusters using `average` linkage and `euclidean` affinity. Fit the model and predict the labels. Note that you may have to use the `find_permutation` function again, because even though the clusters are correct, they may be labeled differently than the real labels given in `data.seq`. The function should return the accuracy score.\n",
     "\n",
     "Part 3. Create function `cluster_hamming` that works like the function in part 2, except now using the [hamming](https://en.wikipedia.org/wiki/Hamming_distance) affinity. Even though it is possible to pass the function `hamming` to `AgglomerativeClustering`, let us now compute the Hamming distance matrix explicitly. We can achieve this using the function `sklearn.metrics.pairwise_distances`. Use the affinity `precomputed` and give the distance matrix, instead of the feature matrix, to the `fit_predict` method of the model. If you want, you can visualize the clustering using the provided `plot` function.\n",
     "\n",
@@ -511,7 +511,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.7.1"
   }
  },
  "nbformat": 4,
