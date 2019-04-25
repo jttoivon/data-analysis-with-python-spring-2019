@@ -247,6 +247,13 @@ Software libraries used
    clustering
    pca
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Week7:
+
+   project
+
+
    
 Indices and tables
 ==================
