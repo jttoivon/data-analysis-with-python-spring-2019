@@ -127,7 +127,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "You may have noticed that we gave the PCA constructor a parameter with value 2. This parameter gives the number of principal axes we want. If the parameter value is n, then the algorithm returns only n components with the highest variances and drops those components with lower variance. So, this algorithm can be used a dimensionality reduction technique. The components with low variance are assumed not to contain any important information.\n",
+    "You may have noticed that we gave the PCA constructor a parameter with value 2. This parameter gives the number of principal axes we want. If the parameter value is n, then the algorithm returns only n components with the highest variances and drops those components with lower variance. So, this algorithm can be used as a dimensionality reduction technique. The components with low variance are assumed not to contain any important information.\n",
     "\n",
     "Let's use PCA to project the above data to one dimension."
    ]
@@ -279,7 +279,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.1"
+   "version": "3.6.7"
   }
  },
  "nbformat": 4,
