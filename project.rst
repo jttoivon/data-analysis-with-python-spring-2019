@@ -3,7 +3,7 @@ Project work
 
 .. note:: EXPERIMENTAL!!! Information on this page will still change drastically.
 
-Choose a project work. There are two optional projects:
+Choose a project work. There are two projects to choose from:
 
 1. biological sequence analysis (part07)
 2. regression analysis on medical data (part08)
@@ -12,6 +12,9 @@ After you have completed 65% of points from week 6, download the exercises
 and/or notebooks from the TMC server.
 Then try to solve as many exercises as you can.
 Then submit your solutions to the TMC server.
+Note that the TMC server is only used here for helping you
+to proceed with the project work. Your final project work
+returned to Moodle can include partial solutions.
 
 The two projects differ a lot in their workflow. See the below sections
 on individual projects to see in detail how solving, testing and reporting
@@ -20,15 +23,7 @@ of exercises are done in each project.
 Save the report as a Jupyter notebook file (with ``ipynb`` extension)
 and submit this file to Moodle.
 After this you will need to give feedback for your own
-report and two other reports. The feedback is given in three/two categories:
-
-VANHA
-
-1. correctness of solutions
-2. clarity of writing and code
-3. depth of analysis
-
-UUSI
+report and two other reports. The feedback is given in two categories:
 
 1. correctness of solutions
 2. clarity of writing (of the idea of solution and discussion) and code
@@ -36,8 +31,8 @@ UUSI
 In each category, in addition to textual feedback, give also
 a grade in the range 0, 1, ..., 5.
 The final grade for the project work will be the weighted average
-over the three categories, where category 1 has weight 3, and
-the others have weight 1. More details can be found in the Moodle.
+over the two categories, where category 1 has weight 2, and
+the second has weight 1. More details can be found in the Moodle.
 You must get at least grade 1 for the project work.
 
 You have ten days to finish the project solutions and report
@@ -62,6 +57,9 @@ solution to the exercise. In the second box analyse the results,
 including how the program worked with the given example input or
 your own examples. 
 
+NOTE. Exercises in section "Stationary and equilibrium distributions (extra)"
+(exercises 20, 21, and 22) are not obligatory. Thus, you only need to do
+19 exercises, if you are aiming to get full points.
 
 Regression analysis
 -------------------
