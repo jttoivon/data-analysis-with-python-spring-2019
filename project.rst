@@ -44,10 +44,17 @@ Complete the exercises of the project like normal weekly exercises.
 
 Copy the file ``project_notebook_sequence_analysis.ipynb`` to folder
 ``hy-data-analysis-with-python-spring-2019``,
-where your solutions are. Start Jupyter with ``jupyter-notebook project_notebook.ipynb``.
+where your solutions are. Start Jupyter with
+``jupyter-notebook project_notebook_sequence_analysis.ipynb``.
 Fill in the missing boxes. Run all cells; it should find the source code
 of your solutions, and include them in the notebook. Do not modify lines that say ``# exercise x``.
 Avoid too long lines as they might not be visible without horizontal scrolling.
+
+.. warning::
+  The internal references in the notebook aren't readable. In this `pdf version
+  <https://www.cs.helsinki.fi/u/jttoivon/dap/project_notebook_sequence_analysis.pdf>`__
+  the references look correct. I will later fix the notebook, do not yet enter
+  anything to it.
 
 Next to each exercise in the report there are also two text boxes for you
 to fill. In the first box, in your own words, describe the idea of the
@@ -63,6 +70,10 @@ Regression analysis
 -------------------
 
 Read the introduction ``introduction-to-regression-analysis.pdf``.
+Remark. It looks like the TMC server corrupted the pdf, you can read
+it from
+`here <https://www.cs.helsinki.fi/u/jttoivon/dap/introduction-to-regression-analysis.pdf>`__
+
 Write solutions to exercises directly into the cells of the given Jupyter notebook.
 Do not modify lines that say ``# exercise x``; without those the tests won't work.
 Don't use additional cells, and do in each cell exactly as the instructions say.
