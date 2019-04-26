@@ -1,8 +1,6 @@
 Project work
 ============
 
-.. note:: EXPERIMENTAL!!! Information on this page will still change drastically.
-
 Choose a project work. There are two projects to choose from:
 
 1. biological sequence analysis (part07)
@@ -64,6 +62,7 @@ NOTE. Exercises in section "Stationary and equilibrium distributions (extra)"
 Regression analysis
 -------------------
 
+Read the introduction ``introduction-to-regression-analysis.pdf``.
 Write solutions to exercises directly into the cells of the given Jupyter notebook.
 Do not modify lines that say ``# exercise x``; without those the tests won't work.
 Don't use additional cells, and do in each cell exactly as the instructions say.
