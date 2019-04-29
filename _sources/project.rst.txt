@@ -53,7 +53,7 @@ Avoid too long lines as they might not be visible without horizontal scrolling.
 .. note::
   The internal references in the notebook aren't weren't readable. It should be fixed now,
   but if you already downloaded it before, you can fetch the updated version from
-  `here <https://www.cs.helsinki.fi/u/jttoivon/dap/project_notebook_sequence_analysis.ipynb>`__
+  `here <https://www.cs.helsinki.fi/u/jttoivon/dap/project_notebook_sequence_analysis.ipynb>`__.
   The pdf version is available from `here
   <https://www.cs.helsinki.fi/u/jttoivon/dap/project_notebook_sequence_analysis.pdf>`__.
 
