@@ -253,6 +253,12 @@ Software libraries used
 
    project
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Week8:
+
+   exam
+
 
    
 Indices and tables
