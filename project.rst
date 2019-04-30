@@ -58,12 +58,12 @@ Avoid too long lines as they might not be visible without horizontal scrolling.
   <https://www.cs.helsinki.fi/u/jttoivon/dap/project_notebook_sequence_analysis.pdf>`__.
 
   
-
 Next to each exercise in the report there are also two text boxes for you
 to fill. In the first box, in your own words, describe the idea of the
 solution to the exercise. In the second box analyse the results,
 including how the program worked with the given example input or
-your own examples. 
+your own examples. Make sure the notebook includes your solutions and looks readable,
+and then submit the resulting notebook to Moodle.
 
 NOTE. Exercises in section "Stationary and equilibrium distributions (extra)"
 (exercises 20, 21, and 22) are not obligatory. Thus, you only need to do
@@ -82,5 +82,6 @@ Do not modify lines that say ``# exercise x``; without those the tests won't wor
 Don't use additional cells, and do in each cell exactly as the instructions say.
 Save the file and run ``tmc test``. The tests read and execute directly the cells
 of the notebook.
-Make sure the notebook looks readable, and submit the resulting notebook to Moodle.
+Make sure the notebook includes you solutions and looks readable,
+and then submit the resulting notebook to Moodle.
 
