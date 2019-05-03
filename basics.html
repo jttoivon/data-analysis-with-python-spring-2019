@@ -1161,7 +1161,7 @@ Natural logarithm of 56 is 4.025352
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-5-(two-dice)">Exercise 5 (two dice)</a></div>
-<p>Let us consider throwing two dice. (A dice can give a value between 1 and 6.) Use two nested <code class="docutils literal notranslate"><span class="pre">for</span></code> loops in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function to iterate through all possible combinations the pair of dice can give. There are 36 possible combinations. Print all those combinations as pairs that sum to 5. For example, your printout should include the pair <code class="docutils literal notranslate"><span class="pre">(2,3)</span></code>. Print one pair per line.</p>
+<p>Let us consider throwing two dice. (A dice can give a value between 1 and 6.) Use two nested <code class="docutils literal notranslate"><span class="pre">for</span></code> loops in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function to iterate through all possible combinations the pair of dice can give. There are 36 possible combinations. Print all those combinations as (ordered) pairs that sum to 5. For example, your printout should include the pair <code class="docutils literal notranslate"><span class="pre">(2,3)</span></code>. Print one pair per line.</p>
 <hr/></div>
 </div>
 <div class="section" id="Functions">
@@ -1502,8 +1502,9 @@ First: 5 Second: 8 Third: 7
 <p>Note that the test cases check that both functions <code class="docutils literal notranslate"><span class="pre">triple</span></code> and <code class="docutils literal notranslate"><span class="pre">square</span></code> are called exactly once per iteration.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-7-(areas-of-shapes)">Exercise 7 (areas of shapes)</a></div>
-<p>Create a program that can compute the areas of three shapes, triangles, rectangles and circles, when their dimensions are given. An endless loop should ask for which shape you want the area be calculated. If the user gives a string that is none of the given shapes, the message “unknown shape!” should be printed. An empty string will exit the loop. Then it will ask for dimensions for that particular shape. When all the necessary dimensions are given, it prints the area, and starts the loop all
-over again. Use format specifier “%f” for the radius. What happens if you give incorrect dimensions, like giving string “aa” as radius? You don’t have to check for errors in the input.</p>
+<p>Create a program that can compute the areas of three shapes, triangles, rectangles and circles, when their dimensions are given.</p>
+<p>An endless loop should ask for which shape you want the area be calculated. An empty string as input will exit the loop. If the user gives a string that is none of the given shapes, the message “unknown shape!” should be printed. Then it will ask for dimensions for that particular shape. When all the necessary dimensions are given, it prints the area, and starts the loop all over again. Use format specifier “%f” for the area.</p>
+<p>What happens if you give incorrect dimensions, like giving string “aa” as radius? You don’t have to check for errors in the input.</p>
 <p>Example interaction:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Choose a shape (triangle, rectangle, circle): triangle
 Give base of the triangle: 20
@@ -2230,10 +2231,10 @@ For key 'b' value 3 was stored
 <span class="p">[</span><span class="s2">"piilottaa"</span><span class="p">,</span> <span class="s2">"salata"</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Make a function <code class="docutils literal notranslate"><span class="pre">reverse_dictionary</span></code> that creates a Finnish to English dictionary based on a English to Finnish dictionary given as a parameter. It should work like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>d={"move":["liikuttaa"], "hide":["piilottaa", "salata"]}
-reverse_dictionary(d)
-{’liikuttaa’: [’move’], ’salata’: [’hide’], ’piilottaa’: [’hide’]}
+<p>Make a function <code class="docutils literal notranslate"><span class="pre">reverse_dictionary</span></code> that creates a Finnish to English dictionary based on a English to Finnish dictionary given as a parameter. The values of the created dictionary should be lists of words. It should work like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">'move'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'liikuttaa'</span><span class="p">],</span> <span class="s1">'hide'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'piilottaa'</span><span class="p">,</span> <span class="s1">'salata'</span><span class="p">],</span> <span class="s1">'six'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'kuusi'</span><span class="p">],</span> <span class="s1">'fir'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'kuusi'</span><span class="p">]}</span>
+<span class="n">reverse_dictionary</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="p">{</span><span class="s1">'liikuttaa'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'move'</span><span class="p">],</span> <span class="s1">'piilottaa'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'hide'</span><span class="p">],</span> <span class="s1">'salata'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'hide'</span><span class="p">],</span> <span class="s1">'kuusi'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'six'</span><span class="p">,</span> <span class="s1">'fir'</span><span class="p">]}</span>
 </pre></div>
 </div>
 <p>Be careful with synonyms and homonyms!</p>
@@ -2380,7 +2381,7 @@ Note above that one can only iterate through the generator once.</div>
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-15-(two-dice-comprehension)">Exercise 15 (two dice comprehension)</a></div>
-<p>Redo the earlier exercise which printed all the pairs of two dice results that sum to 5. But this time use a list comprehension.</p>
+<p>Redo the earlier exercise which printed all the pairs of two dice results that sum to 5. But this time use a list comprehension. Print one pair per line.</p>
 <hr/></div>
 <div class="section" id="Processing-sequences">
 <h3>Processing sequences<a class="headerlink" href="#Processing-sequences" title="Permalink to this headline">¶</a></h3>
