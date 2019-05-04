@@ -23,9 +23,32 @@ and submit this file to Moodle.
 After this you will need to give feedback for your own
 report and two other reports. The feedback is given in two categories:
 
-1. correctness of solutions
-2. clarity of writing (of the idea of solution and discussion) and code
-   
+1. Give a grade 0...5 on the correctness of solutions, and provide
+constructive comments where you find places for improvement.
+
+ 0. Less than half of assignments solved satisfactorily
+ 1. At least half of assignments solved satisfactorily
+ 2. At least half of assignment solved pretty correctly
+ 3. 65% of assignments solved pretty correctly
+ 4. 80% assignments solved pretty correctly
+ 5. All but 1-2 assignments solved almost perfectly
+
+To assess the percentage of correctness, you may give 0.5 points from
+a serious (but failed) attempt, 1 point from essentially correct
+answer, and divide total points by maximum points. Essentially correct
+means an answer that might not go through an automatic test for some
+minor reason.
+
+2. Give a grade 0...5 on the clarity of writing and code, and provide
+   constructive comments where you find places for improvement.
+ 0. Writing and code are not at sufficient level in the solved assignments
+ 1. Writing and code are mostly at sufficient level in the solved assignments
+ 2. Writing and code are mostly at satisfactory level in the solved assignments
+ 3. Writing and code are mostly at good level in the solved assignments
+ 4. Writing and code are mostly at very good level in the solved assignments
+ 5. Writing and code are mostly at excellent level in the solved assignments
+
+
 In each category, in addition to textual feedback, give also
 a grade in the range 0, 1, ..., 5.
 The final grade for the project work will be the weighted average
