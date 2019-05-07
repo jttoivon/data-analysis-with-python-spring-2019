@@ -83,6 +83,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#regression-analysis">Regression analysis</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#running-tests-when-peer-reviewing-students-notebooks">Running tests when peer-reviewing students notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Regression analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Sequence analysis</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Week8:</span></p>
 <ul>
@@ -236,6 +241,39 @@ Save the file and run <code class="docutils literal notranslate"><span class="pr
 of the notebook.
 Make sure the notebook includes you solutions and looks readable,
 and then submit the resulting notebook to Moodle.</p>
+</div>
+</div>
+<div class="section" id="running-tests-when-peer-reviewing-students-notebooks">
+<h1>Running tests when peer-reviewing students notebooks<a class="headerlink" href="#running-tests-when-peer-reviewing-students-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>If you want, you can run tests on the work you are reviewing, to help
+assess the correctness of the solutions. Note that there can be bugs in
+the tests too.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Make sure you don’t accidentally delete your own solutions, when
+testing other student’s work. Don’t do the tests where your own
+solutions are.</p>
+</div>
+<div class="section" id="id1">
+<h2>Regression analysis<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Go to a temporary working area (like <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> on Unix) so you don’t accidentally overwrite
+your own solutions. Run <code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">download</span> <span class="pre">-a</span> <span class="pre">hy-data-analysis-with-python-spring-2019</span></code>
+to get the tests. Store student’s notebook to file
+<code class="docutils literal notranslate"><span class="pre">part08-e01_regression/src/project_notebook_regression_analysis.ipynb</span></code>.
+Run the tests using <code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">test</span> <span class="pre">part08-e01_regression</span></code>.</p>
+</div>
+<div class="section" id="id2">
+<h2>Sequence analysis<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Go to a temporary working area (like <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> on Unix) so you don’t accidentally overwrite
+your own solutions. Run <code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">download</span> <span class="pre">-a</span> <span class="pre">hy-data-analysis-with-python-spring-2019</span></code>
+to get the tests. Store student’s notebook to file
+<code class="docutils literal notranslate"><span class="pre">hy-data-analysis-with-python-spring-2019/project_notebook_sequence_analysis.ipynb</span></code>.
+In the same folder as the notebook, download and save the script
+<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/split-bio-sequence-notebook-into-files.py">split-bio-sequence-notebook-into-files.py</a> (version 1), which will extract the solutions
+from notebook to files.
+Run the script with <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">split-bio-sequence-notebook-into-files.py</span></code>.
+This will overwrite existing files, so be careful!
+Run the tests using <code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">test</span> <span class="pre">part07-e*</span></code>.</p>
 </div>
 </div>
 </div>
