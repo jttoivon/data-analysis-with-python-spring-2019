@@ -108,3 +108,38 @@ of the notebook.
 Make sure the notebook includes you solutions and looks readable,
 and then submit the resulting notebook to Moodle.
 
+Running tests when peer-reviewing students notebooks
+====================================================
+
+If you want, you can run tests on the work you are reviewing, to help
+assess the correctness of the solutions. Note that there can be bugs in
+the tests too.
+
+.. warning:: Make sure you don't accidentally delete your own solutions, when
+	     testing other student's work. Don't do the tests where your own
+	     solutions are.
+
+Regression analysis
+-------------------
+
+Go to a temporary working area (like ``/tmp`` on Unix) so you don't accidentally overwrite
+your own solutions. Run ``tmc download -a hy-data-analysis-with-python-spring-2019``
+to get the tests. Store student's notebook to file
+``part08-e01_regression/src/project_notebook_regression_analysis.ipynb``.
+Run the tests using ``tmc test part08-e01_regression``.
+
+Sequence analysis
+-------------------
+
+Go to a temporary working area (like ``/tmp`` on Unix) so you don't accidentally overwrite
+your own solutions. Run ``tmc download -a hy-data-analysis-with-python-spring-2019``
+to get the tests. Store student's notebook to file
+``hy-data-analysis-with-python-spring-2019/project_notebook_sequence_analysis.ipynb``.
+In the same folder as the notebook, download and save the script
+`split-bio-sequence-notebook-into-files.py <https://www.cs.helsinki.fi/u/jttoivon/dap/split-bio-sequence-notebook-into-files.py>`__ (version 1), which will extract the solutions
+from notebook to files.
+Run the script with ``python3 split-bio-sequence-notebook-into-files.py``.
+This will overwrite existing files, so be careful!
+Run the tests using ``tmc test part07-e*``.
+
+
