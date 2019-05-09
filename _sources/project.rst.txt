@@ -136,7 +136,7 @@ your own solutions. Run ``tmc download -a hy-data-analysis-with-python-spring-20
 to get the tests. Store student's notebook to file
 ``hy-data-analysis-with-python-spring-2019/project_notebook_sequence_analysis.ipynb``.
 In the same folder as the notebook, download and save the script
-`split-bio-sequence-notebook-into-files.py <https://www.cs.helsinki.fi/u/jttoivon/dap/split-bio-sequence-notebook-into-files.py>`__ (version 1), which will extract the solutions
+`split-bio-sequence-notebook-into-files.py <https://www.cs.helsinki.fi/u/jttoivon/dap/split-bio-sequence-notebook-into-files.py>`__ (version 2), which will extract the solutions
 from notebook to files.
 Run the script with ``python3 split-bio-sequence-notebook-into-files.py``.
 This will overwrite existing files, so be careful!
