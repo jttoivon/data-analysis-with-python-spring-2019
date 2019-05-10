@@ -425,7 +425,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 2 (cycling weather)</div>\n",
     "\n",
-    "Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns 'm', 'd', 'Time', and 'Time zone'.\n",
+    "Merge the processed cycling data set (from the previous exercise) and weather data set along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns 'm', 'd', 'Time', and 'Time zone'.\n",
     "\n",
     "Write function `cycling_weather` that reads the data sets and returns the resulting DataFrame.\n",
     "\n",
@@ -439,6 +439,8 @@
     "#### <div class=\"alert alert-info\">Exercise 3 (top bands)</div>\n",
     "\n",
     "Merge the DataFrames UK top40 and the bands DataFrame that are stored in the `src` folder.\n",
+    "Do all this in the parameterless function `top_bands`, which should return the merged DataFrame.\n",
+    "Test your function from the `main` function.\n",
     "\n",
     "<hr/>"
    ]

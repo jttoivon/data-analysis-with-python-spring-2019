@@ -444,15 +444,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>0.135268</td>
-<td>0.196292</td>
-<td>0.469845</td>
+<td>-0.104122</td>
+<td>-0.187614</td>
+<td>-0.738334</td>
 </tr>
 <tr>
 <th>b</th>
-<td>0.884464</td>
-<td>1.249753</td>
-<td>0.391493</td>
+<td>-1.238383</td>
+<td>-2.032813</td>
+<td>-0.506125</td>
 </tr>
 </tbody>
 </table>
@@ -537,15 +537,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>-1.100734</td>
-<td>1.280612</td>
-<td>-0.727692</td>
+<td>-0.438634</td>
+<td>-1.025787</td>
+<td>-0.484245</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-0.670140</td>
-<td>-0.999898</td>
-<td>-0.158345</td>
+<td>-1.234475</td>
+<td>0.803493</td>
+<td>0.762656</td>
 </tr>
 </tbody>
 </table>
@@ -930,8 +930,8 @@ Name: b, dtype: int64
 </div>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-3-(municipal-information)">Exercise 3 (municipal information)</a></div>
-<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function load a data set of municipal information from the src folder (originally from <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/en/">Statistics Finland</a>). Use the function <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, and note that the separator is a tabulator.</p>
-<p>Print the shape of the DataFrame and the column names in the following format:</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function load a data set of municipal information from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (originally from <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/en/">Statistics Finland</a>). Use the function <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, and note that the separator is a tabulator.</p>
+<p>Print the shape of the DataFrame (number of rows and columns) and the column names in the following format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Shape</span><span class="p">:</span> <span class="n">r</span><span class="p">,</span><span class="n">c</span>
 <span class="n">Columns</span><span class="p">:</span>
 <span class="n">col1</span>
@@ -2537,6 +2537,7 @@ dtype: object
 this song has been on the top 40 list.</p>
 <p>Hint. First create the last week’s top40 list of those songs that are also on this week’s list. Then add those entries that were not on this week’s list. Finally sort by position.</p>
 <p>Hint 2. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method of Series and DataFrame can be useful. It can also be nested.</p>
+<p>Hint 3. Like in NumPy, you can use with Pandas the bitwise operators <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, and <code class="docutils literal notranslate"><span class="pre">~</span></code>. Remember that he bitwise operators have higher precedence than the comparison operations, so you may have to use parentheses around comparisons, if you combined result of comparisons with bitwise operators.</p>
 <p>You get a second point, if you get the columns <code class="docutils literal notranslate"><span class="pre">LW</span></code> and <code class="docutils literal notranslate"><span class="pre">Peak</span> <span class="pre">Pos</span></code> correct.</p>
 <hr/></div>
 <div class="section" id="Converting-columns-from-one-type-to-another">

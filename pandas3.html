@@ -1659,11 +1659,11 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-2-(cycling-weather)">Exercise 2 (cycling weather)</a></div>
-<p>Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns ‘m’, ‘d’, ‘Time’, and ‘Time zone’.</p>
+<p>Merge the processed cycling data set (from the previous exercise) and weather data set along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns ‘m’, ‘d’, ‘Time’, and ‘Time zone’.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-3-(top-bands)">Exercise 3 (top bands)</a></div>
-<p>Merge the DataFrames UK top40 and the bands DataFrame that are stored in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder.</p>
+<p>Merge the DataFrames UK top40 and the bands DataFrame that are stored in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Do all this in the parameterless function <code class="docutils literal notranslate"><span class="pre">top_bands</span></code>, which should return the merged DataFrame. Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
 <h2>Aggregates and groupings<a class="headerlink" href="#Aggregates-and-groupings" title="Permalink to this headline">¶</a></h2>
@@ -1798,7 +1798,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7f2ee2de72e8&gt;
+<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7fc88ce9fb00&gt;
 </pre></div>
 </div>
 </div>
@@ -2221,7 +2221,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7f2ee2dfd9e8&gt;
+<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7fc88ce5fa20&gt;
 </pre></div>
 </div>
 </div>
