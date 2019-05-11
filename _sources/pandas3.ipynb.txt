@@ -685,12 +685,13 @@
     "\n",
     "Part 1.\n",
     "\n",
-    "Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.\n",
+    "Read, clean and parse the bicycle data set as before. Group the rows by year, month, and day. Get the sum for each group.\n",
     "Make function `cyclists_per_day` that does the above. The function should return a DataFrame.\n",
+    "Make sure that the columns Hour and Weekday are not included in the returned DataFrame.\n",
     "\n",
     "Part 2.\n",
     "\n",
-    "In the `main` function, using the function `cyclists_per_day`, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don't forget to call the `plt.show` function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?\n",
+    "In the `main` function, using the function `cyclists_per_day`, get the daily counts.  The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don't forget to call the `plt.show` function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?\n",
     "\n",
     "<hr/>"
    ]
@@ -1055,7 +1056,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.1"
+   "version": "3.6.7"
   }
  },
  "nbformat": 4,

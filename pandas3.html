@@ -1798,7 +1798,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7fc88ce9fb00&gt;
+<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7fd5b6fbdeb8&gt;
 </pre></div>
 </div>
 </div>
@@ -2221,7 +2221,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype='int64')
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7fc88ce5fa20&gt;
+<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7fd5b6f7c9e8&gt;
 </pre></div>
 </div>
 </div>
@@ -4160,9 +4160,9 @@ Name: Precipitation, dtype: float64
 <div class="admonition note"><a id="Exercise-4-(cyclists-per-day)">Exercise 4 (cyclists per day)</a></div>
 <p>This exercise can give two points at maximum!</p>
 <p>Part 1.</p>
-<p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group. Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
+<p>Read, clean and parse the bicycle data set as before. Group the rows by year, month, and day. Get the sum for each group. Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame. Make sure that the columns Hour and Weekday are not included in the returned DataFrame.</p>
 <p>Part 2.</p>
-<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></div>
 <p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks on chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
