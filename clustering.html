@@ -442,10 +442,10 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[ 0.86008475  4.31501411]
- [-1.36512238  7.70188306]
- [ 2.07464749  0.9869902 ]
- [-1.70639178  2.9104771 ]]
+[[-1.36512238  7.70188306]
+ [-1.70639178  2.9104771 ]
+ [ 0.86008475  4.31501411]
+ [ 2.07464749  0.9869902 ]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -482,7 +482,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Accuracy score is 0.25
+Accuracy score is 0.01
 </pre></div></div>
 </div>
 <p>Oops! Even though the clusters could match almost perfectly to the original, their labels might be permuted. Let’s select randomly one point from each cluster and check their labels from the original data labels. Then we use this label for the whole cluster. In essence, we are renaming the clusters, not re-clustering the data.</p>
@@ -517,7 +517,7 @@ Accuracy score is 0.25
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[0, 3, 1, 2]
+[3, 2, 0, 1]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -796,8 +796,8 @@ Accuracy score is 0.793544796884
 <p>The function should return a pair, whose first element is the feature matrix and the second element is the label vector.</p>
 <p>Part 2. Create function <code class="docutils literal notranslate"><span class="pre">cluster_euclidean</span></code> that gets a filename as parameter. Get the features and labels using the function from part 1. Perform hierarchical clustering using the function <code class="docutils literal notranslate"><span class="pre">sklearn.cluster.AgglomerativeClustering</span></code>. Get two clusters using <code class="docutils literal notranslate"><span class="pre">average</span></code> linkage and <code class="docutils literal notranslate"><span class="pre">euclidean</span></code> affinity. Fit the model and predict the labels. Note that you may have to use the <code class="docutils literal notranslate"><span class="pre">find_permutation</span></code> function again, because even though the clusters are correct, they may be labeled differently than
 the real labels given in <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>. The function should return the accuracy score.</p>
-<p>Part 3. Create function <code class="docutils literal notranslate"><span class="pre">cluster_hamming</span></code> that works like the function in part 2, except now using the <a class="reference external" href="https://en.wikipedia.org/wiki/Hamming_distance">hamming</a> affinity. Even though it is possible to pass the function <code class="docutils literal notranslate"><span class="pre">hamming</span></code> to <code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code>, let us now compute the Hamming distance matrix explicitly. We can achieve this using the function <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise_distances</span></code>. Use the affinity <code class="docutils literal notranslate"><span class="pre">precomputed</span></code> and give the distance matrix, instead of the feature matrix,
-to the <code class="docutils literal notranslate"><span class="pre">fit_predict</span></code> method of the model. If you want, you can visualize the clustering using the provided <code class="docutils literal notranslate"><span class="pre">plot</span></code> function.</p>
+<p>Part 3. Create function <code class="docutils literal notranslate"><span class="pre">cluster_hamming</span></code> that works like the function in part 2, except now using the <a class="reference external" href="https://en.wikipedia.org/wiki/Hamming_distance">hamming</a> affinity. Even though it is possible to pass the function <code class="docutils literal notranslate"><span class="pre">hamming</span></code> to <code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code>, let us now compute the Hamming distance matrix explicitly. We can achieve this using the function <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise_distances</span></code>. Use the affinity parameter <code class="docutils literal notranslate"><span class="pre">precomputed</span></code> to <code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code>. And give the
+distance matrix you got from <code class="docutils literal notranslate"><span class="pre">pairwise_distances</span></code>, instead of the feature matrix, to the <code class="docutils literal notranslate"><span class="pre">fit_predict</span></code> method of the model. If you want, you can visualize the clustering using the provided <code class="docutils literal notranslate"><span class="pre">plot</span></code> function.</p>
 <p>Which affinity (or distance) do you think is theoretically more correct of these two (Euclidean or Hamming)? Why?</p>
 <!--NAVIGATION--></div>
 </div>
