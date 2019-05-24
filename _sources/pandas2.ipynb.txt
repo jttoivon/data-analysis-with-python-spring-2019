@@ -1111,6 +1111,16 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "## Additional information\n",
+    "\n",
+    "We covered subsetting of DataFrames with the indexers `[]`, `.loc[]`, and `.iloc[]` quite concisely.\n",
+    "For a more verbose explanation, look at the [tutorials at Dunder Data](https://medium.com/dunder-data/pandas-tutorials/home). Especially, the problems with chained indexing operators (like `df[\"a\"][1]`) are explained well there (tutorial 4), which we did not cover at all. As a rule of thumb: one should avoid chained indexing combined with assignment! See [Pandas documentation](http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#why-does-assignment-fail-when-using-chained-indexing)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "## Summary (week 4)\n",
     "\n",
     "* You can create DataFrames in several ways:\n",

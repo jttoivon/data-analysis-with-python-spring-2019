@@ -76,6 +76,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#Missing-data">Missing data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Converting-columns-from-one-type-to-another">Converting columns from one type to another</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#String-processing">String processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Additional-information">Additional information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Summary-(week-4)">Summary (week 4)</a></li>
 </ul>
 </li>
@@ -444,15 +445,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>0.946591</td>
-<td>0.162889</td>
-<td>-0.539725</td>
+<td>-1.909862</td>
+<td>-0.397055</td>
+<td>1.702700</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-1.279701</td>
-<td>-0.456816</td>
-<td>0.373971</td>
+<td>1.002789</td>
+<td>-1.453600</td>
+<td>-0.263648</td>
 </tr>
 </tbody>
 </table>
@@ -537,15 +538,15 @@ This page was generated from <a class="reference external" href="https://github.
 <tbody>
 <tr>
 <th>a</th>
-<td>-1.436359</td>
-<td>0.026119</td>
-<td>0.967579</td>
+<td>-0.745076</td>
+<td>0.163203</td>
+<td>-0.115201</td>
 </tr>
 <tr>
 <th>b</th>
-<td>-0.734211</td>
-<td>-1.310861</td>
-<td>0.976608</td>
+<td>0.450603</td>
+<td>0.037798</td>
+<td>-1.057447</td>
 </tr>
 </tbody>
 </table>
@@ -2958,6 +2959,11 @@ methods</a> of Series objects. You get an additional point, if you manage to get
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="Additional-information">
+<h2>Additional information<a class="headerlink" href="#Additional-information" title="Permalink to this headline">¶</a></h2>
+<p>We covered subsetting of DataFrames with the indexers <code class="docutils literal notranslate"><span class="pre">[]</span></code>, <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code>, and <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code> quite concisely. For a more verbose explanation, look at the <a class="reference external" href="https://medium.com/dunder-data/pandas-tutorials/home">tutorials at Dunder Data</a>. Especially, the problems with chained indexing operators (like <code class="docutils literal notranslate"><span class="pre">df["a"][1]</span></code>) are explained well there (tutorial 4), which we did not cover at all. As a rule of thumb: one should avoid chained indexing combined with assignment! See <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#why-does-assignment-fail-when-using-chained-indexing">Pandas
+documentation</a>.</p>
 </div>
 <div class="section" id="Summary-(week-4)">
 <h2>Summary (week 4)<a class="headerlink" href="#Summary-(week-4)" title="Permalink to this headline">¶</a></h2>

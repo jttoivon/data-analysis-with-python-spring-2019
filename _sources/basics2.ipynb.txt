@@ -790,7 +790,7 @@
    "source": [
     "#### <div class=\"alert alert-info\">Exercise 4 (word frequencies)</div>\n",
     "\n",
-    "Create function `word_frequencies` that gets a filename as a parameter and returns a dict with the word frequencies. In the dictionary the keys are the words and the corresponding values are the number of times that word occurred in the file specified by the function parameter. Read all the lines from the file and split the lines into words using the `split()` method. Further, remove punctuation from the words using the `strip('\"[],.:?!')` method call.\n",
+    "Create function `word_frequencies` that gets a filename as a parameter and returns a dict with the word frequencies. In the dictionary the keys are the words and the corresponding values are the number of times that word occurred in the file specified by the function parameter. Read all the lines from the file and split the lines into words using the `split()` method. Further, remove punctuation from the ends of words using the `strip(\"\"\"!\"#$%&'()*,-./:;?@[]_\"\"\")` method call.\n",
     "\n",
     "Test this function in the main function using the file `alice.txt`. In the output, there should be a word and its count per line separated by a tab:\n",
     "\n",
