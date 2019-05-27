@@ -31,6 +31,7 @@
     "* On command line run `bash nameofthedownloadedfile` on Linux (and maybe on macOS)\n",
     "* Follow the instructions of the installer\n",
     "* Takes about 3 minutes\n",
+    "* Verify that your installation is complete by downloading the script [versions.py](https://raw.githubusercontent.com/jttoivon/data-analysis-with-python-spring-2019/master/versions.py) and run it with `python3 versions.py`.\n",
     "\n",
     "### (alternative b) Install miniconda and Python packages\n",
     "* This alternative is not recommended\n",
@@ -115,7 +116,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.7"
+   "version": "3.6.8"
   }
  },
  "nbformat": 4,
