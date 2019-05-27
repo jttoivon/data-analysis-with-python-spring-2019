@@ -116,7 +116,7 @@ The versions of additional libraries that are know to work are:
 
 More recent versions should work as well. You can check the software
 version of your installation with the following Python script:
-`versions.py <https://github.com/jttoivon/x/blob/master/versions.py>`_
+`versions.py <https://raw.githubusercontent.com/jttoivon/data-analysis-with-python-spring-2019/master/versions.py>`_
 Download the script and execute it with ``python3 versions.py``.
 
 
