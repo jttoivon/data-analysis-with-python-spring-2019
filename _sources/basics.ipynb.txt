@@ -9,7 +9,7 @@
     "\n",
     "<a href=\"https://colab.research.google.com/github/jttoivon/x/blob/master/basics.ipynb\"><img align=\"left\" src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open in Colab\" title=\"Open and Execute in Google Colaboratory\"></a>\n",
     "\n",
-    "|                                                                                     |                                                                                     |                                                                                     |\n",
+    "|                                          -                                          |                                          -                                          |                                          -                                          |\n",
     "|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|\n",
     "|             [Exercise 1 (hello world)](<#Exercise-1-(hello-world&#41;>)             |              [Exercise 2 (compliment)](<#Exercise-2-(compliment&#41;>)              |          [Exercise 3 (multiplication)](<#Exercise-3-(multiplication&#41;>)          |\n",
     "|    [Exercise 4 (multiplication table)](<#Exercise-4-(multiplication-table&#41;>)    |                [Exercise 5 (two dice)](<#Exercise-5-(two-dice&#41;>)                |           [Exercise 6 (triple square)](<#Exercise-6-(triple-square&#41;>)           |\n",

@@ -344,8 +344,23 @@ This page was generated from <a class="reference external" href="https://github.
 <col width="33%"/>
 <col width="33%"/>
 </colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><ul class="first last simple">
+<li></li>
+</ul>
+</th>
+<th class="head"><ul class="first last simple">
+<li></li>
+</ul>
+</th>
+<th class="head"><ul class="first last simple">
+<li></li>
+</ul>
+</th>
+</tr>
+</thead>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="#Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></td>
 <td><a class="reference external" href="#Exercise-6-(nonconvex-clusters)">Exercise 6 (nonconvex clusters)</a></td>
 <td><a class="reference external" href="#Exercise-7-(binding-sites)">Exercise 7 (binding sites)</a></td>
 </tr>
@@ -442,10 +457,10 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[-1.70639178  2.9104771 ]
- [-1.36512238  7.70188306]
+[[-1.36512238  7.70188306]
  [ 2.07464749  0.9869902 ]
- [ 0.86008475  4.31501411]]
+ [ 0.86008475  4.31501411]
+ [-1.70639178  2.9104771 ]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -482,7 +497,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Accuracy score is 0.0
+Accuracy score is 0.26
 </pre></div></div>
 </div>
 <p>Oops! Even though the clusters could match almost perfectly to the original, their labels might be permuted. Let’s select randomly one point from each cluster and check their labels from the original data labels. Then we use this label for the whole cluster. In essence, we are renaming the clusters, not re-clustering the data.</p>
@@ -517,7 +532,7 @@ Accuracy score is 0.0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[2, 3, 1, 0]
+[3, 1, 0, 2]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">

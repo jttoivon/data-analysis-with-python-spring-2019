@@ -358,12 +358,27 @@ This page was generated from <a class="reference external" href="https://github.
 <col width="33%"/>
 <col width="33%"/>
 </colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><ul class="first last simple">
+<li></li>
+</ul>
+</th>
+<th class="head"><ul class="first last simple">
+<li></li>
+</ul>
+</th>
+<th class="head"><ul class="first last simple">
+<li></li>
+</ul>
+</th>
+</tr>
+</thead>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference external" href="#Exercise-11-(rows-and-columns)">Exercise 11 (rows and columns)</a></td>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-11-(rows-and-columns)">Exercise 11 (rows and columns)</a></td>
 <td><a class="reference external" href="#Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></td>
 <td><a class="reference external" href="#Exercise-13-(diamond)">Exercise 13 (diamond)</a></td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="#Exercise-14-(vector-lengths)">Exercise 14 (vector lengths)</a></td>
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-14-(vector-lengths)">Exercise 14 (vector lengths)</a></td>
 <td><a class="reference external" href="#Exercise-15-(vector-angles)">Exercise 15 (vector angles)</a></td>
 <td><a class="reference external" href="#Exercise-16-(multiplication-table-revisited)">Exercise 16 (multiplication table revisited)</a></td>
 </tr>
@@ -566,10 +581,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[  6.93517979e-310,   6.93517979e-310,   0.00000000e+000,
+<span></span>array([[  6.94469946e-310,   6.94469946e-310,   0.00000000e+000,
           0.00000000e+000],
-       [  0.00000000e+000,   0.00000000e+000,   8.70018274e-313,
-          7.05479145e-308]])
+       [  0.00000000e+000,   0.00000000e+000,   0.00000000e+000,
+          0.00000000e+000]])
 </pre></div>
 </div>
 </div>
@@ -653,9 +668,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0.21753547,  0.82250111,  0.3067732 ,  0.58720356],
-       [ 0.66099422,  0.74143651,  0.60599223,  0.04227276],
-       [ 0.40621978,  0.05286995,  0.82721592,  0.90635593]])
+<span></span>array([[ 0.19775611,  0.63630822,  0.75414313,  0.40526326],
+       [ 0.81839249,  0.91677505,  0.26059463,  0.60695041],
+       [ 0.8672073 ,  0.28989951,  0.27379025,  0.81163359]])
 </pre></div>
 </div>
 </div>
@@ -673,9 +688,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[-0.43360256,  0.1658931 , -0.25776676,  0.45354023],
-       [ 0.63689962,  2.22025765, -0.30288698,  0.32794531],
-       [-0.06121737,  0.20849921,  0.456133  , -1.07799509]])
+<span></span>array([[ 1.03205536, -1.19555313, -2.03666327,  0.64167386],
+       [ 0.8150987 ,  0.79266365, -0.76257808,  0.13472503],
+       [ 1.08628264,  1.37285473, -1.5032291 , -2.96245122]])
 </pre></div>
 </div>
 </div>
@@ -693,9 +708,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 8,  5,  9,  5],
-       [ 7,  0, -1,  3],
-       [ 1,  7, -2,  1]])
+<span></span>array([[ 5, -2,  4,  3],
+       [ 4,  2,  2,  7],
+       [ 8,  2,  0,  0]])
 </pre></div>
 </div>
 </div>
@@ -1676,7 +1691,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-3.75 µs ± 17.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+3.71 µs ± 56.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1693,7 +1708,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-90.9 µs ± 288 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+102 µs ± 872 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
