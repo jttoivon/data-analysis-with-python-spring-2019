@@ -89,14 +89,15 @@ def write_navbars():
                 columns = n
             table = []
             empty=" " * (longest_field + 2)
+            column_title = "-".center(longest_field + 2)
             dash="-" * (longest_field + 2)
-            table.append("|%s\n" % (("%s|" % empty)*columns))
-            table.append("|%s\n" % (("%s|" % dash)*columns))
+            table.append("|%s\n" % (("%s|" % column_title)*columns))  # No column title
+            table.append("|%s\n" % (("%s|" % dash)*columns))         # separator line
             for i, e in enumerate(exercise_links):
-                if i % columns == 0:
+                if i % columns == 0:                                 # Start a new row
                     table.append("|")
                 table.append(" %s |" % e.center(longest_field))
-                if i % columns == (columns-1):
+                if i % columns == (columns-1):                       # Row is full
                     table.append("\n")
             remainder = n % columns
             if remainder > 0:

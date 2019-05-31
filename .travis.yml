@@ -25,16 +25,16 @@ install:
   - pip install seaborn==0.8.0
 
 script:
-  - python -m sphinx . build/ -b html
-  - ./add_html_anchors_to_exercises.py build/*.html
-  - touch build/.nojekyll # this file tells gh-pages that there is no need to build
+  - python -m sphinx . _build/ -b html
+  - ./add_html_anchors_to_exercises.py _build/*.html
+  - touch _build/.nojekyll # this file tells gh-pages that there is no need to build
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
-  local-dir: build
+  local-dir: _build
   target-branch: gh-pages 
   on:
     branch: master
