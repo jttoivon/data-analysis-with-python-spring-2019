@@ -581,10 +581,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[  6.94469946e-310,   6.94469946e-310,   0.00000000e+000,
+<span></span>array([[  6.92471301e-310,   1.38715056e-316,   0.00000000e+000,
           0.00000000e+000],
-       [  0.00000000e+000,   0.00000000e+000,   0.00000000e+000,
-          0.00000000e+000]])
+       [  0.00000000e+000,   0.00000000e+000,   6.92471301e-310,
+          1.40428397e-316]])
 </pre></div>
 </div>
 </div>
@@ -668,9 +668,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0.19775611,  0.63630822,  0.75414313,  0.40526326],
-       [ 0.81839249,  0.91677505,  0.26059463,  0.60695041],
-       [ 0.8672073 ,  0.28989951,  0.27379025,  0.81163359]])
+<span></span>array([[ 0.44288126,  0.10214237,  0.93463578,  0.4742952 ],
+       [ 0.6628932 ,  0.78969954,  0.75240659,  0.41199448],
+       [ 0.95939674,  0.36743084,  0.30123026,  0.48133174]])
 </pre></div>
 </div>
 </div>
@@ -688,9 +688,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 1.03205536, -1.19555313, -2.03666327,  0.64167386],
-       [ 0.8150987 ,  0.79266365, -0.76257808,  0.13472503],
-       [ 1.08628264,  1.37285473, -1.5032291 , -2.96245122]])
+<span></span>array([[ 0.12200653, -0.64444405, -0.08816503, -0.74346652],
+       [-0.56773327,  0.41221929,  0.26987134, -0.49314727],
+       [-0.31133009, -0.1302549 ,  0.59682264, -0.8181186 ]])
 </pre></div>
 </div>
 </div>
@@ -708,9 +708,9 @@ real data (sampling). NumPy can easily produce arrays of wanted shape filled wit
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 5, -2,  4,  3],
-       [ 4,  2,  2,  7],
-       [ 8,  2,  0,  0]])
+<span></span>array([[ 9, -1, -1,  8],
+       [ 1,  0,  8,  0],
+       [ 6,  4,  5, -1]])
 </pre></div>
 </div>
 </div>
@@ -1691,7 +1691,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-3.71 µs ± 56.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+3.63 µs ± 16.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1708,7 +1708,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-102 µs ± 872 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+89.6 µs ± 130 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>

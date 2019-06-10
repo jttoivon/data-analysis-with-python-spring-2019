@@ -767,7 +767,7 @@ Number of days with the temperature below zero 49
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 <span class="n">row</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
 <span class="n">col</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
@@ -780,11 +780,11 @@ Number of days with the temperature below zero 49
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[9 4 3 0]
- [3 5 0 2]
- [3 8 1 3]
- [3 3 7 0]]
-[4 3]
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]
+ [12 13 14 15]]
+[ 1 11]
 </pre></div></div>
 </div>
 <p>Note that the result array was one dimensional! The shape of the result array is defined by the shape of the index arrays, not by the shape of the original array. The next example will demonstrate this.</p>
@@ -810,8 +810,8 @@ Number of days with the temperature below zero 49
  [2 2]]
 [[1 3]
  [1 3]]
-[[4 0]
- [8 3]]
+[[ 1  3]
+ [ 9 11]]
 </pre></div></div>
 </div>
 <p>Both index arrays, row and col, had shape (2,2), so also the result was of shape (2,2). However, this form has some repetition in the indices. But we can rely that the broadcasting rules will enable us to avoid the repetition:</p>
@@ -836,8 +836,8 @@ Number of days with the temperature below zero 49
 [[0]
  [2]]
 [[1 3]]
-[[4 0]
- [8 3]]
+[[ 1  3]
+ [ 9 11]]
 </pre></div></div>
 </div>
 <p>One can also combine normal indexing, slicing and fancy indexing:</p>
@@ -855,10 +855,10 @@ Number of days with the temperature below zero 49
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[9, 3],
-       [3, 0],
-       [3, 1],
-       [3, 7]])
+<span></span>array([[ 0,  2],
+       [ 4,  6],
+       [ 8, 10],
+       [12, 14]])
 </pre></div>
 </div>
 </div>
@@ -918,10 +918,10 @@ Number of days with the temperature below zero 49
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[1 9 9 0]
- [4 7 3 2]
- [7 2 0 0]
- [4 5 5 6]]
+[[9 4 3 0]
+ [3 5 0 2]
+ [3 8 1 3]
+ [3 3 7 0]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -938,10 +938,10 @@ Number of days with the temperature below zero 49
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[1, 2, 0, 0],
-       [4, 5, 3, 0],
-       [4, 7, 5, 2],
-       [7, 9, 9, 6]])
+<span></span>array([[3, 3, 0, 0],
+       [3, 4, 1, 0],
+       [3, 5, 3, 2],
+       [9, 8, 7, 3]])
 </pre></div>
 </div>
 </div>
@@ -959,10 +959,10 @@ Number of days with the temperature below zero 49
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[0, 1, 9, 9],
-       [2, 3, 4, 7],
-       [0, 0, 2, 7],
-       [4, 5, 5, 6]])
+<span></span>array([[0, 3, 4, 9],
+       [0, 2, 3, 5],
+       [1, 3, 3, 8],
+       [0, 3, 3, 7]])
 </pre></div>
 </div>
 </div>
