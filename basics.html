@@ -1148,7 +1148,7 @@ The first negative list element was -1
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">log</span>
+<span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">log</span>
 <span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -1630,9 +1630,9 @@ Note the difference between <code class="docutils literal notranslate"><span cla
 <div class="admonition note"><a id="Exercise-8-(solve-quadratic)">Exercise 8 (solve quadratic)</a></div>
 <p>In mathematics, the quadratic equation <span class="math notranslate nohighlight">\(ax^2+bx+c=0\)</span> can be solved with the formula <span class="math notranslate nohighlight">\(x=\frac{-b\pm \sqrt{b^2 -4ac}}{2a}\)</span>.</p>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">solve_quadratic</span></code>, that returns both solutions of a generic quadratic as a pair (2-tuple) when the coefficients are given as parameters. It should work like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">solve_quadratic</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">solve_quadratic</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">solve_quadratic</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">solve_quadratic</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1804,7 +1804,7 @@ the main function for creating inputs to the <code class="docutils literal notra
 <hr/><hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-10-(detect-ranges)">Exercise 10 (detect ranges)</a></div>
 <p>Create a function named <code class="docutils literal notranslate"><span class="pre">detect_ranges</span></code> that gets a list of integers as a parameter. The function should then sort this list, and transform the list into another list where pairs are used for all the detected intervals. So <code class="docutils literal notranslate"><span class="pre">3,4,5,6</span></code> is replaced by the pair <code class="docutils literal notranslate"><span class="pre">(3,7)</span></code>. Numbers that are not part of any interval result just single numbers. The resulting list consists of these numbers and pairs, separated by commas. An example of how this function works:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">detect_ranges</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">]))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">detect_ranges</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">]))</span>
 <span class="p">[</span><span class="mi">2</span><span class="p">,(</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="mi">10</span><span class="p">,(</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">)]</span>
 </pre></div>
 </div>
@@ -2558,7 +2558,7 @@ the function. Let’s replace the above <code class="docutils literal notranslat
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">reduce</span>   <span class="c1"># import the reduce function from the functools module</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>   <span class="c1"># import the reduce function from the functools module</span>
 <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2761,7 +2761,7 @@ If you want to build a string out of smaller strings, then first put the small s
 <div class="admonition note"><a id="Exercise-18-(acronyms)">Exercise 18 (acronyms)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">acronyms</span></code> which takes a string as a parameter and returns a list of acronyms. A word is an acronym if it has length at least two, and all its characters are in uppercase. Before acronym detection, delete punctuation with the <code class="docutils literal notranslate"><span class="pre">strip</span></code> method.</p>
 <p>Test this function in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function with the following call:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">acronyms</span><span class="p">(</span><span class="s2">"""For the purposes of the EU General Data Protection Regulation (GDPR), the controller of your personal information is International Business Machines Corporation (IBM Corp.), 1 New Orchard Road, Armonk, New York, United States, unless indicated otherwise. Where IBM Corp. or a subsidiary it controls (not established in the European Economic Area (EEA)) is required to appoint a legal representative in the EEA, the representative for all such cases is IBM United Kingdom Limited, PO Box 41, North Harbour, Portsmouth, Hampshire, United Kingdom PO6 3AU."""</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">acronyms</span><span class="p">(</span><span class="s2">"""For the purposes of the EU General Data Protection Regulation (GDPR), the controller of your personal information is International Business Machines Corporation (IBM Corp.), 1 New Orchard Road, Armonk, New York, United States, unless indicated otherwise. Where IBM Corp. or a subsidiary it controls (not established in the European Economic Area (EEA)) is required to appoint a legal representative in the EEA, the representative for all such cases is IBM United Kingdom Limited, PO Box 41, North Harbour, Portsmouth, Hampshire, United Kingdom PO6 3AU."""</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>This should return <code class="docutils literal notranslate"><span class="pre">['EU',</span> <span class="pre">'GDPR',</span> <span class="pre">'IBM',</span> <span class="pre">'IBM',</span> <span class="pre">'EEA',</span> <span class="pre">'EEA',</span> <span class="pre">'IBM',</span> <span class="pre">'PO',</span> <span class="pre">'PO6',</span> <span class="pre">'3AU']</span></code></p>
@@ -2872,14 +2872,14 @@ attribute <code class="docutils literal notranslate"><span class="pre">__file__<
 <p>The module attribute <code class="docutils literal notranslate"><span class="pre">__name__</span></code> has value <code class="docutils literal notranslate"><span class="pre">“__main__”</span></code> if we in are the main program, otherwise some other module has imported us and name equals <code class="docutils literal notranslate"><span class="pre">__file__</span></code>.</p>
 <p>In Python it is possible to put statements on the top-level of our module <code class="docutils literal notranslate"><span class="pre">mod</span></code> so that they don’t belong to any function. For instance like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>But if somebody imports our module with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">mod</span></code>, then all the statements at the top-level will be executed. This may be surprising to the user who imported the module. The user will usually say, explicitly when he/she wants to execute some code from the imported module.</p>
 <p>It is better style to put these statements inside some function. If they don’t fit in any other function, then you can use, for example, the function named <code class="docutils literal notranslate"><span class="pre">main</span></code>, like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>    <span class="c1"># We call main only when this module is not being imported, but directly executed</span>
     <span class="n">main</span><span class="p">()</span>                    <span class="c1"># for example with 'python3 mod.py'</span>
@@ -2887,7 +2887,7 @@ attribute <code class="docutils literal notranslate"><span class="pre">__file__<
 </div>
 <p>You probably have seen this mechanism used in the exercise stubs. Note that in Python the <code class="docutils literal notranslate"><span class="pre">main</span></code> has no special meaning, it is just our convention to use it here. Now if somebody imports <code class="docutils literal notranslate"><span class="pre">mod</span></code>, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop won’t be automatically executed. If we want, we can call it explicitly with <code class="docutils literal notranslate"><span class="pre">mod.main()</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
 </pre></div>
 </div>
 <hr class="docutils"/>
