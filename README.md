@@ -1,5 +1,9 @@
 # Data analysis with Python - Spring 2019
 
+## Note
+
+Newer course instance is available from [Data analysis with Python - 2020](https://csmastersuh.github.io/data_analysis_with_python_2020/).
+
 ## Authors
 
 Materials created by [Jarkko Toivonen](https://github.com/jttoivon).
